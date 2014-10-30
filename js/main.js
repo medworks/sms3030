@@ -209,6 +209,17 @@ $(document).ready(function($) {
       }); 
    });
 
+	//=================================== Active menu  ==============================//
+
+    var href=window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+    $("ul#menu li a").each(function(){    	
+		if($(this).attr("href") == href || $(this).attr("href") == '' ){
+			$("ul#menu li.current").removeClass("current");
+			$(this).parent().addClass("current");
+		}
+		
+     })
+
 	
 });
 	//=================================== Slide =====================================//
