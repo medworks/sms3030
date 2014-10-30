@@ -1,7 +1,7 @@
 <!-- Content Pricing Tables-->
 <section class="info_content shadows borders">
   <!-- Container-->
-  <div class="container animation-elements">
+  <div class="container">
       <!-- Titles -->
       <h1 class="titles">
          <span>پنل ها</span>
