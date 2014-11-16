@@ -1708,7 +1708,7 @@ hr,
 }
 /* mouse grab icon */
 .grabbing {
-  cursor: url('images/grabbing.png') 8 8, move;
+  cursor: url('../images/grabbing.png') 8 8, move;
 }
 /* fix */
 .owl-carousel .owl-wrapper,
