@@ -1,6 +1,109 @@
 <?php
   include_once('./inc/header.php');
 ?>
+<body id="top" class="style-4 body-boxed-2">
+<!--[if lt IE 9]>
+  <p class="browsehappy">
+    You are using an
+    <strong>outdated</strong>
+    browser. Please
+    <a href="http://browsehappy.com/">upgrade your browser</a>
+    to improve your experience.
+  </p>
+<![endif]-->
+  
+<div class="loadingContainer">
+  <div class="loading">
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect3"></div>
+    <div class="rect4"></div>
+    <div class="rect5"></div>
+  </div><!-- end of loading -->
+</div><!-- end of loading container -->
+  
+  
+<div class="allWrapper"> 
+
+  <!-- Slider -->
+  <section class="slider section mainSection scrollAnchor darkSection" id="slider">
+    <div class="topMenu navBar">
+      <div class="container">
+        <div class="row">
+          <div class="topContact col-md-6 col-sm-12" style="float:left">
+            <ul>
+              <li class="tele">
+                Tel: 
+                <a href="javascript:void();" class="latinfont ltr" style="display:inline-block;letter-spacing:2px">+98 51 3766 6436</a>
+              </li>
+              <li class="mail">
+                Email: 
+                <a href="javascript:void();" class="latinfont" style="letter-spacing:2px">info@sms3030.com</a>
+              </li>
+            </ul>
+          </div><!-- end of top contacts -->
+          <ul class="topSocial socialNav col-md-6 col-sm-12">
+            <li class="facebook"><a href="#"><i class="animated fa fa-facebook"></i></a></li>
+            <li class="twitter"><a href="#"><i class="animated fa fa-twitter"></i></a></li>
+            <li class="rss"><a href="#"><i class="animated fa fa-rss"></i></a></li>
+          </ul><!-- end of top social -->
+        </div><!-- end of row -->
+      </div><!-- end of container -->
+    </div><!-- end of top menu -->
+    <div id="mainSlider" class="mainSlider homeSlider_4  owl-carousel sliderStyle1">
+      <div id="slide1" class="item slide">
+        <div class="cover"></div><!-- end of cover -->
+        <img src="./images/slider/1.jpg" title="Slide 1" alt="slide 1">
+        <div class="captions">
+          <h2 class="animated">عنوان اسلاید اول</h2>
+          <p class="animated">
+            توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... </p>
+        </div><!-- end of captions -->
+      </div><!-- end of slide -->
+      <div id="slide2" class="item slide">
+        <div class="cover"></div><!-- end of cover -->
+        <img src="./images/slider/2.jpg" title="Slide 2" alt="slide 2">
+        <div class="captions">
+          <h2 class="animated">عنوان اسلاید دوم</h2>
+          <p class="animated">
+            توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... </p>
+        </div><!-- end of captions -->
+      </div><!-- end of slide -->
+      <div id="slide3" class="item slide">
+        <div class="cover"></div><!-- end of cover -->
+        <img src="./images/slider/3.jpg" title="Slide 3" alt="slide 3">
+        <div class="captions">
+          <h2 class="animated">عنوان اسلاید سوم</h2>
+          <p class="animated">
+            توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... </p>
+        </div><!-- end of captions -->
+      </div><!-- end of slide -->
+      <div id="slide4" class="item slide">
+        <div class="cover"></div><!-- end of cover -->
+        <img src="./images/slider/4.jpg" title="Slide 4" alt="slide 4">
+        <div class="captions">
+          <h2 class="animated">عنوان اسلاید چهارم</h2>
+          <p class="animated">
+            توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... </p>
+        </div><!-- end of captions -->
+      </div><!-- end of slide -->
+      <div id="slide5" class="item slide">
+        <div class="cover"></div><!-- end of cover -->
+        <img src="./images/slider/5.jpg" title="Slide 5" alt="slide 5">
+        <div class="captions">
+          <h2 class="animated">عنوان اسلاید پنجم</h2>
+          <p class="animated">
+            توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... </p>
+        </div><!-- end of captions -->
+      </div><!-- end of slide -->
+    </div><!-- end of main slider -->
+  </section>
+  <!-- end of slider -->
+  <!-- Header -->
+    <?php
+      include_once('./inc/menu.php')
+    ?>
+    <!-- end of header -->
   <!-- Pricing -->
   <section class="pricing section mainSection scrollAnchor lightSection" id="pricing">
     <div class="sectionWrapper">
@@ -217,67 +320,7 @@
     </div><!-- end of section wrapper -->
   </section><!-- end blog section -->
 
-  <!-- Clients -->
-  <section class="clients section mainSection scrollAnchor lightSection" id="clients">
-    <div class="sectionWrapper">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 sectionTitle">
-            <h2 class="sectionHeader">
-              مشتریان ما
-              <span class="generalBorder"></span>
-            </h2><!-- end of sectionHeader -->
-          </div><!-- end of section title -->        
-        </div><!-- end of row -->
-        <div class="row">
-          <div class="clientsCarousel owl-carousel clientsGallary">
-            <div class="col-md-2 col-sm-4 item client singleClientsWrapper">
-              <a class="singleClient" href="#" title="client">
-                <img alt="client 1" src="images/clients/1.png" title="client">
-              </a><!-- end of single client -->
-            </div><!-- end of single client wrapper -->
-            <div class="col-md-2 col-sm-4 item client singleClientsWrapper">
-              <a class="singleClient" href="#" title="client">
-                <img alt="client 2" src="images/clients/2.png" title="client">
-              </a><!-- end of single client -->
-            </div><!-- end of single client wrapper -->
-            <div class="col-md-2 col-sm-4 item client singleClientsWrapper">
-              <a class="singleClient" href="#" title="client">
-                <img alt="client 3" src="images/clients/3.png" title="client">
-              </a><!-- end of single client -->
-            </div><!-- end of single client wrapper -->
-            <div class="col-md-2 col-sm-4 item client singleClientsWrapper">
-              <a class="singleClient" href="#" title="client">
-                <img alt="client 4" src="images/clients/4.png" title="client">
-              </a><!-- end of single client -->
-            </div><!-- end of single client wrapper -->
-            <div class="col-md-2 col-sm-4 item client singleClientsWrapper">
-              <a class="singleClient" href="#" title="client">
-                <img alt="client 5" src="images/clients/5.png" title="client">
-              </a><!-- end of single client -->
-            </div><!-- end of single client wrapper -->
-            <div class="col-md-2 col-sm-4 item client singleClientsWrapper">
-              <a class="singleClient" href="#" title="client">
-                <img alt="client 6" src="images/clients/6.png" title="client">
-              </a><!-- end of single client -->
-            </div><!-- end of single client wrapper -->
-            <div class="col-md-2 col-sm-4 item client singleClientsWrapper">
-              <a class="singleClient" href="#" title="client">
-                <img alt="client 7" src="images/clients/7.png" title="client">
-              </a><!-- end of single client -->
-            </div><!-- end of single client wrapper -->
-            <div class="col-md-2 col-sm-4 item client singleClientsWrapper">
-              <a class="singleClient" href="#" title="client">
-                <img alt="client 8" src="images/clients/8.png" title="client">
-              </a><!-- end of single client -->
-            </div><!-- end of single client wrapper -->
-            <!-- end of single client wrapper -->
-          </div><!-- end of clients gallary -->
-        </div><!-- end of row -->
-      </div>
-    </div>
-  </section><!-- end clients section -->
-
 <?php
+  include_once('./inc/clients.php');
   include_once('./inc/footer.php');
 ?>

@@ -4719,7 +4719,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   display: inline-block;
 }
 
-.breadcrumb > li + li:before {
+.breadcrumb > li + li:after {
   padding: 0 5px;
   color: #cccccc;
   content: "/\00a0";

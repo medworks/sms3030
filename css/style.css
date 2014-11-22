@@ -1177,7 +1177,7 @@ hr,
   text-align: left;
 }
 .socialNav > li {
-  float: left;
+  float: right;
   font-size: 12px;
   margin: 0px 2.5px;
   white-space: nowrap;
@@ -1185,10 +1185,10 @@ hr,
   position: relative;
 }
 .socialNav > li:first-child {
-  margin-left: 0px;
+  /*margin-left: 0px;*/
 }
 .socialNav > li:last-child {
-  margin-right: 0px;
+  /*margin-right: 0px;*/
 }
 .socialNav > li a {
   display: block;
@@ -2046,14 +2046,14 @@ hr,
 }
 /* topContact */
 .topContact ul {
-  float: right;
+  float: left;
   margin-top: 5px;
 }
 .topContact ul li {
   float: left;
   color: #c5c5c5;
   font-family: 'bmitra';
-  font-size: 15px;
+  font-size: 14px;
   border-right: 1px solid #ff6b6b;
   padding: 0px 14px;
   height: 14px;
@@ -6433,7 +6433,7 @@ img.fnone {
 /* --- Page info  --------------------- */
 .pageInfo {
   padding: 45px 0;
-  background: url('images/page-info-bg.png') no-repeat;
+  background: url('../images/page-info-bg.png') no-repeat;
   background-attachment: fixed;
   position: relative;
   border-bottom: 1px solid #30333c;
@@ -6454,7 +6454,8 @@ img.fnone {
   font-weight: 700;
   color: #ffffff;
   line-height: 1;
-  float: left;
+  float: right;
+  margin-right: 12px;
 }
 /* --- Bread Crumb  --------------------- */
 .breadcrumb {
@@ -6466,11 +6467,13 @@ img.fnone {
   -khtml-border-radius: 0;
   border-radius: 0;
   background-color: transparent;
-  float: right;
+  float: left;
 }
 .breadcrumb li {
   color: #c5c5c5;
-  font-size: 13px;
+  font-size: 15px;
+  font-family: 'bmitra';
+  float: right;
 }
 .breadcrumb li + li:before {
   color: #c5c5c5;
