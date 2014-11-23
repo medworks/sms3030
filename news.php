@@ -104,7 +104,6 @@ $nhtml2.=<<<cd
     </div><!-- end of page info -->
   </section>
   <!-- end of Page Header -->
-  //menu
   <!-- blog -->
 	 <section class="blog section mainSection scrollAnchor lightSection" id="blog">
         <div class="sectionWrapper">
