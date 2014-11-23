@@ -1,6 +1,7 @@
 <?php
   include_once('./inc/header.php');
 ?>
+
 <body id="top" class="style-4 body-boxed-2">
 <!--[if lt IE 9]>
   <p class="browsehappy">

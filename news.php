@@ -65,7 +65,7 @@
           <div class="col-md-8">
             <ol class="breadcrumb">
               <li>
-                <a href="#">صفحه اصلی</a>
+                <a href="./">صفحه اصلی</a>
               </li>
               <li class="active">اخبار</li>
             </ol><!-- end of breadcrumb -->
@@ -80,21 +80,9 @@
   <section class="blog section mainSection scrollAnchor lightSection" id="blog">
         <div class="sectionWrapper">
           <div class="container blogColmn4">
-
             <div class="row">
 
-              <div class="col-md-12 sectionTitle">
-                <h2 class="sectionHeader">
-                  Look At Our Latest News , Offers &amp; Tutorials
-                  <span class="generalBorder"></span>
-                </h2><!-- end of sectionHeader -->                
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis. Pellentesque cursus arcu id magna euismod in elementum purus molestie.</p>
-              </div><!-- end of section title -->
-              
-            </div><!-- end of row -->
 
-            <div class="row">
-              
               <article class="col-md-3 post">
                 <div class="postWrapper">
                   <div class="postMedia">
@@ -102,14 +90,13 @@
                       <li class="postAuthor">
                         <div class="metaContent">
                           <i class="animated fa fa-user"></i>
-                          Author :
-                          <a href="#" title="author name">Begha</a>
+                          توسط :
+                          <a href="#" title="author name">Admin</a>
                         </div>
                       </li>
-
                     </ul>
                     <a href="single-blog-1.html" title="post sample">
-                      <img alt="post sample" src="images/blog/1.jpg" title="post sample">
+                      <img alt="post sample" src="./images/slider/1.jpg" title="post sample">
                     </a>
                   </div>
                   <div class="postContents">
@@ -117,10 +104,14 @@
                       <i class="animated fa fa-newspaper-o"></i>
                     </a>
                     <h4 class="postTitle">
-                      <a href="single-blog-1.html" title="post sample">Blog Tiltle Shall Be Here !</a>
+                      <a href="single-blog-1.html" title="post sample">
+                        عنوان خبر مورد نظر!
+                      </a>
                     </h4>
-                    <p class="postDetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis.</p>
-                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">Read More</a>
+                    <p class="postDetails">
+                      توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... 
+                    </p>
+                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">ادمه خبر</a>
                   </div>
                 </div>
               </article><!-- end of post -->
@@ -132,14 +123,13 @@
                       <li class="postAuthor">
                         <div class="metaContent">
                           <i class="animated fa fa-user"></i>
-                          Author :
-                          <a href="#" title="author name">Begha</a>
+                          توسط :
+                          <a href="#" title="author name">Admin</a>
                         </div>
                       </li>
-
                     </ul>
                     <a href="single-blog-1.html" title="post sample">
-                      <img alt="post sample" src="images/blog/2.jpg" title="post sample">
+                      <img alt="post sample" src="./images/slider/1.jpg" title="post sample">
                     </a>
                   </div>
                   <div class="postContents">
@@ -147,10 +137,14 @@
                       <i class="animated fa fa-newspaper-o"></i>
                     </a>
                     <h4 class="postTitle">
-                      <a href="single-blog-1.html" title="post sample">Blog Tiltle Shall Be Here !</a>
+                      <a href="single-blog-1.html" title="post sample">
+                        عنوان خبر مورد نظر!
+                      </a>
                     </h4>
-                    <p class="postDetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis.</p>
-                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">Read More</a>
+                    <p class="postDetails">
+                      توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... 
+                    </p>
+                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">ادمه خبر</a>
                   </div>
                 </div>
               </article><!-- end of post -->
@@ -162,14 +156,13 @@
                       <li class="postAuthor">
                         <div class="metaContent">
                           <i class="animated fa fa-user"></i>
-                          Author :
-                          <a href="#" title="author name">Begha</a>
+                          توسط :
+                          <a href="#" title="author name">Admin</a>
                         </div>
                       </li>
-
                     </ul>
                     <a href="single-blog-1.html" title="post sample">
-                      <img alt="post sample" src="images/blog/3.jpg" title="post sample">
+                      <img alt="post sample" src="./images/slider/1.jpg" title="post sample">
                     </a>
                   </div>
                   <div class="postContents">
@@ -177,10 +170,14 @@
                       <i class="animated fa fa-newspaper-o"></i>
                     </a>
                     <h4 class="postTitle">
-                      <a href="single-blog-1.html" title="post sample">Blog Tiltle Shall Be Here !</a>
+                      <a href="single-blog-1.html" title="post sample">
+                        عنوان خبر مورد نظر!
+                      </a>
                     </h4>
-                    <p class="postDetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis.</p>
-                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">Read More</a>
+                    <p class="postDetails">
+                      توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... 
+                    </p>
+                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">ادمه خبر</a>
                   </div>
                 </div>
               </article><!-- end of post -->
@@ -192,14 +189,13 @@
                       <li class="postAuthor">
                         <div class="metaContent">
                           <i class="animated fa fa-user"></i>
-                          Author :
-                          <a href="#" title="author name">Begha</a>
+                          توسط :
+                          <a href="#" title="author name">Admin</a>
                         </div>
                       </li>
-
                     </ul>
                     <a href="single-blog-1.html" title="post sample">
-                      <img alt="post sample" src="images/blog/4.jpg" title="post sample">
+                      <img alt="post sample" src="./images/slider/1.jpg" title="post sample">
                     </a>
                   </div>
                   <div class="postContents">
@@ -207,10 +203,14 @@
                       <i class="animated fa fa-newspaper-o"></i>
                     </a>
                     <h4 class="postTitle">
-                      <a href="single-blog-1.html" title="post sample">Blog Tiltle Shall Be Here !</a>
+                      <a href="single-blog-1.html" title="post sample">
+                        عنوان خبر مورد نظر!
+                      </a>
                     </h4>
-                    <p class="postDetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis.</p>
-                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">Read More</a>
+                    <p class="postDetails">
+                      توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... 
+                    </p>
+                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">ادمه خبر</a>
                   </div>
                 </div>
               </article><!-- end of post -->
@@ -222,14 +222,13 @@
                       <li class="postAuthor">
                         <div class="metaContent">
                           <i class="animated fa fa-user"></i>
-                          Author :
-                          <a href="#" title="author name">Begha</a>
+                          توسط :
+                          <a href="#" title="author name">Admin</a>
                         </div>
                       </li>
-
                     </ul>
                     <a href="single-blog-1.html" title="post sample">
-                      <img alt="post sample" src="images/blog/5.jpg" title="post sample">
+                      <img alt="post sample" src="./images/slider/1.jpg" title="post sample">
                     </a>
                   </div>
                   <div class="postContents">
@@ -237,347 +236,20 @@
                       <i class="animated fa fa-newspaper-o"></i>
                     </a>
                     <h4 class="postTitle">
-                      <a href="single-blog-1.html" title="post sample">Blog Tiltle Shall Be Here !</a>
+                      <a href="single-blog-1.html" title="post sample">
+                        عنوان خبر مورد نظر!
+                      </a>
                     </h4>
-                    <p class="postDetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis.</p>
-                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">Read More</a>
-                  </div>
-                </div>
-              </article><!-- end of post -->
-
-              <article class="col-md-3 post">
-                <div class="postWrapper">
-                  <div class="postMedia">
-                    <ul class="postMeta clearfix">
-                      <li class="postAuthor">
-                        <div class="metaContent">
-                          <i class="animated fa fa-user"></i>
-                          Author :
-                          <a href="#" title="author name">Begha</a>
-                        </div>
-                      </li>
-
-                    </ul>
-                    <a href="single-blog-1.html" title="post sample">
-                      <img alt="post sample" src="images/blog/6.jpg" title="post sample">
-                    </a>
-                  </div>
-                  <div class="postContents">
-                    <a href="#" class="postIcon">
-                      <i class="animated fa fa-newspaper-o"></i>
-                    </a>
-                    <h4 class="postTitle">
-                      <a href="single-blog-1.html" title="post sample">Blog Tiltle Shall Be Here !</a>
-                    </h4>
-                    <p class="postDetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis.</p>
-                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">Read More</a>
-                  </div>
-                </div>
-              </article><!-- end of post -->
-
-              <article class="col-md-3 post">
-                <div class="postWrapper">
-                  <div class="postMedia">
-                    <ul class="postMeta clearfix">
-                      <li class="postAuthor">
-                        <div class="metaContent">
-                          <i class="animated fa fa-user"></i>
-                          Author :
-                          <a href="#" title="author name">Begha</a>
-                        </div>
-                      </li>
-
-                    </ul>
-                    <a href="single-blog-1.html" title="post sample">
-                      <img alt="post sample" src="images/blog/7.jpg" title="post sample">
-                    </a>
-                  </div>
-                  <div class="postContents">
-                    <a href="#" class="postIcon">
-                      <i class="animated fa fa-newspaper-o"></i>
-                    </a>
-                    <h4 class="postTitle">
-                      <a href="single-blog-1.html" title="post sample">Blog Tiltle Shall Be Here !</a>
-                    </h4>
-                    <p class="postDetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis.</p>
-                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">Read More</a>
-                  </div>
-                </div>
-              </article><!-- end of post -->
-
-              <article class="col-md-3 post">
-                <div class="postWrapper">
-                  <div class="postMedia">
-                    <ul class="postMeta clearfix">
-                      <li class="postAuthor">
-                        <div class="metaContent">
-                          <i class="animated fa fa-user"></i>
-                          Author :
-                          <a href="#" title="author name">Begha</a>
-                        </div>
-                      </li>
-
-                    </ul>
-                    <a href="single-blog-1.html" title="post sample">
-                      <img alt="post sample" src="images/blog/5.jpg" title="post sample">
-                    </a>
-                  </div>
-                  <div class="postContents">
-                    <a href="#" class="postIcon">
-                      <i class="animated fa fa-newspaper-o"></i>
-                    </a>
-                    <h4 class="postTitle">
-                      <a href="single-blog-1.html" title="post sample">Blog Tiltle Shall Be Here !</a>
-                    </h4>
-                    <p class="postDetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis.</p>
-                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">Read More</a>
-                  </div>
-                </div>
-              </article><!-- end of post -->
-              
-              <article class="col-md-3 post">
-                <div class="postWrapper">
-                  <div class="postMedia">
-                    <ul class="postMeta clearfix">
-                      <li class="postAuthor">
-                        <div class="metaContent">
-                          <i class="animated fa fa-user"></i>
-                          Author :
-                          <a href="#" title="author name">Begha</a>
-                        </div>
-                      </li>
-
-                    </ul>
-                    <a href="single-blog-1.html" title="post sample">
-                      <img alt="post sample" src="images/blog/1.jpg" title="post sample">
-                    </a>
-                  </div>
-                  <div class="postContents">
-                    <a href="#" class="postIcon">
-                      <i class="animated fa fa-newspaper-o"></i>
-                    </a>
-                    <h4 class="postTitle">
-                      <a href="single-blog-1.html" title="post sample">Blog Tiltle Shall Be Here !</a>
-                    </h4>
-                    <p class="postDetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis.</p>
-                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">Read More</a>
-                  </div>
-                </div>
-              </article><!-- end of post -->
-
-              <article class="col-md-3 post">
-                <div class="postWrapper">
-                  <div class="postMedia">
-                    <ul class="postMeta clearfix">
-                      <li class="postAuthor">
-                        <div class="metaContent">
-                          <i class="animated fa fa-user"></i>
-                          Author :
-                          <a href="#" title="author name">Begha</a>
-                        </div>
-                      </li>
-
-                    </ul>
-                    <a href="single-blog-1.html" title="post sample">
-                      <img alt="post sample" src="images/blog/4.jpg" title="post sample">
-                    </a>
-                  </div>
-                  <div class="postContents">
-                    <a href="#" class="postIcon">
-                      <i class="animated fa fa-newspaper-o"></i>
-                    </a>
-                    <h4 class="postTitle">
-                      <a href="single-blog-1.html" title="post sample">Blog Tiltle Shall Be Here !</a>
-                    </h4>
-                    <p class="postDetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis.</p>
-                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">Read More</a>
-                  </div>
-                </div>
-              </article><!-- end of post -->
-
-              <article class="col-md-3 post">
-                <div class="postWrapper">
-                  <div class="postMedia">
-                    <ul class="postMeta clearfix">
-                      <li class="postAuthor">
-                        <div class="metaContent">
-                          <i class="animated fa fa-user"></i>
-                          Author :
-                          <a href="#" title="author name">Begha</a>
-                        </div>
-                      </li>
-
-                    </ul>
-                    <a href="single-blog-1.html" title="post sample">
-                      <img alt="post sample" src="images/blog/5.jpg" title="post sample">
-                    </a>
-                  </div>
-                  <div class="postContents">
-                    <a href="#" class="postIcon">
-                      <i class="animated fa fa-newspaper-o"></i>
-                    </a>
-                    <h4 class="postTitle">
-                      <a href="single-blog-1.html" title="post sample">Blog Tiltle Shall Be Here !</a>
-                    </h4>
-                    <p class="postDetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis.</p>
-                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">Read More</a>
-                  </div>
-                </div>
-              </article><!-- end of post -->
-
-              <article class="col-md-3 post">
-                <div class="postWrapper">
-                  <div class="postMedia">
-                    <ul class="postMeta clearfix">
-                      <li class="postAuthor">
-                        <div class="metaContent">
-                          <i class="animated fa fa-user"></i>
-                          Author :
-                          <a href="#" title="author name">Begha</a>
-                        </div>
-                      </li>
-
-                    </ul>
-                    <a href="single-blog-1.html" title="post sample">
-                      <img alt="post sample" src="images/blog/6.jpg" title="post sample">
-                    </a>
-                  </div>
-                  <div class="postContents">
-                    <a href="#" class="postIcon">
-                      <i class="animated fa fa-newspaper-o"></i>
-                    </a>
-                    <h4 class="postTitle">
-                      <a href="single-blog-1.html" title="post sample">Blog Tiltle Shall Be Here !</a>
-                    </h4>
-                    <p class="postDetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis.</p>
-                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">Read More</a>
-                  </div>
-                </div>
-              </article><!-- end of post -->
-
-              <article class="col-md-3 post">
-                <div class="postWrapper">
-                  <div class="postMedia">
-                    <ul class="postMeta clearfix">
-                      <li class="postAuthor">
-                        <div class="metaContent">
-                          <i class="animated fa fa-user"></i>
-                          Author :
-                          <a href="#" title="author name">Begha</a>
-                        </div>
-                      </li>
-
-                    </ul>
-                    <a href="single-blog-1.html" title="post sample">
-                      <img alt="post sample" src="images/blog/7.jpg" title="post sample">
-                    </a>
-                  </div>
-                  <div class="postContents">
-                    <a href="#" class="postIcon">
-                      <i class="animated fa fa-newspaper-o"></i>
-                    </a>
-                    <h4 class="postTitle">
-                      <a href="single-blog-1.html" title="post sample">Blog Tiltle Shall Be Here !</a>
-                    </h4>
-                    <p class="postDetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis.</p>
-                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">Read More</a>
-                  </div>
-                </div>
-              </article><!-- end of post -->
-
-              <article class="col-md-3 post">
-                <div class="postWrapper">
-                  <div class="postMedia">
-                    <ul class="postMeta clearfix">
-                      <li class="postAuthor">
-                        <div class="metaContent">
-                          <i class="animated fa fa-user"></i>
-                          Author :
-                          <a href="#" title="author name">Begha</a>
-                        </div>
-                      </li>
-
-                    </ul>
-                    <a href="single-blog-1.html" title="post sample">
-                      <img alt="post sample" src="images/blog/1.jpg" title="post sample">
-                    </a>
-                  </div>
-                  <div class="postContents">
-                    <a href="#" class="postIcon">
-                      <i class="animated fa fa-newspaper-o"></i>
-                    </a>
-                    <h4 class="postTitle">
-                      <a href="single-blog-1.html" title="post sample">Blog Tiltle Shall Be Here !</a>
-                    </h4>
-                    <p class="postDetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis.</p>
-                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">Read More</a>
-                  </div>
-                </div>
-              </article><!-- end of post -->
-
-              <article class="col-md-3 post">
-                <div class="postWrapper">
-                  <div class="postMedia">
-                    <ul class="postMeta clearfix">
-                      <li class="postAuthor">
-                        <div class="metaContent">
-                          <i class="animated fa fa-user"></i>
-                          Author :
-                          <a href="#" title="author name">Begha</a>
-                        </div>
-                      </li>
-
-                    </ul>
-                    <a href="single-blog-1.html" title="post sample">
-                      <img alt="post sample" src="images/blog/2.jpg" title="post sample">
-                    </a>
-                  </div>
-                  <div class="postContents">
-                    <a href="#" class="postIcon">
-                      <i class="animated fa fa-newspaper-o"></i>
-                    </a>
-                    <h4 class="postTitle">
-                      <a href="single-blog-1.html" title="post sample">Blog Tiltle Shall Be Here !</a>
-                    </h4>
-                    <p class="postDetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis.</p>
-                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">Read More</a>
-                  </div>
-                </div>
-              </article><!-- end of post -->
-
-              <article class="col-md-3 post">
-                <div class="postWrapper">
-                  <div class="postMedia">
-                    <ul class="postMeta clearfix">
-                      <li class="postAuthor">
-                        <div class="metaContent">
-                          <i class="animated fa fa-user"></i>
-                          Author :
-                          <a href="#" title="author name">Begha</a>
-                        </div>
-                      </li>
-
-                    </ul>
-                    <a href="single-blog-1.html" title="post sample">
-                      <img alt="post sample" src="images/blog/3.jpg" title="post sample">
-                    </a>
-                  </div>
-                  <div class="postContents">
-                    <a href="#" class="postIcon">
-                      <i class="animated fa fa-newspaper-o"></i>
-                    </a>
-                    <h4 class="postTitle">
-                      <a href="single-blog-1.html" title="post sample">Blog Tiltle Shall Be Here !</a>
-                    </h4>
-                    <p class="postDetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis.</p>
-                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">Read More</a>
+                    <p class="postDetails">
+                      توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... 
+                    </p>
+                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">ادمه خبر</a>
                   </div>
                 </div>
               </article><!-- end of post -->
 
 
             </div><!-- end of row -->
-
             <ul class="pagination">
               <li><a href="#"><i class="animated fa fa-angle-left"></i></a></li>
               <li><a href="#">1</a></li>
