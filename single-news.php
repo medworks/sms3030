@@ -132,18 +132,7 @@ $snhtml.=<<<cd
               </div><!-- end of col-md-8 -->
 
               <aside class="col-md-4 sidebar">
-                <div class="widget searchWidget">
-                  <div class="widgetBody">
-                    <form method="GET" class="sideSearch">
-                      <ul class="clearfix">
-                        <li>
-                          <input type="search" value="جستجو" onblur="if(this.value=='')this.value='search here'" onfocus="if(this.value=='search here')this.value=''" name="s" id="sideSearch" class="sideSearch rtl" />
-                        </li>
-                        <li><button type="submit"><i class="animated fa fa-search"></i></button></li>
-                      </ul>
-                    </form><!-- end of side search -->
-                  </div><!-- end of widget body -->
-                </div><!-- end of widget --><!-- end of search widget -->
+              
 
                 <div class="widget categoriesWidget">
                   <h5 class="widgetHeader">گروه ها</h5><!-- end of widget header -->
