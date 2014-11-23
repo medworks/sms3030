@@ -1,7 +1,35 @@
 <?php
-  include_once('./inc/header.php');
-?>
+	include_once("config.php");
+	include_once("classes/functions.php");
+  	include_once("classes/security.php");
+  	include_once("classes/database.php");	
+    include_once("./lib/persiandate.php");
+	include_once("./lib/Zebra_Pagination.php"); 
 
+	//error_reporting(E_ALL);
+	//ini_set('display_errors', 1);
+	
+	$db = Database::GetDatabase();
+	
+	$records_per_page = 10;
+	$pagination = new Zebra_Pagination();
+
+	$pagination->navigation_position("right");
+
+	$reccount = $db->CountAll("news");
+	$pagination->records($reccount); 
+	
+    $pagination->records_per_page($records_per_page);	
+
+$rows = $db->SelectAll(
+				"news",
+				"*",
+				NULL,
+				"id ASC",
+				($pagination->get_page() - 1) * $records_per_page,
+				$records_per_page);	
+	
+$nhtml1.=<<<cd
 <body id="top" class="page body-boxed-2">
 <!--[if lt IE 9]>
   <p class="browsehappy">
@@ -50,9 +78,9 @@
       </div><!-- end of container -->
     </div><!-- end of top menu -->
     <!-- Header -->
-    <?php
-      include_once('./inc/menu.php')
-    ?>
+cd;
+
+$nhtml2.=<<<cd
     <!-- end of header -->
     <!-- Page Info -->
     <div class="pageInfo">
@@ -76,64 +104,60 @@
     </div><!-- end of page info -->
   </section>
   <!-- end of Page Header -->
+  //menu
   <!-- blog -->
-  <section class="blog section mainSection scrollAnchor lightSection" id="blog">
+	 <section class="blog section mainSection scrollAnchor lightSection" id="blog">
         <div class="sectionWrapper">
           <div class="container blogColmn4">
             <div class="row">
+cd;
 
+for($i = 0; $i < Count($rows); $i++)
+{
+$nhtml2.=<<<cd
 
               <article class="col-md-3 post">
                 <div class="postWrapper">
                   <div class="postMedia">
-                    <ul class="postMeta clearfix">
-                      <li class="postAuthor">
-                        <div class="metaContent">
-                          <i class="animated fa fa-user"></i>
-                          توسط :
-                          <a href="#" title="author name">Admin</a>
-                        </div>
-                      </li>
-                    </ul>
-                    <a href="single-blog-1.html" title="">
-                      <img alt="post sample" src="./images/slider/1.jpg" title="">
+                    
+                    <a href="single-news{$rows[$i]['id']}.html" title="{$rows[$i]['subject']}">
+                      <img class=" morph" src="manager/img.php?did={$rows[$i]['id']}&tid=1" />
                     </a>
                   </div>
                   <div class="postContents">
-                    <a href="#" class="postIcon">
+                    <a href="single-news{$rows[$i]['id']}.html" class="postIcon">
                       <i class="animated fa fa-newspaper-o"></i>
                     </a>
                     <h4 class="postTitle">
-                      <a href="single-blog-1.html" title="post sample">
-                        عنوان خبر مورد نظر!
+                      <a href="single-news{$rows[$i]['id']}.html" title="{$rows[$i]['subject']}">
+                        {$rows[$i]['subject']}
                       </a>
                     </h4>
                     <p class="postDetails">
-                      توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... توضیحات خبر مورد نظر... 
+                      {$rows[$i]['text']}
                     </p>
-                    <a class="readMore bordered generalLink" href="single-blog-1.html" title="read more">ادمه خبر</a>
+                    <a class="readMore bordered generalLink" href="single-news{$rows[$i]['id']}.html" title="read more">ادمه خبر</a>
                   </div>
                 </div>
               </article><!-- end of post -->
-
-
+cd;
+}
+$pgcodes = $pagination->render(true);
+$nhtml2.=<<<cd
             </div><!-- end of row -->
-            <ul class="pagination">
-              <li><a href="#"><i class="animated fa fa-angle-left"></i></a></li>
-              <li><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#"><i class="animated fa fa-angle-right"></i></a></li>
-            </ul>
-
+			{$pgcodes}
             <div class="clearfix"></div>
 
           </div><!-- end of container -->
         </div><!-- end of section wrapper -->
       </section>
       <!-- END blog -->
-
-<?php
+	  
+cd;
+  include_once('./inc/header.php');
+  echo $nhtml1;
+  include_once('./inc/menu.php');
+  echo $nhtml2;
   include_once('./inc/clients.php');
   include_once('./inc/footer.php');
 ?>

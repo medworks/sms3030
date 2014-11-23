@@ -53,6 +53,7 @@
 
 <!-- BootStrap JavaScript ================================================== -->
 <script src="./js/bootstrap.js" type="text/javascript"></script>  
+<script type="text/javascript" src="./js/zebra_pagination.js"></script>
   
 </body>
 </html>
