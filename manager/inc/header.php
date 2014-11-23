@@ -80,8 +80,8 @@
     <div class="container-fluid">
         <!--Logo text start-->
         <div class="header-logo">
-            <a href="./" title="کلینیک رهیاب">
-                <h1>کلینیک رهیاب</h1>
+            <a href="./" title="اس ام اس 3030">
+                <h1>پنل ادمین</h1>
             </a>
         </div>
         <!--Logo text End-->
@@ -130,8 +130,8 @@
         <!--Left navigation user details end-->
         <!--Phone Navigation Menu icon start-->
         <div class="phone-nav-box visible-xs">
-            <a class="phone-logo" href="./" title="کلینیک رهیاب">
-                <h1>کلینیک رهیاب</h1>
+            <a class="phone-logo" href="./" title="اس ام اس 3030">
+                <h1>اس ام اس 3030</h1>
             </a>
             <a class="phone-nav-control" href="javascript:void(0)">
                 <span class="fa fa-bars"></span>
@@ -157,7 +157,7 @@
                     <li><a href="mail.html">Inbox</a></li>
                     <li><a href="compose-mail.html">Compose Mail</a></li>
                 </ul>
-            </li> -->
+            </li>
             <li>
                 <a href="categories.php?act=new">
                     <i class="fa fa-users"></i>
@@ -174,6 +174,7 @@
                     <li><a href="submenu.php?act=new">تعریف زیر منو</a></li>
                 </ul>
             </li>
+			
             <li>
                 <a href="#">
                     <i class="fa fa-pencil"></i>
@@ -184,6 +185,7 @@
                     <li><a href="editdata.php?act=edit">ویرایش اطلاعات</a></li>
                 </ul>
             </li>
+			-->
             <li>
                 <a href="#">
                     <i class="fa fa-bullhorn"></i>
