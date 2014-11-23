@@ -25,13 +25,16 @@
                 <a href="news.php">اخبار</a>
               </li>
               <li>
-                <a href="#">سامانه پیامک</a>
+                <a href="javascript:void(0);">سامانه پیامک</a>
                 <ul class="dropDown sub-menu">
                   <li>
-                    <a href="#">ورود به سامانه</a>
+                    <a href="sms.sms3030.ir">ورود به سامانه</a>
                   </li>
                   <li>
-                    <a href="#">تعرفه پیامک</a>
+                    <a href="sms.sms3030.ir">ثبت نام پنل</a>
+                  </li>
+                  <li>
+                    <a href="plans.php">تعرفه پیامک</a>
                   </li>
                   <li>
                     <a href="#">تعرفه خطوط</a>
