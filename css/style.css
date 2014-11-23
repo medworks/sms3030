@@ -4028,6 +4028,9 @@ img.fnone {
   -khtml-border-radius: 5px;
   border-radius: 5px;
   text-align: center;
+  direction: rtl;
+  font-family: 'bmitra';
+  font-size: 15px;
 }
 .post .postMeta li .metaContent:before {
   height: 100%;
@@ -4272,8 +4275,9 @@ img.fnone {
 }
 .widget .widgetHeader {
   color: #21242e;
-  font-size: 17px;
+  font-size: 19px;
   height: 35px;
+  font-weight: normal;
   border-bottom: 2px solid #ff6b6b;
 }
 .sidebar .department {
@@ -4338,10 +4342,10 @@ img.fnone {
 }
 /* sideSearch */
 .sideSearch ul li {
-  float: left;
+  float: right;
 }
 .sideSearch ul li:last-child {
-  padding-left: 10px;
+  padding-right: 10px;
   width: 27%;
 }
 .sideSearch ul li:first-child {
@@ -4381,7 +4385,7 @@ img.fnone {
 .list li span {
   color: #7a7c82;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 16px;
 }
 .list li a:hover {
   color: #ff6b6b;
@@ -4391,7 +4395,8 @@ img.fnone {
 }
 /* ticker */
 .tickerControl {
-  float: right;
+  float: left;
+  direction: ltr;
 }
 .tickerControl li {
   float: left;
@@ -4436,12 +4441,12 @@ img.fnone {
 }
 #ticker .postContents {
   padding-top: 0;
-  text-align: left;
+  text-align: right;
 }
 #ticker .postTitle {
   font-weight: 700;
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 17px;
 }
 #ticker .postTitle a {
   color: #ff6b6b;
@@ -4466,7 +4471,7 @@ img.fnone {
   width: 100%;
 }
 .singlePostPage .singlePost .postMeta li {
-  float: none !important;
+  /*float: none !important;*/
   display: inline-block;
   margin: 0 3px !important;
 }
