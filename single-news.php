@@ -1,7 +1,20 @@
 <?php
-  include_once('./inc/header.php');
-?>
-
+    include_once("config.php");
+	include_once("classes/functions.php");
+  	include_once("classes/messages.php");
+  	include_once("classes/session.php");	
+  	include_once("classes/security.php");
+  	include_once("classes/database.php");	
+	include_once("classes/login.php");
+    include_once("lib/persiandate.php"); 
+    //error_reporting(E_ALL);
+	//ini_set('display_errors', 1);
+	
+	$db = Database::GetDatabase();
+	
+	$news = $db->Select("news","*","id={$_GET['id']}");
+	$news["regdate"] = ToJalali($news["regdate"],"Y/m/d H:i");
+$snhtml.=<<<cd
 <body id="top" class="page body-boxed-2">
 <!--[if lt IE 9]>
   <p class="browsehappy">
@@ -88,7 +101,7 @@
                         <div>
                           <div>
                             <div>
-                              <img alt="post sample" src="images/slider/2.jpg" title="" width="748" height="350">
+							<img class=" morph" src="manager/img.php?did={$news['id']}&tid=1" width="748" height="350" />	                              
                             </div>
                             
                           </div>
@@ -98,21 +111,15 @@
                         <a href="#" class="postIcon">
                         <i class="animated fa fa-newspaper-o"></i>
                       </a>
-                        <h4 class="postTitle">عنوان خبر!</h4>
+                        <h4 class="postTitle">{$news["subject"]}</h4>
                         <p class="postDetails">
-                          توضیحات خبر...  توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... 
+                          {$news["text"]}
                         </p>
                         <ul class="postMeta clearfix">
                           <li class="postDate">
                             <div class="metaContent">
                               <i class="animated fa fa-clock-o"></i>
-                              تاریخ: 15 فروردین 1393
-                            </div>
-                          </li>
-                          <li class="postAuthor">
-                            <div class="metaContent">
-                              <i class="animated fa fa-user"></i>
-                              توسط: Admin
+                              {$news["regdate"]}
                             </div>
                           </li>
                         </ul>
@@ -230,8 +237,10 @@
           </div><!-- end of container -->
         </div><!-- end of section wrapper -->
       </section>
+cd;
 
-<?php
+  include_once('./inc/header.php');
+  echo $snhtml;
   include_once('./inc/clients.php');
   include_once('./inc/footer.php');
 ?>
