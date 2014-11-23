@@ -101,8 +101,6 @@
 		//header('location:dataentry.php?act=new&msg=1');
 	}
 	
-	$rbmchecked = "";
-	$rbgchecked = "";
 	if ($_GET['act']=="new")
 	{
 		$insertoredit = "

@@ -58,6 +58,7 @@
 <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script> -->
 <!-- <link href="./css/blue.css" media="screen" rel="stylesheet" type="text/css" /> -->
 <link href="./css/red.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="./css/zebra_pagination.css" rel="stylesheet" />
   
 </head>
 
