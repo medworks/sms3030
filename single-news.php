@@ -14,7 +14,7 @@
 	
 	$news = $db->Select("news","*","id={$_GET['id']}");
 	$news["regdate"] = ToJalali($news["regdate"],"Y/m/d H:i");
-$snhtml.=<<<cd
+$snhtml1.=<<<cd
 <body id="top" class="page body-boxed-2">
 <!--[if lt IE 9]>
   <p class="browsehappy">
@@ -63,9 +63,8 @@ $snhtml.=<<<cd
       </div><!-- end of container -->
     </div><!-- end of top menu -->
     <!-- Header -->
-    <?php
-      include_once('./inc/menu.php')
-    ?>
+cd;
+$snhtml2.=<<<cd
     <!-- end of header -->
     <!-- Page Info -->
     <div class="pageInfo">
@@ -132,22 +131,7 @@ $snhtml.=<<<cd
               </div><!-- end of col-md-8 -->
 
               <aside class="col-md-4 sidebar">
-              
-
-                <div class="widget categoriesWidget">
-                  <h5 class="widgetHeader">گروه ها</h5><!-- end of widget header -->
-                  <div class="widgetBody">
-                    <ul class="list rtl">
-                      <li><a href="#" title="">عنوان گروه ها</a></li>
-                      <li><a href="#" title="">عنوان گروه ها</a></li>
-                      <li><a href="#" title="">عنوان گروه ها</a></li>
-                      <li><a href="#" title="">عنوان گروه ها</a></li>
-                      <li><a href="#" title="">عنوان گروه ها</a></li>
-                    </ul>
-                  </div><!-- end of widget body -->
-                </div><!-- end of widget --><!-- end of categories Widget -->
-
-                <div class="widget">
+               <div class="widget">
                   <h5 class="widgetHeader clearfix">
                     آخرین خبرها
                     <span class="tickerControl">
@@ -229,7 +213,9 @@ $snhtml.=<<<cd
 cd;
 
   include_once('./inc/header.php');
-  echo $snhtml;
+  echo $snhtml1;
+  include_once('./inc/menu.php');
+  echo $snhtml2;
   include_once('./inc/clients.php');
   include_once('./inc/footer.php');
 ?>
