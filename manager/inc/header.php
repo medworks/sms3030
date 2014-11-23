@@ -197,6 +197,7 @@
                     <li><a href="editnews.php?act=edit">ویرایش خبر</a></li>
                 </ul>
             </li>
+			<!---
             <li>
                 <a href="#">
                     <i class="fa fa-table"></i>
@@ -207,6 +208,7 @@
                     <li><a href="editarticle.php?act=edit">ویرایش مقالات</a></li>
                 </ul>
             </li>
+			
             <li>
                 <a href="#">
                     <i class="fa fa-image"></i>
@@ -218,6 +220,7 @@
                     <li><a href="editgallery.php?act=new">ویرایش گالری</a></li>
                 </ul>
             </li>
+			-->
             <li>
                 <a href="healthgroup.php?act=new">
                     <i class="fa fa-cloud-upload"></i>
