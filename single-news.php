@@ -100,7 +100,7 @@ $snhtml2.=<<<cd
                         <div>
                           <div>
                             <div>
-							<img class=" morph" src="manager/img.php?did={$news['id']}&tid=1" width="748" height="350" />	                              
+							<img class=" morph" src="manager/img.php?did={$news['id']}&tid=1" width="748" height="350" />
                             </div>
                             
                           </div>

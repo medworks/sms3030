@@ -1,7 +1,12 @@
 <?php
-  include_once('./inc/header.php');
-?>
+	include_once("config.php");
+	include_once("classes/functions.php");
+  	include_once("classes/security.php");
+  	include_once("classes/database.php");	
+    include_once("./lib/persiandate.php");
+	include_once("./lib/Zebra_Pagination.php");
 
+$slide.=<<<cd
 <body id="top" class="style-4 body-boxed-2">
 <!--[if lt IE 9]>
   <p class="browsehappy">
@@ -100,10 +105,13 @@
     </div><!-- end of main slider -->
   </section>
   <!-- end of slider -->
-  <?php
-    include_once('./inc/menu.php');
-    include_once('./inc/plans.php');
-  ?>
+cd;
+
+$db = Database::GetDatabase();
+		
+$news = $db->SelectAll("news","*",NULL,"id DESC","0","2");	
+
+$html.=<<<cd
   <!-- Blog -->
   <section class="blog section mainSection scrollAnchor lightSection" id="blog">
     <div class="sectionWrapper">
@@ -118,6 +126,11 @@
         </div><!-- end of row -->
         <div class="row">
           <div class="grid-sizer"></div><!-- end of grid sizer -->
+cd;
+for($i = 0; $i < Count($news); $i++)
+{
+$news[$i]["regdate"] = ToJalali($news["regdate"],"Y/m/d H:i");	
+$html.=<<<cd
           <article class="col-md-4 post">
             <div class="postWrapper">
               <div class="postMedia">
@@ -125,107 +138,40 @@
                   <li class="postDate">
                     <div class="metaContent">
                       <i class="animated fa fa-clock-o"></i>
-                      تاریخ : 29 فرودین 1363
+                      {$news[$i]["regdate"]}
                     </div>
-                  </li>
-                  <li class="postAuthor">
-                    <div class="metaContent">
-                      <i class="animated fa fa-user"></i>
-                      توسط :
-                      <a href="#" title="author name">اَدمین</a>
-                    </div>
-                  </li>
+                  </li>                  
                 </ul>
-                <a href="#" title="post sample">
-                  <img alt="post sample" src="images/slider/1.jpg" title="post sample">
+                <a href="manager/img.php?did={$news[$i]['id']}&tid=1" title="post sample">
+                  <img  src="manager/img.php?did={$news[$i]['id']}&tid=1"/>
                 </a>
               </div>
               <div class="postContents">
-                <a href="#" class="postIcon">
+                <a href="single-news{$news[$i]['id']}.html" class="postIcon">
                   <i class="animated fa fa-newspaper-o"></i>
                 </a>
                 <h4 class="postTitle">
-                  <a href="#" title="post sample">خبر سوم</a>
+                  <a href="single-news{$news[$i]['id']}.html" title="post sample">{$news[$i]["subject"]}</a>
                 </h4>
-                <p class="postDetails">توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... </p>
-                <a class="readMore bordered generalLink" href="#" title="read more">ادامه خبر</a>
+                <p class="postDetails">{$news[$i]["text"]}</p>
+                <a class="readMore bordered generalLink" href="single-news{$news[$i]['id']}.html" title="read more">ادامه خبر</a>
               </div>
             </div>
           </article><!-- end of post -->
-          <article class="col-md-4 post">
-            <div class="postWrapper">
-              <div class="postMedia">
-                <ul class="postMeta clearfix">
-                  <li class="postDate">
-                    <div class="metaContent">
-                      <i class="animated fa fa-clock-o"></i>
-                      تاریخ : 29 فرودین 1363
-                    </div>
-                  </li>
-                  <li class="postAuthor">
-                    <div class="metaContent">
-                      <i class="animated fa fa-user"></i>
-                      توسط :
-                      <a href="#" title="author name">اَدمین</a>
-                    </div>
-                  </li>
-                </ul>
-                <a href="#" title="post sample">
-                  <img alt="post sample" src="images/slider/2.jpg" title="post sample">
-                </a>
-              </div>
-              <div class="postContents">
-                <a href="#" class="postIcon">
-                  <i class="animated fa fa-newspaper-o"></i>
-                </a>
-                <h4 class="postTitle">
-                  <a href="#" title="post sample">خبر دوم</a>
-                </h4>
-                <p class="postDetails">توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... </p>
-                <a class="readMore bordered generalLink" href="#" title="read more">ادامه خبر</a>
-              </div>
-            </div>
-          </article><!-- end of post -->
-          <article class="col-md-4 post">
-            <div class="postWrapper">
-              <div class="postMedia">
-                <ul class="postMeta clearfix">
-                  <li class="postDate">
-                    <div class="metaContent">
-                      <i class="animated fa fa-clock-o"></i>
-                      تاریخ : 29 فرودین 1363
-                    </div>
-                  </li>
-                  <li class="postAuthor">
-                    <div class="metaContent">
-                      <i class="animated fa fa-user"></i>
-                      توسط :
-                      <a href="#" title="author name">اَدمین</a>
-                    </div>
-                  </li>
-                </ul>
-                <a href="#" title="post sample">
-                  <img alt="post sample" src="images/slider/3.jpg" title="post sample">
-                </a>
-              </div>
-              <div class="postContents">
-                <a href="#" class="postIcon">
-                  <i class="animated fa fa-newspaper-o"></i>
-                </a>
-                <h4 class="postTitle">
-                  <a href="#" title="post sample">خبر اول</a>
-                </h4>
-                <p class="postDetails">توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... توضیحات خبر... </p>
-                <a class="readMore bordered generalLink" href="#" title="read more">ادامه خبر</a>
-              </div>
-            </div>
-          </article><!-- end of post -->
+cd;
+}
+$html.=<<<cd
         </div><!-- end of row -->
       </div><!-- end of container -->
     </div><!-- end of section wrapper -->
   </section><!-- end blog section -->
+cd;
 
-<?php
+  include_once('./inc/header.php');
+  echo $slide;
+  include_once('./inc/menu.php');
+  include_once('./inc/plans.php');
+  echo $html;
   include_once('./inc/clients.php');
   include_once('./inc/footer.php');
 ?>
