@@ -181,7 +181,7 @@
                 </a>
                 <ul>
                     <li><a href="addparam.php">تعریف پارامترها</a></li>
-                    <li><a href="addplan.php">تعریف پلن ها</a></li>
+                    <li><a href="addplan.php">تعریف پلن</a></li>
                     <li><a href="editplan.php">ویرایش پلن ها</a></li>
                 </ul>
             </li>

@@ -75,23 +75,26 @@ $html=<<<cd
                     </div>
                 </div>
                 <!-- Main Content Element  Start-->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">تعریف پارامتر</h3>
-                            </div>
-                            <div class="panel-body">
-                                <form name="frmcat" action="" method="post" class="form-inline ls_form" role="form">
+                <form action="" method="post" id="frmmenu" class="form-inline ls_form" role="form">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">تعریف پارامتر</h3>
+                                </div>
+                                <div class="panel-body">
                                     <div class="form-group">
-                                        <input id="edtgroup" name="edtgroup" type="text" class="form-control" placeholder="پارامتر" value="{$row['name']}"/>
+                                        <input id="edtname" name="edtname" type="text" class="form-control" placeholder="پارامتر" value="{$row['name']}"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="edtpos" name="edtpos"  type="text" class="form-control" placeholder="ترتیب" value="{$row['pos']}" />
                                     </div>
                                     {$insertoredit}
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+				</form>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="panel panel-default">
