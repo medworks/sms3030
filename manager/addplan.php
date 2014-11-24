@@ -249,6 +249,16 @@ $html=<<<cd
                                         <input type="checkbox" name="check_out">
                                         <i></i> پلن پیشنهادی
                                     </label>
+                                    <div class="radio-inline">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="optionsRadios2" id="optionsRadios3" value="option3" checked="">
+                                            کاربری
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="optionsRadios2" id="optionsRadios4" value="option4">
+                                            نمایندگی
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
