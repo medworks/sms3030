@@ -19,10 +19,10 @@
                 <a href="./" class="active">صفحه اصلی</a>
               </li>
               <li>
-                <a href="#">درباره ما</a>
+                <a href="about-us.html">درباره ما</a>
               </li>
               <li>
-                <a href="news.php">اخبار</a>
+                <a href="news.html">اخبار</a>
               </li>
               <li>
                 <a href="javascript:void(0);">سامانه پیامک</a>
@@ -34,7 +34,7 @@
                     <a href="sms.sms3030.ir">ثبت نام پنل</a>
                   </li>
                   <li>
-                    <a href="plans.php">تعرفه پیامک</a>
+                    <a href="plans.html">تعرفه پیامک</a>
                   </li>
                   <li>
                     <a href="#">تعرفه خطوط</a>
