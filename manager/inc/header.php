@@ -95,11 +95,11 @@
             <!--Collapse navigation menu icon end -->
             <!--Top Navigation Start-->
             <ul>
-                <li>
+                <!-- <li>
                     <a href="lock-screen.html">
                         <i class="fa fa-lock"></i>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="admin.php?act=logout">
                         <i class="fa fa-power-off"></i>
@@ -139,7 +139,7 @@
             <div class="clearfix"></div>
         </div>
         <!--Phone Navigation Menu icon start-->
-        <!--Left navigation start-->
+       <!--Left navigation start-->
         <ul class="mainNav">
             <li>
                 <a href="admin.php">
@@ -173,19 +173,28 @@
                     <li><a href="menu.php?act=new">تعریف منو</a></li>
                     <li><a href="submenu.php?act=new">تعریف زیر منو</a></li>
                 </ul>
-            </li>
-			
+            </li> -->
             <li>
                 <a href="#">
                     <i class="fa fa-pencil"></i>
-                    <span>ورود اطلاعات</span>
+                    <span>تعریف پلن ها</span>
                 </a>
                 <ul>
-                    <li><a href="dataentry.php?act=new">ثبت اطلاعات</a></li>
-                    <li><a href="editdata.php?act=edit">ویرایش اطلاعات</a></li>
+                    <li><a href="addparam.php">تعریف پارامترها</a></li>
+                    <li><a href="addplan.php">تعریف پلن ها</a></li>
+                    <li><a href="editplan.php">ویرایش پلن ها</a></li>
                 </ul>
             </li>
-			-->
+            <li>
+                <a href="#">
+                    <i class="fa fa-camera"></i>
+                    <span>اسلاید شو</span>
+                </a>
+                <ul>
+                    <li><a href="addslide.php">ثبت عکس</a></li>
+                    <li><a href="editslide.php">ویرایش عکسها</a></li>
+                </ul>
+            </li>
             <li>
                 <a href="#">
                     <i class="fa fa-bullhorn"></i>
@@ -197,8 +206,7 @@
                     <li><a href="editnews.php?act=edit">ویرایش خبر</a></li>
                 </ul>
             </li>
-			<!---
-            <li>
+            <!-- <li>
                 <a href="#">
                     <i class="fa fa-table"></i>
                     <span>مقالات</span>
@@ -208,7 +216,6 @@
                     <li><a href="editarticle.php?act=edit">ویرایش مقالات</a></li>
                 </ul>
             </li>
-			
             <li>
                 <a href="#">
                     <i class="fa fa-image"></i>
@@ -219,11 +226,10 @@
                     <li><a href="addgallery.php?act=new">تعریف گالری</a></li>
                     <li><a href="editgallery.php?act=new">ویرایش گالری</a></li>
                 </ul>
-            </li>
-			-->
+            </li> 
             <li>
                 <a href="healthgroup.php?act=new">
-                    <i class="fa fa-cloud-upload"></i>
+                    <i class="fa fa-briefcase"></i>
                     <span>گروه درمانی</span>
                 </a>
             </li>
@@ -234,18 +240,40 @@
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <i class="fa fa-file-picture-o"></i>
-                    <span>کلاسها و دوره های درمانی</span>
-                </a>
-            </li>
-            <li>
                 <a href="exammgr.php?act=new">
                     <i class="fa fa-file-o"></i>
                     <span>آزمون های روانشناختی</span>
                 </a>
             </li>
             <li>
+                <a href="#">
+                    <i class="fa fa-file-picture-o"></i>
+                    <span>کلاسها و دوره ها</span>
+                </a>
+                <ul>
+                    <li><a href="javascript:void(0);">تعریف کلاس</a></li>
+                    <li><a href="javascript:void(0);">ویرایش کلاسها</a></li>
+                    <li><a href="javascript:void(0);">ثبت نام کنندگان</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-coffee"></i>
+                    <span>همایش ها</span>
+                </a>
+                <ul>
+                    <li><a href="javascript:void(0);">تعریف همایش</a></li>
+                    <li><a href="javascript:void(0);">ویرایش همایش ها</a></li>
+                    <li><a href="javascript:void(0);">ثبت نام کنندگان</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-pencil-square-o"></i>
+                    <span>پرسش و پاسخ</span>
+                </a>
+            </li> -->
+            <li> 
                 <a href="#">
                     <i class="fa fa-gear"></i>
                     <span>تنظیمات</span>
