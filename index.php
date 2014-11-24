@@ -5,7 +5,12 @@
   	include_once("classes/database.php");	
     include_once("./lib/persiandate.php");
 	include_once("./lib/Zebra_Pagination.php");
-
+	
+	$Tell_Number = GetSettingValue('Tell_Number',0);
+	$Address = GetSettingValue('Address',0);
+	$Contact_Email = GetSettingValue('Contact_Email',0);	
+	$About_System = GetSettingValue('About_System',0);
+	
 $slide.=<<<cd
 <body id="top" class="style-4 body-boxed-2">
 <!--[if lt IE 9]>
@@ -40,11 +45,11 @@ $slide.=<<<cd
             <ul>
               <li class="tele">
                 Tel: 
-                <a href="javascript:void();" class="latinfont ltr" style="display:inline-block;letter-spacing:2px">+98 51 3766 6436</a>
+                <a href="javascript:void();" class="latinfont ltr" style="display:inline-block;letter-spacing:2px">+98 {$Tell_Number}</a>
               </li>
               <li class="mail">
                 Email: 
-                <a href="javascript:void();" class="latinfont" style="letter-spacing:2px">info@sms3030.com</a>
+                <a href="javascript:void();" class="latinfont" style="letter-spacing:2px">{$Contact_Email}</a>
               </li>
             </ul>
           </div><!-- end of top contacts -->
