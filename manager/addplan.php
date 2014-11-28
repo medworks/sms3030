@@ -34,9 +34,9 @@
 	else
 	if ($_POST["mark"]=="editplan")
 	{						
-		$values = array("`mid`"=>"'{$_POST[cbmenu]}'","`smid`"=>"'{$sm}'",
-						"`subject`"=>"'{$_POST[edtsubject]}'","`text`"=>"'{$_POST[edttext]}'",
-						"`picid`"=>"'0'");
+		$values = array("`name`"=>"'{$_POST[edtname]}'","`type`"=>"'{$_POST[type]}'",
+						"`offer`"=>"'{$_POST[offer]}'","`pos`"=>"'{$_POST[edtpos]}'",
+						"`params`"=>"'0'");
         $db->UpdateQuery("plans",$values,array("id='{$_GET[pid]}'"));		
 		header('location:addplan.php?act=new&msg=1');
 	}
@@ -51,7 +51,25 @@
 
 	if ($_GET['act']=="edit")
 	{
-	    $row=$db->Select("plans","*","id='{$_GET["pid"]}'",NULL);		
+	    $row=$db->Select("plans","*","id='{$_GET["pid"]}'",NULL);
+		if ($row["type"]==1)	
+		{
+			$userchecked = "checked";
+			$agentchecked = "";
+		}
+		else
+		{
+			$userchecked = "";
+			$agentchecked = "checked";
+		}
+		if ($row["offer"]==1)
+		{
+			$offer = "checked";
+		}
+		else
+		{
+			$offer = "";
+		}
 		$insertoredit = "
 			<button id='submit' type='submit' class='btn btn-default'>ویرایش</button>
 			<input type='hidden' name='mark' value='editplan' /> ";		
@@ -96,16 +114,16 @@ $html=<<<cd
                                         <input id="edtpos" name="edtpos"  type="text" class="form-control" placeholder="ترتیب" value="{$row['pos']}" />
                                     </div>
                                     <label style="width:90px">
-                                        <input type="checkbox" name="offer" value="1">
+                                        <input type="checkbox" name="offer" value="1" {$offer}>
                                         <i></i> پلن پیشنهادی
                                     </label>
                                     <div class="radio-inline">
                                         <label class="radio-inline">
-                                            <input type="radio" name="type" id="optionsRadios3" value="1" checked="">
+                                            <input type="radio" name="type" id="optionsRadios3" value="1" {$userchecked}>
                                             کاربری
                                         </label>
                                         <label class="radio-inline">
-                                            <input type="radio" name="type" id="optionsRadios4" value="2">
+                                            <input type="radio" name="type" id="optionsRadios4" value="2" {$agentchecked}>
                                             نمایندگی
                                         </label>
                                     </div>
@@ -120,13 +138,7 @@ $html=<<<cd
                                     <h3 class="panel-title">انتخاب پارامترها</h3>
                                 </div>
                                 <div class="panel-body">
-                                    {$cbmenu}
-									<div id="sm1">
-										{$cbsm1}
-									</div>
-                                    <div id="sm2">
-										{$cbsm2}
-									</div>                                    
+                                   
                                 </div>
                             </div>
                         </div>
@@ -151,20 +163,7 @@ $html=<<<cd
     <!--Page main section end -->
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$("#cbmenu").change(function(){
-				var id= $(this).val();
-				$.get('./ajaxcommand.php?smid='+id,function(data) {			
-						$('#sm1').html(data);
-						
-						$("#cbsm1").change(function(){
-							var id= $(this).val();
-							$.get('./ajaxcommand.php?smid2='+id,function(data) {			
-								$('#sm2').html(data);
-							});
-						});			
-				});
-			});			
-		
+					
 		});
 	</script>
 cd;
