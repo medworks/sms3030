@@ -180,9 +180,9 @@
                     <span>تعریف پلن ها</span>
                 </a>
                 <ul>
-                    <li><a href="addparam.php">تعریف پارامترها</a></li>
-                    <li><a href="addplan.php">تعریف پلن</a></li>
-                    <li><a href="editplan.php">ویرایش پلن ها</a></li>
+                    <li><a href="addparam.php?act=new">تعریف پارامترها</a></li>
+                    <li><a href="addplan.php?act=new">تعریف پلن</a></li>
+                    <li><a href="editplan.php?act=edit">ویرایش پلن ها</a></li>
                 </ul>
             </li>
             <li>

@@ -16,43 +16,43 @@
 	}
 	$db = Database::GetDatabase();	
 	
-	if ($_POST["mark"]=="savegroup")
+	if ($_POST["mark"]=="saveparam")
 	{
-		$fields = array("`name`");		
-		$values = array("'{$_POST[edtgroup]}'");	
-		if (!$db->InsertQuery('categories',$fields,$values)) 
+		$fields = array("`name`","`pos`");		
+		$values = array("'{$_POST[edtname]}'","'{$_POST[edtpos]}'");	
+		if (!$db->InsertQuery('params',$fields,$values)) 
 		{			
-			header('location:categories.php?act=new&msg=2');			
+			header('location:addparam.php?act=new&msg=2');			
 		} 	
 		else 
 		{  										
-			header('location:categories.php?act=new&msg=1');
+			header('location:addparam.php?act=new&msg=1');
 		}  		
 	}
 	else
-	if ($_POST["mark"]=="editgroup")
+	if ($_POST["mark"]=="editparam")
 	{			    
 		$values = array("`name`"=>"'{$_POST[edtgroup]}'");
-        $db->UpdateQuery("categories",$values,array("id='{$_GET[gid]}'"));		
-		header('location:categories.php?act=new&msg=1');
+        $db->UpdateQuery("params",$values,array("id='{$_GET[gid]}'"));		
+		header('location:addparam.php?act=new&msg=1');
 	}	
 	if ($_GET['act']=="new")
 	{
 		$insertoredit = "
 			<button type='submit' class='btn btn-default'>ثبت</button>
-			<input type='hidden' name='mark' value='savegroup' /> ";
+			<input type='hidden' name='mark' value='saveparam' /> ";
 	}
 	if ($_GET['act']=="edit")
 	{
-	    $row=$db->Select("categories","*","id='{$_GET["gid"]}'",NULL);		
+	    $row=$db->Select("params","*","id='{$_GET["pid"]}'",NULL);		
 		$insertoredit = "
 			<button type='submit' class='btn btn-default'>ویرایش</button>
-			<input type='hidden' name='mark' value='editgroup' /> ";
+			<input type='hidden' name='mark' value='editparam' /> ";
 	}
 	if ($_GET['act']=="del")
 	{
-		$db->Delete("categories"," id",$_GET["gid"]);		
-		header('location:categories.php?act=new');	
+		$db->Delete("params"," id",$_GET["pid"]);		
+		header('location:addparam.php?act=new');	
 	}	
 $msgs = GetMessage($_GET['msg']);
 
@@ -115,7 +115,7 @@ $html=<<<cd
 								<tbody>
 								<tr>
 cd;
-$rows = $db->SelectAll("categories","*",NULL,"id ASC");
+$rows = $db->SelectAll("params","*",NULL,"pos ASC");
 for($i = 0; $i < Count($rows); $i++)
 {
 $rownumber = $i+1;
@@ -125,8 +125,8 @@ $html.=<<<cd
 	<td>
 		<ul class="ls-glyphicons-list">
 			<li>
-				<a href="?act=del&gid={$rows[$i]["id"]}" title="پاک کردن" style="margin-left:5px"><span class="glyphicon glyphicon-remove"></span></a>
-				<a href="?act=edit&gid={$rows[$i]["id"]}" title="ویرایش"><span class="glyphicon glyphicon-edit"></span></a>
+				<a href="?act=del&pid={$rows[$i]["id"]}" title="پاک کردن" style="margin-left:5px"><span class="glyphicon glyphicon-remove"></span></a>
+				<a href="?act=edit&pid={$rows[$i]["id"]}" title="ویرایش"><span class="glyphicon glyphicon-edit"></span></a>
 			</li>
 		</ul>
 	</td>
