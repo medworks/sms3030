@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2014 at 05:59 PM
+-- Generation Time: Nov 28, 2014 at 10:24 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `pics` (
   `tid` int(11) NOT NULL,
   `sid` int(11) NOT NULL,
   `itype` varchar(25) NOT NULL,
-  `img` blob NOT NULL,
+  `img` mediumblob NOT NULL,
   `iname` varchar(50) NOT NULL,
   `isize` varchar(25) NOT NULL,
   PRIMARY KEY (`id`)
@@ -104,9 +104,17 @@ CREATE TABLE IF NOT EXISTS `plans` (
   `type` tinyint(4) NOT NULL,
   `offer` tinyint(1) NOT NULL,
   `pos` smallint(6) NOT NULL,
-  `prams` varchar(50) NOT NULL,
+  `params` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `plans`
+--
+
+INSERT INTO `plans` (`id`, `name`, `type`, `offer`, `pos`, `params`) VALUES
+(1, 'نقره ای', 1, 1, 1, '0'),
+(3, 'طلایی', 2, 0, 2, '0');
 
 -- --------------------------------------------------------
 
