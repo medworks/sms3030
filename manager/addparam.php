@@ -32,8 +32,8 @@
 	else
 	if ($_POST["mark"]=="editparam")
 	{			    
-		$values = array("`name`"=>"'{$_POST[edtgroup]}'");
-        $db->UpdateQuery("params",$values,array("id='{$_GET[gid]}'"));		
+		$values = array("`name`"=>"'{$_POST[edtname]}'","`pos`"=>"'{$_POST[edtpos]}'");
+        $db->UpdateQuery("params",$values,array("id='{$_GET[pid]}'"));		
 		header('location:addparam.php?act=new&msg=1');
 	}	
 	if ($_GET['act']=="new")
