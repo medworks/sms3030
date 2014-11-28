@@ -28,7 +28,8 @@
 		else 
 		{  			
 			header('location:addplan.php?act=new&msg=1');			
-		}  		
+		} 
+		//echo $db->cmd;
 	}
 	else
 	if ($_POST["mark"]=="editplan")
