@@ -3413,12 +3413,12 @@ hr,
 }
 /* --- Departments --------------------- */
 .department .departHeader {
-  height: 30px;
+  height: 40px;
   border-bottom: 2px solid #ff6b6b;
   margin-bottom: 20px;
   color: #393f4f;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: normal;
 }
 .department .departBody {
   border: 1px solid #ccc;
@@ -4516,7 +4516,7 @@ img.fnone {
   width: 100%;
 }
 .rrssb-buttons li {
-  float: left;
+  float: right;
   margin-left: 10px;
   width: 32px !important;
 }
@@ -4590,8 +4590,8 @@ img.fnone {
   background-color: #21242e !important;
 }
 .rrssb-buttons.left li {
-  margin-left: 0;
-  margin-right: 10px;
+  margin-right: 0;
+  margin-left: 10px;
 }
 /* Commnets */
 .singleComment {
