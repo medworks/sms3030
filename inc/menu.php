@@ -19,7 +19,7 @@
                 <a href="./" class="active">صفحه اصلی</a>
               </li>
               <li>
-                <a href="about-us.html">درباره ما</a>
+                <a href="aboutus.html">درباره ما</a>
               </li>
               <li>
                 <a href="news.html">اخبار</a>

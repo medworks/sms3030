@@ -6,12 +6,10 @@ deny from all
 <IFModule mod_rewrite.c>   
 	RewriteEngine On 
 	RewriteRule ^index.html sms3030/index.php [L]
-	RewriteRule ^about-us.html sms3030/about-us.php [L]
-	RewriteRule ^gallery.html sms3030/gallery.php [L]	
-	RewriteRule ^one-gallery([0-9]+).html sms3030/one-gallery.php?id=$1 [L]	
+	RewriteRule ^aboutus.html sms3030/aboutus.php [L]
+	RewriteRule ^plans.html sms3030/plans.php [L]
+	RewriteRule ^single-plan.html sms3030/single-plan.php [L]
 	RewriteRule ^contactus.html sms3030/contactus.php [L]
-	RewriteRule ^healthgroup.html sms3030/healthgroup.php [L]
-	RewriteRule ^exam.html sms3030/exam.php [L]
 	RewriteRule ^news.html sms3030/news.php [L]
 	RewriteRule ^single-news([0-9]+).html sms3030/single-news.php?id=$1 [L]	
 	RewriteBase / 	

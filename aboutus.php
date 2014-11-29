@@ -81,19 +81,17 @@ $ahtml2 =<<<cd
   </section>
   <!-- end of Page Header -->
 		<!-- Main content alpha -->
-		<div id="main" class="col9 clearfix">
-			<div id="main_inner">
-				<div class="article_grid four_column_blog">
-					<h4>درباره ما</h4>
-				</div>
-				<div class="entry">
-					<p style="font-size:22px;font-weight:normal;">
-						{$About_System}
-					</p>
-					<div class="clearboth"></div>									
-				</div>				
-			</div><!-- #main_inner -->
-		</div>					
+		<section class="pricing section mainSection scrollAnchor lightSection" id="pricing">
+    <div class="sectionWrapper">
+      <div class="container">
+        <div class="row">          
+          <div class="col-md-12">
+            <p style="font-size:23px;text-align:justify;font-weight:normal;line-height:35px;padding:0 35px;">{$About_System}</p>
+          </div><!-- end of col-md-12 -->
+        </div><!-- end of row-->
+      </div><!-- end of container -->
+    </div><!-- end of section wrapper -->
+  </section>		
 		<!-- /Main content alpha -->
 	
 cd;
