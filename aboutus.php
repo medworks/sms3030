@@ -86,7 +86,7 @@ $ahtml2 =<<<cd
       <div class="container">
         <div class="row">          
           <div class="col-md-12">
-            <p style="font-size:23px;text-align:justify;font-weight:normal;line-height:35px;padding:0 35px;">{$About_System}</p>
+            <p style="font-size:23px;text-align:justify;font-weight:normal;line-height:35px;padding:0 35px;color:#000">{$About_System}</p>
           </div><!-- end of col-md-12 -->
         </div><!-- end of row-->
       </div><!-- end of container -->

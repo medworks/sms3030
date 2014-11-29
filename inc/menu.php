@@ -37,7 +37,7 @@
                     <a href="plans.html">تعرفه پیامک</a>
                   </li>
                   <li>
-                    <a href="#">تعرفه خطوط</a>
+                    <a href="lines.html">تعرفه خطوط</a>
                   </li>
                 </ul>
               </li>
