@@ -137,19 +137,19 @@
 }
 /* --- Bachground Images  --------------------- */
 .pricingTable .pricingIcon {
-  background-image: url('../../images/plan-icon-red.png');
+  background-image: url('../images/plan-icon-red.png');
 }
 .fact .factIcon1 {
-  background-image: url('../../images/fact-1-red.png');
+  background-image: url('../images/fact-1-red.png');
 }
 .fact .factIcon2 {
-  background-image: url('../../images/fact-2-red.png');
+  background-image: url('../images/fact-2-red.png');
 }
 .fact .factIcon3 {
-  background-image: url('../../images/fact-3-red.png');
+  background-image: url('../images/fact-3-red.png');
 }
 .fact .factIcon4 {
-  background-image: url('../../images/fact-4-red.png');
+  background-image: url('../images/fact-4-red.png');
 }
 /* --- colors  --------------------- */
 h1,

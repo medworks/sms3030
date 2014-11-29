@@ -42,13 +42,13 @@
                 </ul>
               </li>
               <li>
-                <a href="#">پذیرش نمایندگی</a>
+                <a href="reseller.html">پذیرش نمایندگی</a>
               </li>
               <li>
                 <a href="#">شماره حساب</a>
               </li>
               <li>
-                <a href="#">تماس با ما</a>
+                <a href="contactus.html">تماس با ما</a>
               </li>
           </nav><!-- end of main nav -->
           <a href="#" class="generalLink bordered" id="responsiveMainNavToggler"><i class="fa fa-bars"></i></a>

@@ -8,6 +8,8 @@ deny from all
 	RewriteRule ^index.html sms3030/index.php [L]
 	RewriteRule ^aboutus.html sms3030/aboutus.php [L]
 	RewriteRule ^lines.html sms3030/lines.php [L]
+	RewriteRule ^reseller.html sms3030/reseller.php [L]
+	RewriteRule ^single-reseller.html sms3030/single-reseller.php [L]
 	RewriteRule ^plans.html sms3030/plans.php [L]
 	RewriteRule ^single-plan.html sms3030/single-plan.php [L]
 	RewriteRule ^contactus.html sms3030/contactus.php [L]
