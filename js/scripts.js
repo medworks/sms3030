@@ -611,7 +611,7 @@ This file includes all cusomized javascript and all plugins libraries options
   //-- message --
   jQuery(document).ready(function() {
     
-    var watermark = 'Message';
+    var watermark = 'پیام';
     
     //init, set watermark text and class
     jQuery('#messageArea').val(watermark).addClass('inputBar');

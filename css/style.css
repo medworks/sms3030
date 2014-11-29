@@ -4722,7 +4722,7 @@ img.fnone {
 .add-send form button,
 .add-send form input[type="submit"] {
   position: absolute;
-  right: 10px;
+  left: 10px;
   bottom: 10px;
   background-color: #ff6b6b;
 }

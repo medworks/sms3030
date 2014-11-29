@@ -132,29 +132,38 @@
                   <!-- end error message -->
 
                       <div class="sendMessage add-send clearfix">
-               
+                        <style>
+                          form.sendMessageForm input,
+                          form.sendMessageForm textarea{
+                            direction: rtl;
+                          }
+                        </style>
                         <form method="POST" action="sendmail.php" class="sendMessageForm clearfix">
                           <ul class="row clearfix">
-                            <li class="col-md-6"><input type="text" value="Your Name" onblur="if(this.value=='')this.value='Your Name'" onfocus="if(this.value=='Your Name')this.value=''" name="name" id="name" class="name"></li>
-                            <li class="col-md-6"><input type="email" value="Email" onblur="if(this.value=='')this.value='Email'" onfocus="if(this.value=='Email')this.value=''" name="email" id="email" class="email"></li>
-                            <li class="col-md-6"><input type="text" value="Phone" onblur="if(this.value=='')this.value='Phone'" onfocus="if(this.value=='Phone')this.value=''" name="phone" id="phone" class="phone"></li>
-                            <li class="col-md-6"><input type="text" value="Subject" onblur="if(this.value=='')this.value='Subject'" onfocus="if(this.value=='Subject')this.value=''" name="subject" id="subject" class="subject"></li>
-                            <li class="col-md-12"><textarea name="message" id="messageArea" class="inputBar"></textarea></li>
+                            <li class="col-md-6">
+                              <input type="text" value="نام و نام خانوادگی" onblur="if(this.value=='')this.value='نام و نام خانوادگی'" onfocus="if(this.value=='نام و نام خانوادگی')this.value=''" name="name" id="name" class="name" />
+                            </li>
+                            <li class="col-md-6">
+                              <input type="email" value="ایمیل *" onblur="if(this.value=='')this.value='ایمیل *'" onfocus="if(this.value=='ایمیل *')this.value=''" name="email" id="email" class="email" />
+                            </li>
+                            <li class="col-md-6">
+                              <input type="text" value="تلفن" onblur="if(this.value=='')this.value='تلفن'" onfocus="if(this.value=='تلفن')this.value=''" name="phone" id="phone" class="phone" />
+                            </li>
+                            <li class="col-md-6">
+                              <input type="text" value="موضوع" onblur="if(this.value=='')this.value='موضوع'" onfocus="if(this.value=='موضوع')this.value=''" name="subject" id="subject" class="subject" />
+                            </li>
+                            <li class="col-md-12">
+                              <textarea name="message" id="messageArea" class="inputBar"></textarea>
+                            </li>
                           </ul>
-                          <button type="submit" class="loadingbtn" data-loading-text="Sending Your Message .... ">&nbsp;&nbsp;&nbsp;&nbsp; Send &nbsp;&nbsp;&nbsp;&nbsp; </button>
+                          <button type="submit" class="loadingbtn" data-loading-text="Sending Your Message .... ">ارسال</button>
                         </form><!-- end of send Message form -->
                       </div><!-- end of send Message -->
-
                    </div><!-- end of widget body -->
-
                 </div><!-- end of widget -->
-
               </div><!-- end of col-md-8 -->
 
               <aside class="col-md-4 sidebar">
-
-                
-
                 <div class="department following">
                   <h5 class="departHeader followingHeader">ما را در شبکه های زیر دنبال کنید</h5><!-- end of depart header -->
                   <div class="departBody followingbody">
@@ -179,14 +188,11 @@
                           <a href="#"><i class="fa fa-pinterest"></i></a>
                       </li>
                     </ul>
-                  </div><!-- end of following body -->
-                  
+                  </div><!-- end of following body -->                 
                 </div><!-- end of following -->
-
               </aside><!-- end of sidebar -->
 
             </div>
-
           </div><!-- end of container -->
         </div><!-- end of section wrapper -->
       </section>
