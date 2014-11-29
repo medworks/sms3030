@@ -6,11 +6,13 @@
     include_once("./lib/persiandate.php");
 	include_once("./lib/Zebra_Pagination.php");
 	
+	$db = Database::GetDatabase();
+	
 	$Tell_Number = GetSettingValue('Tell_Number',0);
 	$Address = GetSettingValue('Address',0);
 	$Contact_Email = GetSettingValue('Contact_Email',0);	
 	$About_System = GetSettingValue('About_System',0);
-	
+	$slides = $db->SelectAll("slide","*",NULL,"id ASC");	
 $slide.=<<<cd
 <body id="top" class="style-4 body-boxed-2">
 <!--[if lt IE 9]>
@@ -62,57 +64,31 @@ $slide.=<<<cd
       </div><!-- end of container -->
     </div><!-- end of top menu -->
     <div id="mainSlider" class="mainSlider homeSlider_4  owl-carousel sliderStyle1">
+cd;
+for($i = 0; $i < Count($slides); $i++)
+{
+$slide.=<<<cd
       <div id="slide1" class="item slide">
-        <div class="cover"></div><!-- end of cover -->
-        <img src="./images/slider/1.jpg" title="Slide 1" alt="slide 1">
+        <div class="cover"></div>
+		<!-- end of cover -->
+		<img src="img.php?did={$slides[$i]['id']}&type=slide" title="{$slides[$i]['subject']}" alt="{$slides[$i]['subject']}" />         
         <div class="captions">
-          <h2 class="animated">عنوان اسلاید اول</h2>
+          <h2 class="animated">{$slides[$i]['subject']}</h2>
           <p class="animated">
-            توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... </p>
-        </div><!-- end of captions -->
-      </div><!-- end of slide -->
-      <div id="slide2" class="item slide">
-        <div class="cover"></div><!-- end of cover -->
-        <img src="./images/slider/2.jpg" title="Slide 2" alt="slide 2">
-        <div class="captions">
-          <h2 class="animated">عنوان اسلاید دوم</h2>
-          <p class="animated">
-            توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... </p>
-        </div><!-- end of captions -->
-      </div><!-- end of slide -->
-      <div id="slide3" class="item slide">
-        <div class="cover"></div><!-- end of cover -->
-        <img src="./images/slider/3.jpg" title="Slide 3" alt="slide 3">
-        <div class="captions">
-          <h2 class="animated">عنوان اسلاید سوم</h2>
-          <p class="animated">
-            توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... </p>
-        </div><!-- end of captions -->
-      </div><!-- end of slide -->
-      <div id="slide4" class="item slide">
-        <div class="cover"></div><!-- end of cover -->
-        <img src="./images/slider/4.jpg" title="Slide 4" alt="slide 4">
-        <div class="captions">
-          <h2 class="animated">عنوان اسلاید چهارم</h2>
-          <p class="animated">
-            توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... </p>
-        </div><!-- end of captions -->
-      </div><!-- end of slide -->
-      <div id="slide5" class="item slide">
-        <div class="cover"></div><!-- end of cover -->
-        <img src="./images/slider/5.jpg" title="Slide 5" alt="slide 5">
-        <div class="captions">
-          <h2 class="animated">عنوان اسلاید پنجم</h2>
-          <p class="animated">
-            توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... توضیحات عکس ... </p>
-        </div><!-- end of captions -->
-      </div><!-- end of slide -->
+			{$slides[$i]['text']}
+          </p>
+        </div>
+		<!-- end of captions -->
+      </div>
+	  <!-- end of slide -->
+cd;
+}
+$slide.=<<<cd
     </div><!-- end of main slider -->
   </section>
   <!-- end of slider -->
 cd;
 
-$db = Database::GetDatabase();
 		
 $news = $db->SelectAll("news","*",NULL,"id DESC","0","2");	
 
