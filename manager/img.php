@@ -11,6 +11,11 @@
 		$pic = $db->Select("gpics","*","`gid`='{$_GET[did]}'",NULL);
 	}
 	else
+	if (isset($_GET["type"]) and $_GET["type"]=="slide")
+	{
+		$pic = $db->Select("slide","*","`id`='{$_GET[did]}'",NULL);
+	}
+	else
 	{
 		$pic = $db->Select("pics","*","`sid`='{$_GET[did]}' AND `tid`='{$_GET[tid]}'",NULL);
 	}
