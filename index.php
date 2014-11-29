@@ -71,7 +71,7 @@ $slide.=<<<cd
       <div id="slide1" class="item slide">
         <div class="cover"></div>
 		<!-- end of cover -->
-		<img src="img.php?did={$slides[$i]['id']}&type=slide" title="{$slides[$i]['subject']}" alt="{$slides[$i]['subject']}" />         
+		<img src="manager/img.php?did={$slides[$i]['id']}&type=slide" title="{$slides[$i]['subject']}" alt="{$slides[$i]['subject']}" />         
         <div class="captions">
           <h2 class="animated">{$slides[$i]['subject']}</h2>
           <p class="animated">
