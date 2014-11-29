@@ -19,8 +19,8 @@
 	$db = Database::GetDatabase(); 
 	if ($_GET['act']=="del")
 	{
-		$db->Delete("gallerypics"," id ",$_GET["did"]);		
-		header('location:editgallery.php?act=new');	
+		$db->Delete("slide"," id ",$_GET["did"]);		
+		header('location:editslide.php?act=edit');	
 	}		
     
 $html.=<<<cd
