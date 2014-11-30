@@ -226,14 +226,18 @@
                     <li><a href="addgallery.php?act=new">تعریف گالری</a></li>
                     <li><a href="editgallery.php?act=new">ویرایش گالری</a></li>
                 </ul>
-            </li> 
+            </li> --> 
             <li>
-                <a href="healthgroup.php?act=new">
+                <a href="#">
                     <i class="fa fa-briefcase"></i>
-                    <span>گروه درمانی</span>
+                    <span>اطلاعت حساب</span>
                 </a>
+                <ul>
+                    <li><a href="bank.php">ثبت اطلاعات بانک</a></li>
+                    <li><a href="editbank.php">ویرایش اطلاعات</a></li>
+                </ul>
             </li>
-            <li>
+            <!-- <li>
                 <a href="sendnews.php">
                     <i class="fa fa-send-o"></i>
                     <span>ارسال خبر به اعضاء</span>
