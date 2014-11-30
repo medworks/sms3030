@@ -115,7 +115,9 @@
 
           <div class="col-md-6 factsImg">
             <div class="imacWrapper">
-              <img alt="imac" class="imac" src="images/i-mac.png" title="sms3030">
+              <a href="http://sms.sms3030.ir" title="پنل نمایندگی اس ام اس 3030" target="_blank">
+                <img alt="imac" class="imac" src="images/i-mac.png" title="پنل نمایندگی اس ام اس 3030">
+              </a>
             </div>
           </div><!-- end of fact img -->
         

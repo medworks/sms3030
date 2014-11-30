@@ -111,11 +111,11 @@
                   </tr>
 
                   <tr>
-                    <td>ارسال پیامک به صورت تکی و گروهی</td>
-                    <td><a href="#" class="generalLink order" style="font-size:16px">سفارش</a></td>
-                    <td><a href="#" class="generalLink order" style="font-size:16px">سفارش</a></td>
-                    <td><a href="#" class="generalLink order" style="font-size:16px">سفارش</a></td>
-                    <td><a href="#" class="generalLink order" style="font-size:16px">سفارش</a></td>
+                    <td>قیمت (ریال)</td>
+                    <td><a href="#" class="generalLink order" style="font-size:18px">80000</a></td>
+                    <td><a href="#" class="generalLink order" style="font-size:18px">10000</a></td>
+                    <td><a href="#" class="generalLink order" style="font-size:18px">20000</a></td>
+                    <td><a href="#" class="generalLink order" style="font-size:18px">30000</a></td>
                   </tr>
 
                 </tbody>
