@@ -54,6 +54,9 @@
 <!-- BootStrap JavaScript ================================================== -->
 <script src="./js/bootstrap.js" type="text/javascript"></script>  
 <script type="text/javascript" src="./js/zebra_pagination.js"></script>
+
+<script type="text/javascript" src="./js/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="./js/jquery.validationEngine-fa.js"></script>
   
 </body>
 </html>

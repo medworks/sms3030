@@ -20,6 +20,11 @@ This file includes all cusomized javascript and all plugins libraries options
     jQuery('body').css({'overflow' : 'visible'});
   });
 
+  //-- Form validate --
+jQuery(document).ready(function() {
+  jQuery(".formdata").validationEngine();
+});
+
   //--------------------------------------------------------------------------------------------
 
 
