@@ -102,8 +102,8 @@
                   </tr>
 
                   <tr>
-                    <td>قیمت (ریال)</td>
-                    <td><a href="#" class="generalLink order" style="font-size:18px">80000</a></td>
+                    <td>سفارش / قیمت (ریال)</td>
+                    <td><a href="order.html" class="generalLink order" style="font-size:18px">80000</a></td>
                   </tr>
 
                 </tbody>

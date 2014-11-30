@@ -50,6 +50,9 @@
               <li>
                 <a href="contactus.html">تماس با ما</a>
               </li>
+              <li>
+                <a href="javascript:void(0);" style="font-size:18px;margin-right:60px">تعداد استفاده کنندگان از پنل : 0</a>
+              </li>
           </nav><!-- end of main nav -->
           <a href="#" class="generalLink bordered" id="responsiveMainNavToggler"><i class="fa fa-bars"></i></a>
           <div class="clearfix"></div><!-- end of clearfix -->

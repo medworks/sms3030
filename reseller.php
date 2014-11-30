@@ -85,7 +85,7 @@
             <div class="fact singleFact factBox">
               <div class="factIcon factIcon3"></div>
               <h4 class="factTitle">
-                <a href="#">نعریف دامنه مورد نظر</a>
+                <a href="single-reseller.html">نعریف دامنه مورد نظر</a>
               </h4>
               <p class="factDescription">
                 تعریف دامنه با نام خود برروی پنل.
@@ -95,7 +95,7 @@
             <div class="fact singleFact factBox">
               <div class="factIcon factIcon3"></div>
               <h4 class="factTitle">
-                <a href="#">تعریف نماینده به صورت نامحدود</a>
+                <a href="single-reseller.html">تعریف نماینده به صورت نامحدود</a>
               </h4>
               <p class="factDescription">
                 تعریف نماینده و کاربر به صورت نامحدود.
@@ -104,7 +104,7 @@
             <div class="fact singleFact factBox">
               <div class="factIcon factIcon3"></div>
               <h4 class="factTitle">
-                <a href="#">تعریف نماینده به صورت نامحدود</a>
+                <a href="single-reseller.html">تعریف نماینده به صورت نامحدود</a>
               </h4>
               <p class="factDescription">
                 تعریف نماینده و کاربر به صورت نامحدود.
@@ -125,7 +125,7 @@
             <div class="fact singleFact factBox">
               <div class="factIcon factIcon3"></div>
               <h4 class="factTitle">
-                <a href="#">نعریف دامنه مورد نظر</a>
+                <a href="single-reseller.html">نعریف دامنه مورد نظر</a>
               </h4>
               <p class="factDescription">
                 تعریف دامنه با نام خود برروی پنل.
@@ -135,7 +135,7 @@
             <div class="fact singleFact factBox">
               <div class="factIcon factIcon3"></div>
               <h4 class="factTitle">
-                <a href="#">تعریف نماینده به صورت نامحدود</a>
+                <a href="single-reseller.html">تعریف نماینده به صورت نامحدود</a>
               </h4>
               <p class="factDescription">
                 تعریف نماینده و کاربر به صورت نامحدود.
@@ -144,7 +144,7 @@
             <div class="fact singleFact factBox">
               <div class="factIcon factIcon3"></div>
               <h4 class="factTitle">
-                <a href="#">تعریف نماینده به صورت نامحدود</a>
+                <a href="single-reseller.html">تعریف نماینده به صورت نامحدود</a>
               </h4>
               <p class="factDescription">
                 تعریف نماینده و کاربر به صورت نامحدود.

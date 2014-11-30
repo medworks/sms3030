@@ -111,11 +111,11 @@
                   </tr>
 
                   <tr>
-                    <td>قیمت (ریال)</td>
-                    <td><a href="#" class="generalLink order" style="font-size:18px">80000</a></td>
-                    <td><a href="#" class="generalLink order" style="font-size:18px">10000</a></td>
-                    <td><a href="#" class="generalLink order" style="font-size:18px">20000</a></td>
-                    <td><a href="#" class="generalLink order" style="font-size:18px">30000</a></td>
+                    <td>سفارش/قیمت (ریال)</td>
+                    <td><a href="http://panel.sms3030.ir" class="generalLink order" style="font-size:18px">80000</a></td>
+                    <td><a href="http://panel.sms3030.ir" class="generalLink order" style="font-size:18px">10000</a></td>
+                    <td><a href="http://panel.sms3030.ir" class="generalLink order" style="font-size:18px">20000</a></td>
+                    <td><a href="http://panel.sms3030.ir" class="generalLink order" style="font-size:18px">30000</a></td>
                   </tr>
 
                 </tbody>
