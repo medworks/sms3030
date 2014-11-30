@@ -274,7 +274,7 @@
                     <span class="badge badge-red">3</span>
                 </a>
                 <ul>
-                    <li><a href="settinginfo.php">ثبت نام کنندگان</a></li>
+                    <li><a href="regreseller.php">ثبت نام کنندگان</a></li>
                     <li><a href="aboutinfo.php">تایید شده ها</a></li>
                 </ul>
             </li>
