@@ -159,7 +159,7 @@
                 </ul>
             </li> -->
             <li>
-                <a href="categories.php?act=new">
+                <a href="numregister.php">
                     <i class="fa fa-users"></i>
                     <span>تعداد استفاده کنندگان</span>
                 </a>
