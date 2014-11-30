@@ -49,7 +49,7 @@ $html=<<<cd
                                                 <td>9151091162</td>
                     							<td>5137613679</td>
                                                 <td class="text-center">													
-    											   <a href="seenregres.php">
+    											   <a href="seenregconf.php">
                                                     <button type="button" class="btn btn-xs btn-warning" title="مشاهده"><i class="fa fa-eye"></i></button>
     											   </a>
                                                 </td>
