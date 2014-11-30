@@ -275,7 +275,7 @@
                 </a>
                 <ul>
                     <li><a href="regreseller.php">ثبت نام کنندگان</a></li>
-                    <li><a href="aboutinfo.php">تایید شده ها</a></li>
+                    <li><a href="confirmed.php">تایید شده ها</a></li>
                 </ul>
             </li>
             <li> 
