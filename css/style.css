@@ -2871,7 +2871,8 @@ hr,
   color: #21242e;
   border-bottom: 1px solid #cccccc;
   text-align: right;
-  font-weight: 700;
+  font-weight: normal;
+  font-size: 18px;
 }
 .responsiveMainNav > ul.navTabs > li a:hover,
 .responsiveMainNav > ul.navTabs > li > button:hover {
