@@ -116,7 +116,7 @@
                        />
                      </li>
                     <li class="col-md-6">
-                      <input class="repass validate[required,equals[password]]" data-prompt-position="topLeft" id="repass" name="repass" placeholder="تکرار رمز عبور*" type="password" />
+                      <input class="repass validate[required,equals[pass]]" data-prompt-position="topLeft" id="repass" name="repass" placeholder="تکرار رمز عبور*" type="password" />
                     </li>
                     <li class="col-md-6">
                       <input class="codemeli validate[required,custom[onlyNumberSp],maxSize[10],minSize[10]]" data-prompt-position="topLeft" id="codemeli" name="codemeli" placeholder="کدملی*" type="text" />
