@@ -157,14 +157,14 @@
                     <li><a href="mail.html">Inbox</a></li>
                     <li><a href="compose-mail.html">Compose Mail</a></li>
                 </ul>
-            </li>
+            </li> -->
             <li>
                 <a href="categories.php?act=new">
                     <i class="fa fa-users"></i>
-                    <span>دسته بندی گروه ها</span>
+                    <span>تعداد استفاده کنندگان</span>
                 </a>
             </li>
-            <li>
+            <!-- <li>
                 <a href="#">
                     <i class="fa fa-navicon"></i>
                     <span>دسته بندی منوها</span>
@@ -266,13 +266,18 @@
                     <li><a href="javascript:void(0);">ویرایش همایش ها</a></li>
                     <li><a href="javascript:void(0);">ثبت نام کنندگان</a></li>
                 </ul>
-            </li>
+            </li> -->
             <li>
                 <a href="#">
                     <i class="fa fa-pencil-square-o"></i>
-                    <span>پرسش و پاسخ</span>
+                    <span>پنل نمایندگی</span>
+                    <span class="badge badge-red">3</span>
                 </a>
-            </li> -->
+                <ul>
+                    <li><a href="settinginfo.php">ثبت نام کنندگان</a></li>
+                    <li><a href="aboutinfo.php">تایید شده ها</a></li>
+                </ul>
+            </li>
             <li> 
                 <a href="#">
                     <i class="fa fa-gear"></i>

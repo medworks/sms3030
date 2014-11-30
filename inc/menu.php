@@ -42,10 +42,10 @@
                 </ul>
               </li>
               <li>
-                <a href="javascript:void(0);">نمایندگی</a>
+                <a href="reseller.html">نمایندگی</a>
                 <ul class="dropDown sub-menu">
                   <li>
-                    <a href="reseller.html">پلن های نمایندگی</a>
+                    <a href="single-reseller.html">پلن نمایندگی</a>
                   </li>
                   <li>
                     <a href="order.html">ثبت نام</a>
