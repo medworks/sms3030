@@ -27,7 +27,7 @@
     <!-- TODO: Add a favicon -->
     <link rel="shortcut icon" href="./images/fab.ico" />
     
-    <title>Rahyab clinic||Mediateq.ir</title>
+    <title>SMS330||Mediateq.ir</title>
 	
 	<link href="./css/zebra_pagination.css" rel="stylesheet" />
     
@@ -81,7 +81,7 @@
         <!--Logo text start-->
         <div class="header-logo">
             <a href="./" title="اس ام اس 3030">
-                <h1>پنل ادمین</h1>
+                <h1>پنل مدیریت</h1>
             </a>
         </div>
         <!--Logo text End-->
