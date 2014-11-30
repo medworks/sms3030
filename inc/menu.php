@@ -42,7 +42,15 @@
                 </ul>
               </li>
               <li>
-                <a href="reseller.html">پذیرش نمایندگی</a>
+                <a href="javascript:void(0);">نمایندگی</a>
+                <ul class="dropDown sub-menu">
+                  <li>
+                    <a href="reseller.html">پلن های نمایندگی</a>
+                  </li>
+                  <li>
+                    <a href="order.html">ثبت نام</a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a href="#">شماره حساب</a>
