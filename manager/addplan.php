@@ -20,9 +20,10 @@
 	{			
 		$lsparam = implode(",",$_POST["param"]);
 		$lsspecial = implode(",",$_POST["special"]);
-		$fields = array("`name`","`type`","`offer`","`pos`","`params`","`specials`");		
-		$values = array("'{$_POST[edtname]}'","'{$_POST[type]}'","'{$_POST[offer]}'",
-						"'{$_POST[edtpos]}'","'{$lsparam}'","'{$lsspecial}'");	
+		$fields = array("`name`","`title`","`type`","`offer`","`pos`","`params`","`specials`");		
+		$values = array("'{$_POST[edtname]}'","'{$_POST[edttitle]}'",
+						"'{$_POST[type]}'","'{$_POST[offer]}'","'{$_POST[edtpos]}'",
+						"'{$lsparam}'","'{$lsspecial}'");	
 		if (!$db->InsertQuery('plans',$fields,$values)) 
 		{			
 			header('location:addplan.php?act=new&msg=2');			
@@ -38,9 +39,10 @@
 	{			
 		$lsparam = implode(",",$_POST["param"]);
 		$lsspecial = implode(",",$_POST["special"]);
-		$values = array("`name`"=>"'{$_POST[edtname]}'","`type`"=>"'{$_POST[type]}'",
-						"`offer`"=>"'{$_POST[offer]}'","`pos`"=>"'{$_POST[edtpos]}'",
-						"`params`"=>"'{$lsparam}'","`specials`"=>"'{$lsspecial}'");
+		$values = array("`name`"=>"'{$_POST[edtname]}'","`title`"=>"'{$_POST[edttitle]}'",
+						"`type`"=>"'{$_POST[type]}'","`offer`"=>"'{$_POST[offer]}'",
+						"`pos`"=>"'{$_POST[edtpos]}'","`params`"=>"'{$lsparam}'",
+						"`specials`"=>"'{$lsspecial}'");
         $db->UpdateQuery("plans",$values,array("id='{$_GET[pid]}'"));		
 		header('location:addplan.php?act=new&msg=1');
 	}
@@ -152,11 +154,14 @@ $html=<<<cd
                         <div class="col-md-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">عنوان پلن</h3>
+                                    <h3 class="panel-title">نام پلن</h3>
                                 </div>
                                 <div class="panel-body">
                                     <div class="form-group">
                                         <input id="edtname" name="edtname" type="text" class="form-control" style="direction:ltr" placeholder="اسم پلن" value="{$row['name']}"/>
+                                    </div>
+									<div class="form-group">
+                                        <input id="edttitle" name="edttitle" type="text" class="form-control" style="direction:ltr" placeholder="تیتر" value="{$row['title']}"/>
                                     </div>
                                     <div class="form-group">
                                         <input id="edtpos" name="edtpos"  type="text" class="form-control" placeholder="ترتیب" value="{$row['pos']}" />
