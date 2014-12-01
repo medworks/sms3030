@@ -41,9 +41,7 @@ $html=<<<cd
                     <!--Top breadcrumb start -->
                 </div>
             </div>
-            <!-- Main Content Element  Start-->
-            <form id="frmsubmenu" class="form-inline ls_form" name="frmsubmenu" action="" method="post" role="form">
-                
+            <!-- Main Content Element  Start-->                            
                 <div class="row">
                     <div class="col-md-12">
                         <div class="panel panel-default">
@@ -98,10 +96,10 @@ $html.=<<<cd
                                                 <td>{$rows[$i]["accno"]}</td>
                     							<td>{$rows[$i]["cardno"]}</td>
                                                 <td class="text-center">													
-    											   <a href="bank.php?act=edit&bid={$rows[$i]["id"]}">                 
+    											   <a href="bank.php?act=edit&bid={$rows[$i]['id']}">                 
                                                     <button class="btn btn-xs btn-warning" title="ویرایش"><i class="fa fa-pencil-square-o"></i></button>
                                                     </a>
-                                                    <a href="?act=del&bid={$rows[$i]["id"]}">                                               
+                                                    <a href="?act=del&bid={$rows[$i]['id']}">                                               
                                                         <button class="btn btn-xs btn-danger" title="پاک کردن"><i class="fa fa-minus"></i></button>
                                                     </a>    
                                                 </td>
@@ -120,7 +118,6 @@ $html.=<<<cd
                         </div>
                     </div>
                 </div>
-            </form>               
             <!-- Main Content Element  End-->
         </div>
     </div>

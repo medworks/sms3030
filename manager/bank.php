@@ -82,7 +82,7 @@ $bhtml=<<<cd
                                 </div>
                                 <div class="panel-body">
                                     <div class="form-group">
-                                        <input id="edtname" name="edtname" type="text" class="form-control" value=" ">
+                                        <input id="edtname" name="edtname" type="text" class="form-control" value="{$row['name']}">
                                     </div>
                                 </div>
                             </div>
@@ -96,7 +96,7 @@ $bhtml=<<<cd
                                 </div>
                                 <div class="panel-body">
                                     <div class="form-group">
-                                        <input id="edtfamily" name="edtfamily" type="text" class="form-control" value=" ">
+                                        <input id="edtfamily" name="edtfamily" type="text" class="form-control" value="{$row['owner']}">
                                     </div>
                                 </div>
                             </div>
@@ -110,7 +110,7 @@ $bhtml=<<<cd
                                 </div>
                                 <div class="panel-body">
                                     <div class="form-group">
-                                        <input id="edtaccno" name="edtaccno" type="text" class="form-control" value=" ">
+                                        <input id="edtaccno" name="edtaccno" type="text" class="form-control" value="{$row['accno']}">
                                     </div>
                                 </div>
                             </div>
@@ -124,7 +124,7 @@ $bhtml=<<<cd
                                 </div>
                                 <div class="panel-body">
                                     <div class="form-group">
-                                        <input id="edtcardno" name="edtcardno" type="text" class="form-control" value=" ">
+                                        <input id="edtcardno" name="edtcardno" type="text" class="form-control" value="{$row['cardno']}">
                                     </div>
                                 </div>
                             </div>
@@ -138,7 +138,7 @@ $bhtml=<<<cd
                                 </div>
                                 <div class="panel-body">
                                     <div class="form-group">
-                                        <input id="edtsheba" name="edtsheba" type="text" class="form-control" value=" ">
+                                        <input id="edtsheba" name="edtsheba" type="text" class="form-control" value="{$row['shebano']}">
                                     </div>
                                 </div>
                             </div>
