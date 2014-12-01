@@ -187,6 +187,17 @@
             </li>
             <li>
                 <a href="#">
+                    <i class="fa fa-table"></i>
+                    <span>تعریف پلن نمایندگی</span>
+                </a>
+                <ul>
+                    <li><a href="addparamres.php">تعریف پارامترها</a></li>
+                    <li><a href="addplanres.php">تعریف پلن ها</a></li>
+                    <li><a href="editplanres.php">ویرایش پلن ها</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
                     <i class="fa fa-camera"></i>
                     <span>اسلاید شو</span>
                 </a>
@@ -207,16 +218,6 @@
                 </ul>
             </li>
             <!-- <li>
-                <a href="#">
-                    <i class="fa fa-table"></i>
-                    <span>مقالات</span>
-                </a>
-                <ul>
-                    <li><a href="addarticle.php?act=new">ثبت مقاله</a></li>
-                    <li><a href="editarticle.php?act=edit">ویرایش مقالات</a></li>
-                </ul>
-            </li>
-            <li>
                 <a href="#">
                     <i class="fa fa-image"></i>
                     <span>گالری تصاویر</span>
