@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2014 at 09:52 PM
+-- Generation Time: Dec 01, 2014 at 10:49 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -19,6 +19,31 @@ SET time_zone = "+00:00";
 --
 -- Database: `sms`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bankinfo`
+--
+
+CREATE TABLE IF NOT EXISTS `bankinfo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `owner` varchar(50) NOT NULL,
+  `accno` varchar(20) NOT NULL,
+  `cardno` varchar(20) NOT NULL,
+  `shebano` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `bankinfo`
+--
+
+INSERT INTO `bankinfo` (`id`, `name`, `owner`, `accno`, `cardno`, `shebano`) VALUES
+(1, ' ملت', ' سعید حاتمی', ' 41151246546545', ' 6032654798563652', 'IR4548544165444656465'),
+(2, ' ملی', ' سعید حاتمی', ' 646546646465', ' 76874967978', ' ir74668665446465465');
 
 -- --------------------------------------------------------
 
@@ -54,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `params` (
   `name` varchar(100) NOT NULL,
   `pos` smallint(6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `params`
@@ -62,7 +87,11 @@ CREATE TABLE IF NOT EXISTS `params` (
 
 INSERT INTO `params` (`id`, `name`, `pos`) VALUES
 (2, 'ارسال نظیر به نظیر', 1),
-(3, 'ارسال مشاغل', 2);
+(3, 'ارسال مشاغل', 2),
+(4, 'ارساب زمانبندی شده', 3),
+(5, 'پشتیبانی 24 ساعته', 4),
+(7, '5 خط رایگان\r\n', 6),
+(8, 'ارسال به وایبر\r\n', 7);
 
 -- --------------------------------------------------------
 
@@ -101,20 +130,23 @@ INSERT INTO `pics` (`id`, `tid`, `sid`, `itype`, `img`, `iname`, `isize`) VALUES
 CREATE TABLE IF NOT EXISTS `plans` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
+  `title` varchar(20) NOT NULL,
   `type` tinyint(4) NOT NULL,
   `offer` tinyint(1) NOT NULL,
   `pos` smallint(6) NOT NULL,
-  `params` varchar(50) NOT NULL,
+  `params` varchar(60) NOT NULL,
+  `specials` varchar(30) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `plans`
 --
 
-INSERT INTO `plans` (`id`, `name`, `type`, `offer`, `pos`, `params`) VALUES
-(1, 'نقره ای', 1, 1, 1, '0'),
-(3, 'طلایی', 2, 0, 2, '0');
+INSERT INTO `plans` (`id`, `name`, `title`, `type`, `offer`, `pos`, `params`, `specials`) VALUES
+(4, 'A<sup>+</sup>', 'شخصی', 0, 0, 1, '2,3,4,5,7,8', '2,3,4,5,7,8'),
+(5, 'B', 'سازمانی', 0, 0, 3, '2,4,7', '2,4,7'),
+(6, 'C', 'شرکتی', 0, 1, 2, '2,3,7,8', '2,3,7,8');
 
 -- --------------------------------------------------------
 
