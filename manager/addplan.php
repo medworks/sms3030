@@ -18,8 +18,8 @@
 
 	if ($_POST["mark"]=="saveplan")
 	{			
-		$lsparam = implode($_POST["param"]);
-		$lsspecial = implode($_POST["special"]);
+		$lsparam = implode(",",$_POST["param"]);
+		$lsspecial = implode(",",$_POST["special"]);
 		$fields = array("`name`","`type`","`offer`","`pos`","`params`","`specials`");		
 		$values = array("'{$_POST[edtname]}'","'{$_POST[type]}'","'{$_POST[offer]}'",
 						"'{$_POST[edtpos]}'","'{$lsparam}'","'{$lsspecial}'");	
@@ -35,10 +35,12 @@
 	}
 	else
 	if ($_POST["mark"]=="editplan")
-	{						
+	{			
+		$lsparam = implode(",",$_POST["param"]);
+		$lsspecial = implode(",",$_POST["special"]);
 		$values = array("`name`"=>"'{$_POST[edtname]}'","`type`"=>"'{$_POST[type]}'",
 						"`offer`"=>"'{$_POST[offer]}'","`pos`"=>"'{$_POST[edtpos]}'",
-						"`params`"=>"'0'","`specials`");
+						"`params`"=>"'{$lsparam}'","`specials`"=>"'{$lsspecial}'");
         $db->UpdateQuery("plans",$values,array("id='{$_GET[pid]}'"));		
 		header('location:addplan.php?act=new&msg=1');
 	}
@@ -88,14 +90,36 @@ $lstparam.=<<<cd
 cd;
 	for($i=0;$i<count($paramlist);$i++)
 	{
+		if ($_GET['act']=="edit")
+		{
+			$arrparam = explode(",",$row["params"]);
+			$arrspecial = explode(",",$row["specials"]);
+			if (in_array($paramlist[$i]['id'],$arrparam))
+			{
+				$pmchecked ="checked";
+			}
+			else
+			{
+				$pmchecked ="";
+			}
+			
+			if (in_array($paramlist[$i]['id'],$arrspecial))
+			{
+				$slchecked ="checked";
+			}
+			else
+			{
+				$slchecked ="";
+			}
+		}	
 $lstparam.=<<<cd
 			<tr>
 				<td>{$paramlist[$i]['name']}</td>
 				<td>
-					<input type="checkbox" name="param[]" value="{$paramlist[$i]['id']}" >
+					<input type="checkbox" name="param[]" value="{$paramlist[$i]['id']}" {$pmchecked}>
 				</td>	
 				<td>
-					<input type="checkbox" name="special[]" value="{$paramlist[$i]['id']}" >
+					<input type="checkbox" name="special[]" value="{$paramlist[$i]['id']}" {$slchecked}>
 				</td>
 			</tr>			
 cd;
