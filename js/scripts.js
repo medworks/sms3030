@@ -24,6 +24,12 @@ This file includes all cusomized javascript and all plugins libraries options
 jQuery(document).ready(function() {
   jQuery(".formdata").validationEngine();
 });
+  
+
+  //-- fancy box --
+jQuery(document).ready(function() {
+    jQuery(".fancybox").fancybox();
+  });
 
   //--------------------------------------------------------------------------------------------
 

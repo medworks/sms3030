@@ -138,7 +138,7 @@
                     </li>
                     <li class="col-md-12" style="color:#fff;font-size:18px;margin-bottom:10px">
                       <input class="rule validate[required]" data-prompt-position="topLeft:-450" id="rule" name="rule" type="checkbox" />
-                      قوانین پلیس سامانه را می پذیرم. برای مشاهده <a id="rule" href="#" title="مشاهده قوانین" style="font-family:inherit;color:#ff6b6b">اینجا</a> کلیک نمایید.
+                      قوانین پلیس سامانه را می پذیرم. برای مشاهده <a id="rule" href="./rule.html" class="fancybox fancybox.ajax" style="font-family:inherit;color:#ff6b6b">اینجا</a> کلیک نمایید.
                     </li>
                     <li class="col-md-12">
                       <button class="generalBtn loginBtn" type="submit">ارسال</button>

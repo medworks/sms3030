@@ -60,6 +60,7 @@
 <link href="./css/red.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="./css/zebra_pagination.css" rel="stylesheet" />
 <link href="./css/validationEngine.jquery.css" rel="stylesheet" />
+<link href="./css/jquery.fancybox.css" rel="stylesheet" />
   
 </head>
 

@@ -57,6 +57,8 @@
 
 <script type="text/javascript" src="./js/jquery.validationEngine.js"></script>
 <script type="text/javascript" src="./js/jquery.validationEngine-fa.js"></script>
+
+<script type="text/javascript" src="./js/jquery.fancybox.pack.js"></script>
   
 </body>
 </html>
