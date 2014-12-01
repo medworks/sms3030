@@ -234,8 +234,8 @@
                     <span>اطلاعت حساب</span>
                 </a>
                 <ul>
-                    <li><a href="bank.php">ثبت اطلاعات بانک</a></li>
-                    <li><a href="editbank.php">ویرایش اطلاعات</a></li>
+                    <li><a href="bank.php?act=new">ثبت اطلاعات بانک</a></li>
+                    <li><a href="editbank.php?act=edit">ویرایش اطلاعات</a></li>
                 </ul>
             </li>
             <!-- <li>
@@ -279,7 +279,7 @@
                     <span class="badge badge-red">3</span>
                 </a>
                 <ul>
-                    <li><a href="regreseller.php">ثبت نام کنندگان</a></li>
+                    <li><a href="regreseller.php?act=new">ثبت نام کنندگان</a></li>
                     <li><a href="confirmed.php">تایید شده ها</a></li>
                 </ul>
             </li>
