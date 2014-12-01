@@ -1,7 +1,6 @@
 <?php
-  include_once('./inc/header.php');
-?>
 
+$phtml=<<<cd
 <body id="top" class="page body-boxed-2">
 <!--[if lt IE 9]>
   <p class="browsehappy">
@@ -50,9 +49,8 @@
       </div><!-- end of container -->
     </div><!-- end of top menu -->
     <!-- Header -->
-    <?php
-      include_once('./inc/menu.php')
-    ?>
+cd;
+$phtml2=<<<cd
     <!-- end of header -->
     <!-- Page Info -->
     <div class="pageInfo">
@@ -76,9 +74,13 @@
     </div><!-- end of page info -->
   </section>
   <!-- end of Page Header -->
- 
+cd;
 
-<?php
+
+  include_once('./inc/header.php');
+  echo $phtml;
+  include_once('./inc/menu.php')
+  echo $phtml2;
   include_once('./inc/plans.php');
   include_once('./inc/clients.php');
   include_once('./inc/footer.php');
