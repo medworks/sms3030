@@ -51,7 +51,7 @@
 
 	if ($_GET['act']=="edit")
 	{
-	    $row=$db->Select("plans","*","id='{$_GET["pid"]}'",NULL);
+	    $row=$db->Select("plans","*","id='{$_GET["pid"]}'");
 		if ($row["type"]==1)	
 		{
 			$userchecked = "checked";
@@ -75,11 +75,14 @@
 			<input type='hidden' name='mark' value='editplan' /> ";		
 	}
 	
-	
-	
-	
-
-	
+	$paramlist=$db->SelectAll("params","*");
+	for($i=0;$i<count($paramlist);$i++)
+	{
+$lstparam.=<<<cd
+		{$paramlist[$i]['name']}<input type="checkbox" name="param[]" value="{$paramlist[$i]['id']}" >
+		<br/>
+cd;
+	}
 $html=<<<cd
     <!--Page main section start-->
     <section id="min-wrapper">
@@ -139,7 +142,7 @@ $html=<<<cd
                                     <h3 class="panel-title">انتخاب پارامترها</h3>
                                 </div>
                                 <div class="panel-body">
-                                   
+                                   {$lstparam}
                                 </div>
                             </div>
                         </div>
