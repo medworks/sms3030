@@ -76,13 +76,32 @@
 	}
 	
 	$paramlist=$db->SelectAll("params","*");
+$lstparam.=<<<cd
+		<table>
+			<tr>
+				<th style="width:150px">نام</th>
+				<th style="width:100px">قابلیت</th>
+				<th >نمایش در باکس</th>				
+			</tr>
+cd;
 	for($i=0;$i<count($paramlist);$i++)
 	{
 $lstparam.=<<<cd
-		{$paramlist[$i]['name']}<input type="checkbox" name="param[]" value="{$paramlist[$i]['id']}" >
-		<br/>
+			<tr>
+				<td>{$paramlist[$i]['name']}</td>
+				<td>
+					<input type="checkbox" name="param[]" value="{$paramlist[$i]['id']}" >
+				</td>	
+				<td>
+					<input type="checkbox" name="special[]" value="{$paramlist[$i]['id']}" >
+				</td>
+			</tr>			
 cd;
 	}
+$lstparam.=<<<cd
+		</table>		
+cd;
+
 $html=<<<cd
     <!--Page main section start-->
     <section id="min-wrapper">
