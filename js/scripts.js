@@ -240,7 +240,7 @@ jQuery(document).ready(function() {
       autoplayTimeout:8000,
       autoplayHoverPause:false,
       nav: true,
-      dots: true,
+      dots: false,
       stagePadding:0,
       smartSpeed:1000,
       responsive:{
