@@ -185,7 +185,7 @@
                     <li><a href="editplan.php?act=edit">ویرایش پلن ها</a></li>
                 </ul>
             </li>
-            <li>
+            <!-- <li>
                 <a href="#">
                     <i class="fa fa-table"></i>
                     <span>تعریف پلن نمایندگی</span>
@@ -195,7 +195,7 @@
                     <li><a href="addplanres.php">تعریف پلن ها</a></li>
                     <li><a href="editplanres.php">ویرایش پلن ها</a></li>
                 </ul>
-            </li>
+            </li> -->
             <li>
                 <a href="#">
                     <i class="fa fa-camera"></i>
