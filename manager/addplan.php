@@ -127,7 +127,7 @@ $html=<<<cd
                                             نمایندگی
                                         </label>
                                     </div>
-                                    <span class="help_text" style="display:inherit">برای گذاشتن علائم در توان از تگ &lt;sup&gt; &lt;/sup&gt; در اسم پلن استفاده نمایید</span>
+                                    <span class="help_text" style="display:inherit">برای گذاشتن علائم در توان از تگ &lt;sup&gt; &lt;/sup&gt; در اسم پلن استفاده نمایید.به طور مثال: <span style="direction:ltr;display:inline-block">A&lt;sup&gt;+&lt;/sup&gt;<span> </span>
                                 </div>
                             </div>
                         </div>
