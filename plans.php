@@ -79,7 +79,7 @@ cd;
 
   include_once('./inc/header.php');
   echo $phtml;
-  include_once('./inc/menu.php')
+  include_once('./inc/menu.php');
   echo $phtml2;
   include_once('./inc/plans.php');
   include_once('./inc/clients.php');
