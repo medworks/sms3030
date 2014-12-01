@@ -188,7 +188,7 @@
             <li>
                 <a href="#">
                     <i class="fa fa-table"></i>
-                    <span>تعریف پنل نمایندگی</span>
+                    <span>تعریف پلن نمایندگی</span>
                 </a>
                 <ul>
                     <li><a href="addparamres.php">تعریف پارامترها</a></li>
