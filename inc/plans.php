@@ -2,11 +2,26 @@
     <div class="sectionWrapper">
       <div class="container">
         <div class="row">
-          
+          <style>
+            .pricingIcon h2{
+              color: #333;
+              font-family: 'arno pro', sans-serif ;
+              font-size: 48px;
+              font-weight: normal;
+              direction: ltr;
+              line-height: 98px;
+            }
+            .pricingIcon h2 sup{
+              font-size: 35px;
+              font-weight: inherit;
+              font-family: inherit;
+              vertical-align: middle;
+            }
+          </style>
           <div class="col-md-3 col-sm-6">
             <div class="pricingTable">
               <header class="pricingHeader clearfix">
-                <div class="pricingIcon" style="background:#ffffff url('./images/plan-b.png') center center no-repeat"></div>
+                <div class="pricingIcon" style="background:#ffffff center center no-repeat"><h2>B</h2></div>
                 <h3 class="pricingTitle planTitle">پنل پایه</h3>
               </header><!-- end pricing header -->
               <ul class="pricingBody planBody">
@@ -27,7 +42,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="pricingTable">
               <header class="pricingHeader clearfix">
-                <div class="pricingIcon" style="background:#ffffff url('./images/plan-a.png') center center no-repeat"></div>
+                <div class="pricingIcon" style="background:#ffffff center center no-repeat"><h2>A</h2></div>
                 <h3 class="pricingTitle planTitle">پنل تبلیغاتی</h3>
               </header><!-- end pricing header -->
              <ul class="pricingBody planBody">
@@ -49,7 +64,7 @@
             <div class="pricingTable">
               <header class="pricingHeader clearfix">
                 <img src="images/ribbon.png" alt="ribbon" class="ribbon">
-                <div class="pricingIcon" style="background:#ffffff url('./images/plan-plus.png') center center no-repeat"></div>
+                <div class="pricingIcon" style="background:#ffffff center center no-repeat"><h2>A<sup>+</sup></h2></div>
                 <h3 class="pricingTitle planTitle">پنل سازمانی</h3>
               </header><!-- end pricing header -->
               <ul class="pricingBody planBody">
@@ -70,7 +85,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="pricingTable">
               <header class="pricingHeader clearfix">
-                <div class="pricingIcon" style="background:#ffffff url('./images/plan-s.png') center center no-repeat"></div>
+                <div class="pricingIcon" style="background:#ffffff center center no-repeat"><h2>A<sup>s</sup></h2></div>
                 <h3 class="pricingTitle planTitle">پنل حرفه ای</h3>
               </header><!-- end pricing header -->
               <ul class="pricingBody planBody">

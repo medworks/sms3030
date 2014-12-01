@@ -108,7 +108,7 @@ $html=<<<cd
                                 </div>
                                 <div class="panel-body">
                                     <div class="form-group">
-                                        <input id="edtname" name="edtname" type="text" class="form-control" placeholder="اسم پلن" value="{$row['name']}"/>
+                                        <input id="edtname" name="edtname" type="text" class="form-control" style="direction:ltr" placeholder="اسم پلن" value="{$row['name']}"/>
                                     </div>
                                     <div class="form-group">
                                         <input id="edtpos" name="edtpos"  type="text" class="form-control" placeholder="ترتیب" value="{$row['pos']}" />
@@ -127,6 +127,7 @@ $html=<<<cd
                                             نمایندگی
                                         </label>
                                     </div>
+                                    <span class="help_text" style="display:inherit">برای گذاشتن علائم در توان از تگ &lt;sup&gt; &lt;/sup&gt; در اسم پلن استفاده نمایید</span>
                                 </div>
                             </div>
                         </div>
