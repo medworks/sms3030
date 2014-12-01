@@ -18,9 +18,11 @@
 
 	if ($_POST["mark"]=="saveplan")
 	{			
-		$fields = array("`name`","`type`","`offer`","`pos`","`params`");		
+		$lsparam = implode($_POST["param"]);
+		$lsspecial = implode($_POST["special"]);
+		$fields = array("`name`","`type`","`offer`","`pos`","`params`","`specials`");		
 		$values = array("'{$_POST[edtname]}'","'{$_POST[type]}'","'{$_POST[offer]}'",
-						"'{$_POST[edtpos]}'","'0'");	
+						"'{$_POST[edtpos]}'","'{$lsparam}'","'{$lsspecial}'");	
 		if (!$db->InsertQuery('plans',$fields,$values)) 
 		{			
 			header('location:addplan.php?act=new&msg=2');			
@@ -36,7 +38,7 @@
 	{						
 		$values = array("`name`"=>"'{$_POST[edtname]}'","`type`"=>"'{$_POST[type]}'",
 						"`offer`"=>"'{$_POST[offer]}'","`pos`"=>"'{$_POST[edtpos]}'",
-						"`params`"=>"'0'");
+						"`params`"=>"'0'","`specials`");
         $db->UpdateQuery("plans",$values,array("id='{$_GET[pid]}'"));		
 		header('location:addplan.php?act=new&msg=1');
 	}
