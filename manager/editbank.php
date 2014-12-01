@@ -1,4 +1,28 @@
 <?php
+	include_once("../config.php");
+	include_once("../classes/functions.php");
+  	include_once("../classes/messages.php");
+  	include_once("../classes/session.php");	
+  	include_once("../classes/security.php");
+  	include_once("../classes/database.php");	
+	include_once("../classes/login.php");
+    include_once("../lib/persiandate.php"); 
+	include_once("../lib/Zebra_Pagination.php"); 
+	
+	
+	$login = Login::GetLogin();
+    if (!$login->IsLogged())
+	{
+		header("Location: ../index.php");
+		die(); // solve a security bug
+	}
+	$db = Database::GetDatabase();	
+	
+	if ($_GET['act']=="del")
+	{
+		$db->Delete("bankinfo"," id ",$_GET["bid"]);		
+		header('location:editbank.php?act=edit');	
+	}		
 
 $html=<<<cd
 <section id="min-wrapper">
@@ -44,26 +68,54 @@ $html=<<<cd
                                             </tr>
                                             </thead>
                                             <tbody>
+cd;
+	$records_per_page = 10;
+	$pagination = new Zebra_Pagination();
+
+	$pagination->navigation_position("right");
+
+	$reccount = $db->CountAll("bankinfo");
+	$pagination->records($reccount); 
+	
+    $pagination->records_per_page($records_per_page);	
+
+$rows = $db->SelectAll(
+				"bankinfo",
+				"*",
+				NULL,
+				"id ASC",
+				($pagination->get_page() - 1) * $records_per_page,
+				$records_per_page);
+				
+for($i = 0; $i < Count($rows); $i++)
+{
+$rownumber = $i+1;
+$html.=<<<cd
                                             <tr>
-                    							<td>1</td>
-                    							<td>مجتبی امجدی</td>
-                                                <td>767</td>
-                                                <td>5137464613679</td>
-                    							<td>513746456613679</td>
+                    							<td>{$rownumber}</td>
+                    							<td>{$rows[$i]["name"]}</td>
+                                                <td>{$rows[$i]["owner"]}</td>
+                                                <td>{$rows[$i]["accno"]}</td>
+                    							<td>{$rows[$i]["cardno"]}</td>
                                                 <td class="text-center">													
-    											   <a href="addnews.php?act=edit&amp;did=2">                 
+    											   <a href="bank.php?act=edit&bid={$rows[$i]["id"]}">                 
                                                     <button class="btn btn-xs btn-warning" title="ویرایش"><i class="fa fa-pencil-square-o"></i></button>
                                                     </a>
-                                                    <a href="?act=del&amp;did=2">                                               
+                                                    <a href="?act=del&bid={$rows[$i]["id"]}">                                               
                                                         <button class="btn btn-xs btn-danger" title="پاک کردن"><i class="fa fa-minus"></i></button>
                                                     </a>    
                                                 </td>
                                             </tr>
+cd;
+}
+$pgcodes = $pagination->render(true);
+$html.=<<<cd
+
                                         </tbody>
                                     </table>
                                 </div>
                                 <!--Table Wrapper Finish-->
-                                
+                                {$pgcodes}
                             </div>
                         </div>
                     </div>
