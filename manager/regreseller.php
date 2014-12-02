@@ -96,7 +96,7 @@ $html.=<<<cd
                                                 <td>{$rows[$i]["mobile"]}</td>
                     							<td>{$rows[$i]["tell"]}</td>
                                                 <td class="text-center">													
-    											   <a href="seenregres.php?act=veiw&aid={$rows[$i]["id"]}">
+    											   <a href="seenregres.php?act=view&aid={$rows[$i]["id"]}">
                                                     <button type="button" class="btn btn-xs btn-warning" title="مشاهده"><i class="fa fa-eye"></i></button>
     											   </a>
                                                 </td>
