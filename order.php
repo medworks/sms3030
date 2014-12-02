@@ -1,7 +1,6 @@
 <?php
-  include_once('./inc/header.php');
-?>
-
+  
+$order=<<<cd
 <body id="top" class="page body-boxed-2">
 <!--[if lt IE 9]>
   <p class="browsehappy">
@@ -50,9 +49,8 @@
       </div><!-- end of container -->
     </div><!-- end of top menu -->
     <!-- Header -->
-    <?php
-      include_once('./inc/menu.php')
-    ?>
+cd;
+$order2=<<<cd
     <!-- end of header -->
     <!-- Page Info -->
     <div class="pageInfo">
@@ -153,9 +151,12 @@
           </div><!-- end of container -->
         </div><!-- end of section wrapper -->
       </section>
- 
+cd;
 
-<?php
+  include_once('./inc/header.php');
+  echo $order;
+  include_once('./inc/menu.php')
+  echo $order2;
   include_once('./inc/clients.php');
   include_once('./inc/footer.php');
 ?>
