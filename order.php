@@ -155,7 +155,7 @@ cd;
 
   include_once('./inc/header.php');
   echo $order;
-  include_once('./inc/menu.php')
+  include_once('./inc/menu.php');
   echo $order2;
   include_once('./inc/clients.php');
   include_once('./inc/footer.php');
