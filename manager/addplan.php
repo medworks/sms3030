@@ -20,10 +20,10 @@
 	{			
 		$lsparam = implode(",",$_POST["param"]);
 		$lsspecial = implode(",",$_POST["special"]);
-		$fields = array("`name`","`title`","`type`","`offer`","`pos`","`params`","`specials`");		
+		$fields = array("`name`","`title`","`type`","`offer`","`pos`","`params`","`specials`","`price`");
 		$values = array("'{$_POST[edtname]}'","'{$_POST[edttitle]}'",
 						"'{$_POST[type]}'","'{$_POST[offer]}'","'{$_POST[edtpos]}'",
-						"'{$lsparam}'","'{$lsspecial}'");	
+						"'{$lsparam}'","'{$lsspecial}'","'{$_POST[edtprice]}'");	
 		if (!$db->InsertQuery('plans',$fields,$values)) 
 		{			
 			header('location:addplan.php?act=new&msg=2');			
@@ -42,7 +42,7 @@
 		$values = array("`name`"=>"'{$_POST[edtname]}'","`title`"=>"'{$_POST[edttitle]}'",
 						"`type`"=>"'{$_POST[type]}'","`offer`"=>"'{$_POST[offer]}'",
 						"`pos`"=>"'{$_POST[edtpos]}'","`params`"=>"'{$lsparam}'",
-						"`specials`"=>"'{$lsspecial}'");
+						"`specials`"=>"'{$lsspecial}'","`price`"=>"'{$_POST[edtprice]}'");
         $db->UpdateQuery("plans",$values,array("id='{$_GET[pid]}'"));		
 		header('location:addplan.php?act=new&msg=1');
 	}
@@ -179,6 +179,9 @@ $html=<<<cd
                                             <input type="radio" name="type" id="optionsRadios4" value="2" {$agentchecked}>
                                             نمایندگی
                                         </label>
+										<div class="form-group">
+                                        <input id="edtprice" name="edtprice"  type="text" class="form-control" placeholder="قیمت" value="{$row['price']}" />
+                                    </div>
                                     </div> 
                                     <span class="help_text" style="display:inherit">برای گذاشتن علائم در توان از تگ &lt;sup&gt; &lt;/sup&gt; در اسم پلن استفاده نمایید.به طور مثال: <span style="direction:ltr;display:inline-block">A&lt;sup&gt;+&lt;/sup&gt;<span> </span>
                                 </div>
