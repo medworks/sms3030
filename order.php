@@ -12,9 +12,14 @@
 	
 	if ($_POST["mark"]=="register")
 	{
-		$fields = array("`name`","`pos`");		
-		$values = array("'{$_POST[edtname]}'","'{$_POST[edtpos]}'");	
-		if (!$db->InsertQuery('params',$fields,$values)) 
+		$fields = array("`name`","`company`","`email`","`username`","`password`",
+						"`meli`","`shenasname`","`tell`","`mobile`","`codeposti`",
+						"`address`","`regdate`");
+		$values = array("'{$_POST[edtname]}'","'{$_POST[edtcompany]}'","'{$_POST[edtemail]}'",
+						"'{$_POST[edtusername]}'","'{$_POST[edtpass]}'","'{$_POST[edtmeli]}'",
+						"'{$_POST[edtshenas]}'","'{$_POST[edttell]}'","'{$_POST[edtmobile]}'",
+						"'{$_POST[edtzipcode]}'","'{$_POST[txtaddress]}'","'{$date}'");
+		if (!$db->InsertQuery('agents',$fields,$values)) 
 		{			
 			header('location:order.html?act=new&msg=2');			
 		} 	
@@ -158,7 +163,7 @@ $order2=<<<cd
                       <input class="address validate[required,minSize[30],maxSize[500]]" data-prompt-position="topLeft" id="address" name="txtaddress" placeholder="آدرس*" type="text" />
                     </li>
                     <li class="col-md-12" style="color:#fff;font-size:18px;margin-bottom:10px">
-                      <input class="rule validate[required]" data-prompt-position="topLeft:-450" id="rule" name="rule" type="checkbox" />
+                      <input class="rule validate[required]" data-prompt-position="topLeft:-450" id="rule" name="chbrule" type="checkbox"  value="1"/>
                       قوانین پلیس سامانه را می پذیرم. برای مشاهده <a id="rule" href="./rule.html" class="fancybox fancybox.ajax" style="font-family:inherit;color:#ff6b6b">اینجا</a> کلیک نمایید.
                     </li>
                     <li class="col-md-12">
