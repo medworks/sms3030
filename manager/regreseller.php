@@ -79,7 +79,7 @@ cd;
 $rows = $db->SelectAll(
 				"agents",
 				"*",
-				NULL,
+				"confirm = 0",
 				"regdate DESC",
 				($pagination->get_page() - 1) * $records_per_page,
 				$records_per_page);

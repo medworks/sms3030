@@ -14,12 +14,20 @@
 		header("Location: ../index.php");
 		die(); // solve a security bug
 	} 
+	
 	$db = Database::GetDatabase(); 
 	
 	if (isset($_GET["act"]) and $_GET["act"]=="view")
 	{
 		$row = $db->Select("agents","*","id ={$_GET['aid']}");
 		$regdate = ToJalali($row["regdate"],"Y/m/d H:i");
+	}
+	
+	if ((isset($_POST["mark"]) and $_POST["mark"]=="confirm"))
+	{
+		$values = array("`confirm`"=>"'1'");
+		$db->UpdateQuery("agents",$values,array("id='{$_GET[aid]}'"));		
+		header('location:regreseller.php?act=new');
 	}
 $html=<<<cd
 <section id="min-wrapper">
@@ -203,7 +211,7 @@ $html=<<<cd
                                 </div>
                                 <div class="panel-body">               
                                     <button id="submit" type="submit" class="btn btn-default">تایید</button>
-                                    <input type="hidden" name="mark" value="savenews"> 
+                                    <input type="hidden" name="mark" value="confirm"> 
                                 </div>
                             </div>
                         </div>
