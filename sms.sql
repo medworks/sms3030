@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2014 at 10:49 PM
+-- Generation Time: Dec 02, 2014 at 11:04 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -23,6 +23,38 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `agents`
+--
+
+CREATE TABLE IF NOT EXISTS `agents` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `company` varchar(50) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `username` varchar(15) NOT NULL,
+  `password` varchar(40) NOT NULL,
+  `meli` varchar(12) NOT NULL,
+  `shenasname` varchar(12) NOT NULL,
+  `tell` varchar(12) NOT NULL,
+  `mobile` varchar(12) NOT NULL,
+  `codeposti` varchar(12) NOT NULL,
+  `address` text NOT NULL,
+  `regdate` datetime NOT NULL,
+  `confirm` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `agents`
+--
+
+INSERT INTO `agents` (`id`, `name`, `company`, `email`, `username`, `password`, `meli`, `shenasname`, `tell`, `mobile`, `codeposti`, `address`, `regdate`, `confirm`) VALUES
+(1, 'رضا', 'ghbjhgjh', 'gjhghg@gffh.com', 'user', '12345', '6546546565', '46565', '0123456789', '0124578965', '121654655', 'fghfhfhfgghjgjgjhgjhgjhgjhjhgjghjgjhgjhgjhgjhgjhgjhgjh', '0000-00-00 00:00:00', 1),
+(2, 'سعید حاتمی', 'گسترش سامانه بیخودی', 'hatami4560@yahoo.com', 'phpdev', '110**', '0945452124', '45455', '3662355644', '9151204395', '465466465', 'مشهد -فلاحی - لاتلاتلتالتالالتالتلالتالتللتالتلتالتلتلالتتالا', '2014-12-02 10:59:46', 0);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `bankinfo`
 --
 
@@ -35,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `bankinfo` (
   `shebano` varchar(30) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `bankinfo`
@@ -136,6 +168,7 @@ CREATE TABLE IF NOT EXISTS `plans` (
   `pos` smallint(6) NOT NULL,
   `params` varchar(60) NOT NULL,
   `specials` varchar(30) NOT NULL,
+  `price` double NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
@@ -143,10 +176,10 @@ CREATE TABLE IF NOT EXISTS `plans` (
 -- Dumping data for table `plans`
 --
 
-INSERT INTO `plans` (`id`, `name`, `title`, `type`, `offer`, `pos`, `params`, `specials`) VALUES
-(4, 'A<sup>+</sup>', 'شخصی', 0, 0, 1, '2,3,4,5,7,8', '2,3,4,5,7,8'),
-(5, 'B', 'سازمانی', 0, 0, 3, '2,4,7', '2,4,7'),
-(6, 'C', 'شرکتی', 0, 1, 2, '2,3,7,8', '2,3,7,8');
+INSERT INTO `plans` (`id`, `name`, `title`, `type`, `offer`, `pos`, `params`, `specials`, `price`) VALUES
+(4, 'A<sup>+</sup>', 'شخصی', 1, 0, 1, '2,3,4,5,7,8', '2,3,4,5,7,8', 800000),
+(5, 'B', 'سازمانی', 2, 0, 3, '2,4,7', '2,4,7', 600000),
+(6, 'C', 'شرکتی', 1, 1, 2, '2,3,7,8', '2,3,7,8', 750000);
 
 -- --------------------------------------------------------
 
