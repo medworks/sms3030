@@ -1,5 +1,27 @@
 <?php
-
+	include_once("../config.php");
+	include_once("../classes/functions.php");
+  	include_once("../classes/messages.php");
+  	include_once("../classes/session.php");	
+  	include_once("../classes/security.php");
+  	include_once("../classes/database.php");	
+	include_once("../classes/login.php");
+    include_once("../lib/persiandate.php"); 
+	include_once("../lib/Zebra_Pagination.php"); 
+	
+	
+	$login = Login::GetLogin();
+    if (!$login->IsLogged())
+	{
+		header("Location: ../index.php");
+		die(); // solve a security bug
+	} 
+	$db = Database::GetDatabase(); 
+	if ($_GET['act']=="del")
+	{
+		$db->Delete("agents"," id ",$_GET["aid"]);		
+		header('location:regreseller.php?act=edit');	
+	}		
 $html=<<<cd
 <section id="min-wrapper">
     <div id="main-content">
@@ -43,22 +65,51 @@ $html=<<<cd
                                             </tr>
                                             </thead>
                                             <tbody>
+cd;
+	$records_per_page = 10;
+	$pagination = new Zebra_Pagination();
+
+	$pagination->navigation_position("right");
+
+	$reccount = $db->CountAll("agents");
+	$pagination->records($reccount); 
+	
+    $pagination->records_per_page($records_per_page);	
+
+$rows = $db->SelectAll(
+				"agents",
+				"*",
+				"confirm = 1",
+				"regdate DESC",
+				($pagination->get_page() - 1) * $records_per_page,
+				$records_per_page);
+				
+	
+for($i = 0; $i < Count($rows); $i++)
+{
+$rownumber = $i+1;
+
+$html.=<<<cd
                                             <tr>
-                    							<td>1</td>
-                    							<td>مجتبی امجدی</td>
-                                                <td>9151091162</td>
-                    							<td>5137613679</td>
+                    							<td>{$rownumber}</td>
+                    							<td>{$rows[$i]["name"]}</td>
+                                                <td>{$rows[$i]["mobile"]}</td>
+                    							<td>{$rows[$i]["tell"]}</td>
                                                 <td class="text-center">													
-    											   <a href="seenregconf.php">
+    											   <a href="seenregres.php?act=view&aid={$rows[$i]["id"]}">
                                                     <button type="button" class="btn btn-xs btn-warning" title="مشاهده"><i class="fa fa-eye"></i></button>
     											   </a>
                                                 </td>
                                             </tr>
+cd;
+}
+$pgcodes = $pagination->render(true);
+$html.=<<<cd
                                         </tbody>
                                     </table>
                                 </div>
                                 <!--Table Wrapper Finish-->
-                                
+                                {$pgcodes}
                             </div>
                         </div>
                     </div>

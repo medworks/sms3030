@@ -154,7 +154,7 @@ $order2=<<<cd
                       <input class="tel validate[required,custom[onlyNumberSp],maxSize[10],minSize[10]]" data-prompt-position="topLeft" id="tel" name="edttell" placeholder="شماره ثابت*" type="text" />
                     </li>
                     <li class="col-md-6">
-                      <input class="mobile validate[required,custom[onlyNumberSp],maxSize[10],minSize[10]]" data-prompt-position="topLeft" id="mobile" name="edtmobile" placeholder="شماره همراه*" type="text" />
+                      <input class="mobile validate[required,custom[onlyNumberSp],maxSize[11],minSize[11]]" data-prompt-position="topLeft" id="mobile" name="edtmobile" placeholder="شماره همراه*" type="text" />
                     </li>
                     <li class="col-md-6">
                       <input class="zipcod" id="zipcod" name="edtzipcode" placeholder="کد پستی" type="text" />
