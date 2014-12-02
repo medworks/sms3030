@@ -6,8 +6,7 @@
   	include_once("./classes/security.php");
   	include_once("./classes/database.php");	
 	
-    	
-		
+    			
 	$db = Database::GetDatabase(); 
 	
 	if ($_POST["mark"]=="register")

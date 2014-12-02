@@ -170,7 +170,7 @@ $html=<<<cd
                                         <input type="checkbox" name="offer" value="1" {$offer}>
                                         <i></i> پلن پیشنهادی
                                     </label>
-                                    <!-- <div class="radio-inline">
+                                     <div class="radio-inline">
                                         <label class="radio-inline">
                                             <input type="radio" name="type" id="optionsRadios3" value="1" {$userchecked}>
                                             کاربری
@@ -179,7 +179,7 @@ $html=<<<cd
                                             <input type="radio" name="type" id="optionsRadios4" value="2" {$agentchecked}>
                                             نمایندگی
                                         </label>
-                                    </div> -->
+                                    </div> 
                                     <span class="help_text" style="display:inherit">برای گذاشتن علائم در توان از تگ &lt;sup&gt; &lt;/sup&gt; در اسم پلن استفاده نمایید.به طور مثال: <span style="direction:ltr;display:inline-block">A&lt;sup&gt;+&lt;/sup&gt;<span> </span>
                                 </div>
                             </div>

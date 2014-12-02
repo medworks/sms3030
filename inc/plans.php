@@ -48,7 +48,7 @@ cd;
 $rows = $db->SelectAll(
 				"plans",
 				"*",
-				NULL,
+				"type = 1",
 				"pos ASC",
 				($pagination->get_page() - 1) * $records_per_page,
 				$records_per_page);
