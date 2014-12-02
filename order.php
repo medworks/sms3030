@@ -12,6 +12,7 @@
 	
 	if ($_POST["mark"]=="register")
 	{
+		$date = date('Y-m-d H:i:s');
 		$fields = array("`name`","`company`","`email`","`username`","`password`",
 						"`meli`","`shenasname`","`tell`","`mobile`","`codeposti`",
 						"`address`","`regdate`");
