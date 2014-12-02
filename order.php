@@ -1,5 +1,28 @@
 <?php
-  
+    include_once("./config.php");
+	include_once("./classes/functions.php");
+  	include_once("./classes/messages.php");
+  	include_once("./classes/session.php");	
+  	include_once("./classes/security.php");
+  	include_once("./classes/database.php");	
+	
+    	
+		
+	$db = Database::GetDatabase(); 
+	
+	if ($_POST["mark"]=="register")
+	{
+		$fields = array("`name`","`pos`");		
+		$values = array("'{$_POST[edtname]}'","'{$_POST[edtpos]}'");	
+		if (!$db->InsertQuery('params',$fields,$values)) 
+		{			
+			header('location:order.html?act=new&msg=2');			
+		} 	
+		else 
+		{  										
+			header('location:order.html?act=new&msg=1');
+		}  		
+	}
 $order=<<<cd
 <body id="top" class="page body-boxed-2">
 <!--[if lt IE 9]>
@@ -94,45 +117,45 @@ $order2=<<<cd
             <div class="row registerAreaContents">
 
               <div class="col-md-12 formWrapper">
-                <form class="registerFormArea formArea rtl formdata" method="POST">
+                <form action="" class="registerFormArea formArea rtl formdata" method="POST">
 
                   <ul class="row">
                     <li class="col-md-6">
-                      <input class="name validate[required,minSize[4],maxSize[50]]" data-prompt-position="topLeft" id="name" name="name" placeholder="نام و نام خانوادگی*" type="text" />
+                      <input class="name validate[required,minSize[4],maxSize[50]]" data-prompt-position="topLeft" id="name" name="edtname" placeholder="نام و نام خانوادگی*" type="text" />
                     </li>
                     <li class="col-md-6">
-                      <input class="company-name" id="company-name" name="company-name" placeholder="نام شرکت" type="text" />
+                      <input class="company-name" id="company-name" name="edtcompany" placeholder="نام شرکت" type="text" />
                     </li>
                     <li class="col-md-6">
-                      <input class="email validate[required,custom[email]]" id="email" data-prompt-position="topLeft" name="email" placeholder="ایمیل*" type="email" />
+                      <input class="email validate[required,custom[email]]" id="email" data-prompt-position="topLeft" name="edtemail" placeholder="ایمیل*" type="email" />
                     </li>
                     <li class="col-md-6">
-                      <input class="user validate[required,minSize[4],maxSize[50]]" data-prompt-position="topLeft" id="user" name="user" placeholder="نام کاربری مورد نظر*" type="text" />
+                      <input class="user validate[required,minSize[4],maxSize[50]]" data-prompt-position="topLeft" id="user" name="edtusername" placeholder="نام کاربری مورد نظر*" type="text" />
                     </li>
                     <li class="col-md-6">
-                      <input class="pass validate[required,minSize[5],maxSize[32]]" data-prompt-position="topLeft" id="pass" name="pass" placeholder="رمز عبور*" type="password"
+                      <input class="pass validate[required,minSize[5],maxSize[32]]" data-prompt-position="topLeft" id="pass" name="edtpass" placeholder="رمز عبور*" type="password"
                        />
                      </li>
                     <li class="col-md-6">
-                      <input class="repass validate[required,equals[pass]]" data-prompt-position="topLeft" id="repass" name="repass" placeholder="تکرار رمز عبور*" type="password" />
+                      <input class="repass validate[required,equals[pass]]" data-prompt-position="topLeft" id="repass" name="edtteppass" placeholder="تکرار رمز عبور*" type="password" />
                     </li>
                     <li class="col-md-6">
-                      <input class="codemeli validate[required,custom[onlyNumberSp],maxSize[10],minSize[10]]" data-prompt-position="topLeft" id="codemeli" name="codemeli" placeholder="کدملی*" type="text" />
+                      <input class="codemeli validate[required,custom[onlyNumberSp],maxSize[10],minSize[10]]" data-prompt-position="topLeft" id="codemeli" name="edtmeli" placeholder="کدملی*" type="text" />
                     </li>
                     <li class="col-md-6">
-                      <input class="idnum validate[required,custom[onlyNumberSp],maxSize[10],minSize[1]]" data-prompt-position="topLeft" id="idnum" name="idnum" placeholder="شماره شناسنامه*" type="text" />
+                      <input class="idnum validate[required,custom[onlyNumberSp],maxSize[10],minSize[1]]" data-prompt-position="topLeft" id="idnum" name="edtshenas" placeholder="شماره شناسنامه*" type="text" />
                     </li>
                     <li class="col-md-6">
-                      <input class="tel validate[required,custom[onlyNumberSp],maxSize[10],minSize[10]]" data-prompt-position="topLeft" id="tel" name="tel" placeholder="شماره ثابت*" type="text" />
+                      <input class="tel validate[required,custom[onlyNumberSp],maxSize[10],minSize[10]]" data-prompt-position="topLeft" id="tel" name="edttell" placeholder="شماره ثابت*" type="text" />
                     </li>
                     <li class="col-md-6">
-                      <input class="mobile validate[required,custom[onlyNumberSp],maxSize[10],minSize[10]]" data-prompt-position="topLeft" id="mobile" name="mobile" placeholder="شماره همراه*" type="text" />
+                      <input class="mobile validate[required,custom[onlyNumberSp],maxSize[10],minSize[10]]" data-prompt-position="topLeft" id="mobile" name="edtmobile" placeholder="شماره همراه*" type="text" />
                     </li>
                     <li class="col-md-6">
-                      <input class="zipcod" id="zipcod" name="zipcod" placeholder="کد پستی" type="text" />
+                      <input class="zipcod" id="zipcod" name="edtzipcode" placeholder="کد پستی" type="text" />
                     </li>
                     <li class="col-md-6">
-                      <input class="address validate[required,minSize[30],maxSize[500]]" data-prompt-position="topLeft" id="address" name="address" placeholder="آدرس*" type="text" />
+                      <input class="address validate[required,minSize[30],maxSize[500]]" data-prompt-position="topLeft" id="address" name="txtaddress" placeholder="آدرس*" type="text" />
                     </li>
                     <li class="col-md-12" style="color:#fff;font-size:18px;margin-bottom:10px">
                       <input class="rule validate[required]" data-prompt-position="topLeft:-450" id="rule" name="rule" type="checkbox" />
@@ -140,6 +163,7 @@ $order2=<<<cd
                     </li>
                     <li class="col-md-12">
                       <button class="generalBtn loginBtn" type="submit">ارسال</button>
+					  <input type="hidden" name="mark" value="register" />
                     </li>
                   </ul><!-- end of row -->
 
