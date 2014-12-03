@@ -39,11 +39,17 @@
                   <li>
                     <a href="lines.html">تعرفه خطوط</a>
                   </li>
+                  <li>
+                    <a href="lineorder.html">ثبت نام خط</a>
+                  </li>
                 </ul>
               </li>
               <li>
-                <a href="reseller.html">نمایندگی</a>
+                <a href="javascript:void(0);">نمایندگی</a>
                 <ul class="dropDown sub-menu">
+                   <li>
+                    <a href="reseller.html">شرایط نمایندگی نمایندگی</a>
+                  </li>
                   <li>
                     <a href="single-reseller.html">پلن نمایندگی</a>
                   </li>

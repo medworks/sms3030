@@ -187,17 +187,6 @@
                     <li><a href="plandetail.php">توضیحات</a></li>
                 </ul>
             </li>
-            <!-- <li>
-                <a href="#">
-                    <i class="fa fa-table"></i>
-                    <span>تعریف پلن نمایندگی</span>
-                </a>
-                <ul>
-                    <li><a href="addparamres.php">تعریف پارامترها</a></li>
-                    <li><a href="addplanres.php">تعریف پلن ها</a></li>
-                    <li><a href="editplanres.php">ویرایش پلن ها</a></li>
-                </ul>
-            </li> -->
             <li>
                 <a href="#">
                     <i class="fa fa-camera"></i>
@@ -277,12 +266,23 @@
             <li>
                 <a href="#">
                     <i class="fa fa-pencil-square-o"></i>
-                    <span>پنل نمایندگی</span>
+                    <span>پلن نمایندگی</span>
                     <span class="badge badge-red">3</span>
                 </a>
                 <ul>
                     <li><a href="regreseller.php?act=new">ثبت نام کنندگان</a></li>
                     <li><a href="confirmed.php">تایید شده ها</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-table"></i>
+                    <span>سفارش خطوط</span>
+                    <span class="badge badge-red">3</span>
+                </a>
+                <ul>
+                    <li><a href="addparamres.php">ثبت نام کنندگان</a></li>
+                    <li><a href="addplanres.php">تایید شده ها</a></li>
                 </ul>
             </li>
             <li> 

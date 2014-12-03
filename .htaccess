@@ -11,6 +11,7 @@ deny from all
 	RewriteRule ^bank.html sms3030/bank.php [L]
 	RewriteRule ^aboutus.html sms3030/aboutus.php [L]
 	RewriteRule ^lines.html sms3030/lines.php [L]
+	RewriteRule ^lineorder.html sms3030/lineorder.php [L]
 	RewriteRule ^reseller.html sms3030/reseller.php [L]
 	RewriteRule ^single-reseller.html sms3030/single-reseller.php [L]
 	RewriteRule ^plans.html sms3030/plans.php [L]

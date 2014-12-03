@@ -36,14 +36,14 @@ $order2=<<<cd
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <h2 class="pageTitle">نمایندگی اس ام اس 3030</h2>
+            <h2 class="pageTitle">ثبت نام خط</h2>
           </div><!-- end of col-md-4 -->
           <div class="col-md-8">
             <ol class="breadcrumb">
               <li>
                 <a href="./">صفحه اصلی</a>
               </li>
-              <li class="active">نمایندگی</li>
+              <li class="active">ثبت نام خط</li>
             </ol><!-- end of breadcrumb -->
           </div><!-- end of col-md-8 -->
 
@@ -63,7 +63,7 @@ $order2=<<<cd
                   <span class="generalBorder"></span>
                 </h2><!-- end of sectionHeader -->
                 <p>
-                  لطفا فیلدهای زیر را به صورت کامل پر نموده و برای ما ارسال نمایید در اولین فرصت برای شما حساب کاربری ایجاد و ارسال می گردد.
+                  لطفا فیلدهای زیر را به صورت کامل پر نموده و برای ما ارسال نمایید در اولین فرصت برای شما خط مورد نظر بر روی پنل کاربریتان قرار خواهد گرفت.
                 </p>
               </div><!-- end of section title -->
               
@@ -76,7 +76,7 @@ $order2=<<<cd
 
                   <ul class="row">
                     <li class="col-md-6">
-                      <input class="name validate[required,minSize[4],maxSize[50]]" data-prompt-position="topLeft" id="name" name="edtname" placeholder="نام و نام خانوادگی*" type="text" />
+                      <input class="name validate[required]" data-prompt-position="topLeft" id="name" name="edtname" placeholder="نام و نام خانوادگی*" type="text" />
                     </li>
                     <li class="col-md-6">
                       <input class="company-name" id="company-name" name="edtcompany" placeholder="نام شرکت" type="text" />
@@ -85,37 +85,15 @@ $order2=<<<cd
                       <input class="email validate[required,custom[email]]" id="email" data-prompt-position="topLeft" name="edtemail" placeholder="ایمیل*" type="email" />
                     </li>
                     <li class="col-md-6">
-                      <input class="user validate[required,minSize[4],maxSize[50]]" data-prompt-position="topLeft" id="user" name="edtusername" placeholder="نام کاربری مورد نظر*" type="text" />
+                      <input class="user validate[required]" data-prompt-position="topLeft" id="user" name="edtusername" placeholder="نام کاربری*" type="text" />
                     </li>
                     <li class="col-md-6">
-                      <input class="pass validate[required,minSize[5],maxSize[32]]" data-prompt-position="topLeft" id="pass" name="edtpass" placeholder="رمز عبور*" type="password"
-                       />
-                     </li>
-                    <li class="col-md-6">
-                      <input class="repass validate[required,equals[pass]]" data-prompt-position="topLeft" id="repass" name="edtteppass" placeholder="تکرار رمز عبور*" type="password" />
+                      <input class="line validate[required,custom[onlyNumberSp],maxSize[14],minSize[8]]" data-prompt-position="topLeft" id="line" name="line" placeholder="شماره خط مورد نظر*" type="text" />
                     </li>
                     <li class="col-md-6">
-                      <input class="codemeli validate[required,custom[onlyNumberSp],maxSize[10],minSize[10]]" data-prompt-position="topLeft" id="codemeli" name="edtmeli" placeholder="کدملی*" type="text" />
+                      <input class="reline validate[required,equals[line]]" data-prompt-position="topLeft" id="reline" name="reline" placeholder="تکرار شماره خط مورد نظر*" type="text" />
                     </li>
-                    <li class="col-md-6">
-                      <input class="idnum validate[required,custom[onlyNumberSp],maxSize[10],minSize[1]]" data-prompt-position="topLeft" id="idnum" name="edtshenas" placeholder="شماره شناسنامه*" type="text" />
-                    </li>
-                    <li class="col-md-6">
-                      <input class="tel validate[required,custom[onlyNumberSp],maxSize[10],minSize[10]]" data-prompt-position="topLeft" id="tel" name="edttell" placeholder="شماره ثابت*" type="text" />
-                    </li>
-                    <li class="col-md-6">
-                      <input class="mobile validate[required,custom[onlyNumberSp],maxSize[10],minSize[10]]" data-prompt-position="topLeft" id="mobile" name="edtmobile" placeholder="شماره همراه*" type="text" />
-                    </li>
-                    <li class="col-md-6">
-                      <input class="zipcod" id="zipcod" name="edtzipcode" placeholder="کد پستی" type="text" />
-                    </li>
-                    <li class="col-md-6">
-                      <input class="address validate[required,minSize[30],maxSize[500]]" data-prompt-position="topLeft" id="address" name="txtaddress" placeholder="آدرس*" type="text" />
-                    </li>
-                    <li class="col-md-12" style="color:#fff;font-size:18px;margin-bottom:10px">
-                      <input class="rule validate[required]" data-prompt-position="topLeft:-450" id="rule" name="chbrule" type="checkbox"  value="1"/>
-                      قوانین پلیس سامانه را می پذیرم. برای مشاهده <a id="rule" href="./rule.html" class="fancybox fancybox.ajax" style="font-family:inherit;color:#ff6b6b">اینجا</a> کلیک نمایید.
-                    </li>
+                    
                     <li class="col-md-12">
                       <button class="generalBtn loginBtn" type="submit">ارسال</button>
 					             <input type="hidden" name="mark" value="register" />
