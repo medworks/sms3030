@@ -29,12 +29,12 @@ $html=<<<cd
             <div class="row">
                 <div class="col-md-12">
                     <!--Top header start-->
-                    <h3 class="ls-top-header">ثبت نام کنندگان پنل نمایندگی</h3>
+                    <h3 class="ls-top-header">تایید شده های پلن نمایندگی</h3>
                     <!--Top header end -->
                     <!--Top breadcrumb start -->
                     <ol class="breadcrumb">
                         <li><a href="admin.php"><i class="fa fa-home"></i></a></li>
-                        <li class="active">ثبت نام کنندگان</li>
+                        <li class="active">تایید شده ها</li>
                     </ol>
                     <!--Top breadcrumb start -->
                 </div>
@@ -46,7 +46,7 @@ $html=<<<cd
                     <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title">لیست ثبت نام کنندگان</h3>
+                                <h3 class="panel-title">لیست تایید شده ها</h3>
                             </div>
                             <div class="panel-body">
                                 <!--Table Wrapper Start-->
