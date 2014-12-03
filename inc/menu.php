@@ -53,7 +53,7 @@
                 </ul>
               </li>
               <li>
-                <a href="#">شماره حساب</a>
+                <a href="bank.html">شماره حساب</a>
               </li>
               <li>
                 <a href="contactus.html">تماس با ما</a>

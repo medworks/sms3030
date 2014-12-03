@@ -84,7 +84,7 @@ $html=<<<cd
                             <div class="panel-body">
                                 <form name="frmcat" action="" method="post" class="form-inline ls_form" role="form">
                                     <div class="form-group">
-                                        <input id="edtgroup" name="edtgroup" type="text" class="form-control" placeholder="اسم گروه" value="{$row['name']}"/>
+                                        <input id="edtgroup" name="edtgroup" type="text" class="form-control" placeholder="تعداد ثبت نام کنندگان" value="{$row['name']}"/>
                                     </div>
                                     {$insertoredit}
                                 </form>
