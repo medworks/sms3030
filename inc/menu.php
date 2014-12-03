@@ -31,7 +31,7 @@
                     <a href="sms.sms3030.ir">ورود به سامانه</a>
                   </li>
                   <li>
-                    <a href="sms.sms3030.ir">ثبت نام پنل</a>
+                    <a href="http://panel.sms3030.ir/?section=main::new_user&tab=true">ثبت نام پنل</a>
                   </li>
                   <li>
                     <a href="plans.html">تعرفه پیامک</a>

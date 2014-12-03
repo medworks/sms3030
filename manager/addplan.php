@@ -161,7 +161,7 @@ $html=<<<cd
                                         <input id="edtname" name="edtname" type="text" class="form-control" style="direction:ltr" placeholder="اسم پلن" value="{$row['name']}"/>
                                     </div>
 									<div class="form-group">
-                                        <input id="edttitle" name="edttitle" type="text" class="form-control" style="direction:ltr" placeholder="تیتر" value="{$row['title']}"/>
+                                        <input id="edttitle" name="edttitle" type="text" class="form-control" placeholder="تیتر" value="{$row['title']}"/>
                                     </div>
                                     <div class="form-group">
                                         <input id="edtpos" name="edtpos"  type="text" class="form-control" placeholder="ترتیب" value="{$row['pos']}" />
@@ -170,21 +170,32 @@ $html=<<<cd
                                         <input type="checkbox" name="offer" value="1" {$offer}>
                                         <i></i> پلن پیشنهادی
                                     </label>
-                                     <div class="radio-inline">
-                                        <label class="radio-inline">
-                                            <input type="radio" name="type" id="optionsRadios3" value="1" {$userchecked}>
-                                            کاربری
-                                        </label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="type" id="optionsRadios4" value="2" {$agentchecked}>
-                                            نمایندگی
-                                        </label>
-										<div class="form-group">
-                                        <input id="edtprice" name="edtprice"  type="text" class="form-control" placeholder="قیمت" value="{$row['price']}" />
-                                    </div>
-                                    </div> 
+                                    <div class="radio-inline">
+									    <label class="radio-inline">
+									        <input type="radio" name="type" id="optionsRadios3" value="1" {$userchecked}>
+									        کاربری
+									    </label>
+									    <label class="radio-inline">
+									        <input type="radio" name="type" id="optionsRadios4" value="2" {$agentchecked}>
+									        نمایندگی
+									    </label>
+									</div>
                                     <span class="help_text" style="display:inherit">برای گذاشتن علائم در توان از تگ &lt;sup&gt; &lt;/sup&gt; در اسم پلن استفاده نمایید.به طور مثال: <span style="direction:ltr;display:inline-block">A&lt;sup&gt;+&lt;/sup&gt;<span> </span>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">هزینه پلن</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group">
+    									<input id="edtprice" name="edtprice"  type="text" class="form-control" placeholder="قیمت" value="{$row['price']}" />
+                                    </div>
+								</div>
                             </div>
                         </div>
                     </div> 

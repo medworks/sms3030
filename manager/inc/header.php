@@ -164,16 +164,17 @@
                     <span>تعداد استفاده کنندگان</span>
                 </a>
             </li>
-            <!-- <li>
+            <li>
                 <a href="#">
                     <i class="fa fa-navicon"></i>
-                    <span>دسته بندی منوها</span>
+                    <span>تعریف خطوط</span>
                 </a>
                 <ul>
-                    <li><a href="menu.php?act=new">تعریف منو</a></li>
-                    <li><a href="submenu.php?act=new">تعریف زیر منو</a></li>
+                    <li><a href="addnum.php">تعریف ارقام</a></li>
+                    <li><a href="addline.php">تعریف خطوط</a></li>
+                    <li><a href="linedetail.php">توضیحات</a></li>
                 </ul>
-            </li> -->
+            </li>
             <li>
                 <a href="#">
                     <i class="fa fa-pencil"></i>
@@ -183,6 +184,7 @@
                     <li><a href="addparam.php?act=new">تعریف پارامترها</a></li>
                     <li><a href="addplan.php?act=new">تعریف پلن</a></li>
                     <li><a href="editplan.php?act=edit">ویرایش پلن ها</a></li>
+                    <li><a href="plandetail.php">توضیحات</a></li>
                 </ul>
             </li>
             <!-- <li>
