@@ -59,7 +59,7 @@ $order2=<<<cd
             <div class="row">
               <div class="col-md-12 sectionTitle">
                 <h2 class="sectionHeader">
-                  ثبت نام پنل نمایندگی اس ام اس 3030
+                  ثبت نام خط
                   <span class="generalBorder"></span>
                 </h2><!-- end of sectionHeader -->
                 <p>
