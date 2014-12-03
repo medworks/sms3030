@@ -281,8 +281,8 @@
                     <span class="badge badge-red">3</span>
                 </a>
                 <ul>
-                    <li><a href="addparamres.php">ثبت نام کنندگان</a></li>
-                    <li><a href="addplanres.php">تایید شده ها</a></li>
+                    <li><a href="lineordered.php">ثبت نام کنندگان</a></li>
+                    <li><a href="lineconfirmed.php">تایید شده ها</a></li>
                 </ul>
             </li>
             <li> 
