@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2014 at 11:04 AM
+-- Generation Time: Dec 04, 2014 at 11:30 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -76,6 +76,80 @@ CREATE TABLE IF NOT EXISTS `bankinfo` (
 INSERT INTO `bankinfo` (`id`, `name`, `owner`, `accno`, `cardno`, `shebano`) VALUES
 (1, ' ملت', ' سعید حاتمی', ' 41151246546545', ' 6032654798563652', 'IR4548544165444656465'),
 (2, ' ملی', ' سعید حاتمی', ' 646546646465', ' 76874967978', ' ir74668665446465465');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `linecountnum`
+--
+
+CREATE TABLE IF NOT EXISTS `linecountnum` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `numcount` int(11) NOT NULL,
+  `pos` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `linecountnum`
+--
+
+INSERT INTO `linecountnum` (`id`, `numcount`, `pos`) VALUES
+(1, 14, 3),
+(2, 12, 2),
+(3, 8, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `linedef`
+--
+
+CREATE TABLE IF NOT EXISTS `linedef` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `lctid` int(11) NOT NULL,
+  `lineno` varchar(20) NOT NULL,
+  `ischoice` tinyint(1) NOT NULL,
+  `price` double NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `linedef`
+--
+
+INSERT INTO `linedef` (`id`, `lctid`, `lineno`, `ischoice`, `price`) VALUES
+(1, 1, '1000', 1, 300000),
+(3, 1, '1000', 0, 200000),
+(4, 1, '2000', 1, 3000000),
+(5, 1, '2000', 0, 2000000),
+(6, 3, '1000', 1, 500000),
+(7, 3, '1000', 0, 400000);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `linenumbers`
+--
+
+CREATE TABLE IF NOT EXISTS `linenumbers` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `company` varchar(60) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `linenumber` varchar(20) NOT NULL,
+  `regdate` datetime NOT NULL,
+  `confirm` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `linenumbers`
+--
+
+INSERT INTO `linenumbers` (`id`, `name`, `company`, `email`, `username`, `linenumber`, `regdate`, `confirm`) VALUES
+(1, 'سعید حاتمی', 'گسترش سامانه بیخودی', 'gjhghg@gffh.com', 'user', '10009151204395', '2014-12-04 20:48:24', 0);
 
 -- --------------------------------------------------------
 
@@ -192,7 +266,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
   `key` varchar(30) NOT NULL,
   `value` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=41 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=42 ;
 
 --
 -- Dumping data for table `settings`
@@ -238,7 +312,8 @@ INSERT INTO `settings` (`id`, `key`, `value`) VALUES
 (37, 'Email_Text', '<p style="direction:rtl;">\r\nبا سلام\r\n<br/>\r\nآقا/خانم {user} ، به شماره خط {tel}  و همراه {mobile} \r\n<br/>\r\nدرخواست شما با مشخصات {order_info} \r\n<br/>\r\nدر مورخه {date} با موفقیت ثبت شد.\r\n<br/>\r\n************************************\r\n<br/>\r\nمشخصات پرداخت به شرح ذیل می باشند :\r\n<br/>\r\nبانک : درگاه پرداخت الکترونیک بانک ملت\r\n<br/>\r\nکد پیگیری : {payment_code}\r\n<br/>\r\nتاریخ پرداخت : {date}\r\n<br/>\r\n************************************\r\n<br/>\r\n با تشکر از اعتماد شما - گروه بازرگانی ایرانا\r\n051-38555560\r\n<br/>\r\n</p>'),
 (38, 'Is_Send_Order_Sms_For_Admin', '1'),
 (39, 'Admin_Mobile_Number', ''),
-(40, 'Admin_Sms_Text', '');
+(40, 'Admin_Sms_Text', ''),
+(41, 'LinesDescribe', 'توضیحات تکمیلی خطوط\r\nلاتلتالتالتالتلتا\r\nلتالتالتلتلتلتا');
 
 -- --------------------------------------------------------
 
