@@ -12,21 +12,18 @@
 	if ($_POST["mark"]=="register")
 	{
 		$date = date('Y-m-d H:i:s');
-		$fields = array("`name`","`company`","`email`","`username`","`password`",
-						"`meli`","`shenasname`","`tell`","`mobile`","`codeposti`",
-						"`address`","`regdate`");
+		$fields = array("`name`","`company`","`email`",
+						"`username`","`linenumber`","`regdate`");
 		$values = array("'{$_POST[edtname]}'","'{$_POST[edtcompany]}'","'{$_POST[edtemail]}'",
-						"'{$_POST[edtusername]}'","'{$_POST[edtpass]}'","'{$_POST[edtmeli]}'",
-						"'{$_POST[edtshenas]}'","'{$_POST[edttell]}'","'{$_POST[edtmobile]}'",
-						"'{$_POST[edtzipcode]}'","'{$_POST[txtaddress]}'","'{$date}'");
-		if (!$db->InsertQuery('agents',$fields,$values)) 
+						"'{$_POST[edtusername]}'","'{$_POST[linenumber]}'","'{$date}'");
+		if (!$db->InsertQuery('linenumbers',$fields,$values)) 
 		{			
-			header('location:order.html?act=new&msg=2');			
+			header('location:lineorder.html?act=new&msg=2');			
 		} 	
 		else 
 		{  										
-			header('location:order.html?act=new&msg=1');
-		}  		
+			header('location:lineorder.html?act=new&msg=1');
+		}  			
 	}
 
 $order2=<<<cd
@@ -91,7 +88,7 @@ $order2=<<<cd
                       <input class="line validate[required,custom[onlyNumberSp],maxSize[14],minSize[8]]" data-prompt-position="topLeft" id="line" name="line" placeholder="شماره خط مورد نظر*" type="text" />
                     </li>
                     <li class="col-md-6">
-                      <input class="reline validate[required,equals[line]]" data-prompt-position="topLeft" id="reline" name="reline" placeholder="تکرار شماره خط مورد نظر*" type="text" />
+                      <input class="reline validate[required,equals[line]]" data-prompt-position="topLeft" id="linenumber" name="linenumber" placeholder="تکرار شماره خط مورد نظر*" type="text" />
                     </li>
                     
                     <li class="col-md-12">
