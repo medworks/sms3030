@@ -19,7 +19,7 @@
 	if ($_POST["mark"]=="saveline")
 	{
 		$fields = array("`lctid`","`lineno`","`ischoice`","`price`");
-		$values = array("'{$_POST[cblinecount]}'","'{$_POST[rbchoice]}'","'{$_POST[edtprice]}'");	
+		$values = array("'{$_POST[cblinecount]}'","'{$_POST[edtline]}'","'{$_POST[rbchoice]}'","'{$_POST[edtprice]}'");	
 		if (!$db->InsertQuery('linedef',$fields,$values)) 
 		{			
 			header('location:addline.php?act=new&msg=2');			
@@ -36,7 +36,8 @@
 						"`ischoice`"=>"'{$_POST[rbchoice]}'","`price`"=>"'{$_POST[edtprice]}'");
         $db->UpdateQuery("linedef",$values,array("id='{$_GET[lid]}'"));		
 		header('location:addline.php?act=new&msg=1');
-	}	
+	}
+	//echo $db->cmd;
 	if ($_GET['act']=="new")
 	{
 		$insertoredit = "
@@ -56,6 +57,7 @@
 			$unchoiced = "checked";
 			$choiced = "";
 		}
+		
 		$insertoredit = "
 			<button type='submit' class='btn btn-default'>ویرایش</button>
 			<input type='hidden' name='mark' value='editline' /> ";
@@ -161,11 +163,13 @@ $rows = $db->SelectAll("linedef","*",NULL,"id ASC");
 for($i = 0; $i < Count($rows); $i++)
 {
 $rownumber = $i+1;
+$rows[$i]["lctid"] = $db->Select("linecountnum","*"," id = {$rows[$i]["lctid"]}");
+$rows[$i]["ischoice"] = ($rows[$i]["ischoice"])?"انتخابی" :"غیرانتخابی";
 $html.=<<<cd
 	<td>{$rownumber}</td>
 	<td>{$rows[$i]["lineno"]}</td>
 	<td>{$rows[$i]["ischoice"]}</td>
-	<td>{$rows[$i]["lctid"]}</td>
+	<td>{$rows[$i]["lctid"][1]}</td>
 	<td>{$rows[$i]["price"]}</td>
 	<td>
 		<ul class="ls-glyphicons-list">
