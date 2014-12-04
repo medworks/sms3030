@@ -1,8 +1,23 @@
 <?php
-  include_once('./inc/header.php');
-  include_once('./inc/pageheader.php');
-  include_once('./inc/menu.php');
-?>
+    include_once("./config.php");
+	include_once("./classes/functions.php");
+  	include_once("./classes/session.php");	
+  	include_once("./classes/security.php");
+  	include_once("./classes/database.php");		
+
+	$db = Database::GetDatabase();	
+	$linecount=$db->SelectAll("linecountnum","*",NULL," numcount ASC");
+	$linenum=$db->SelectAll("linedef","*",NULL," id ASC");	
+	for ($i=0;$i<count($linenum);$i++)
+	{
+		$linenumunique[] = $linenum[$i]["lineno"];
+	}	
+	foreach(array_unique($linenumunique) as $v)
+	{
+		if($v!= "" ){$linenumuniq[] = $v;  }
+	}	
+	var_dump($linenumuniq);
+ $table=<<<cd
     <!-- Page Info -->
     <div class="pageInfo">
       <div class="cover"></div>
@@ -56,70 +71,71 @@
                     }
                   </style>
                 <thead>
-                  <tr style="font-size:23px">
-                    <th rowspan="2" style="vertical-align:middle;width:100px">تعداد ارقام</th>
-                    <th colspan="2">خطوط 1000</th>
-                    <th colspan="2">خطوط 2000</th>
-                    <th colspan="2">خطوط 3000</th>
-                    <th colspan="2">خطوط 5000</th>
-                    <th colspan="2">خطوط 021</th>
+				<tr style="font-size:23px">
+				<th rowspan="2" style="vertical-align:middle;width:100px">تعداد ارقام</th>
+cd;
+for($i=0;$i<count($linenumuniq);$i++)
+{
+$table.=<<<cd
+                    <th colspan="2">خطوط {$linenumuniq[$i]}</th>                    
+cd;
+}
+$table.=<<<cd
                   </tr>
                   <tr>
+cd;
+for($i=0;$i<count($linenumuniq);$i++)
+{
+$table.=<<<cd
                     <th class="random">غیرانتخابی (ریال)</th>
                     <th class="non-rand">انتخابی (ریال)</th>
-                    <th class="random">غیرانتخابی (ریال)</th>
-                    <th class="non-rand">انتخابی (ریال)</th>
-                    <th class="random">غیرانتخابی (ریال)</th>
-                    <th class="non-rand">انتخابی (ریال)</th>
-                    <th class="random">غیرانتخابی (ریال)</th>
-                    <th class="non-rand">انتخابی (ریال)</th>
-                    <th class="random">غیرانتخابی (ریال)</th>
-                    <th class="non-rand">انتخابی (ریال)</th>
+cd;
+}
+$table.=<<<cd
                   </tr>
                 </thead>
-
                 <tbody>
+cd;
+for($i=0;$i<count($linecount);$i++)
+{
+$table.=<<<cd
                   <tr>
-                    <td>14 رقمی</td>
-                    <td class="price even"><a href="#" title="">250/000/000</a></td>
-                    <td class="price odd"><a href="#" title="">25000</a></td>
-                    <td class="price even"><a href="#" title="">25000</a></td>
-                    <td class="price odd"><a href="#" title="">25000</a></td>
-                    <td class="price even"><a href="#" title="">25000</a></td>
-                    <td class="price odd"><a href="#" title="">25000</a></td>
-                    <td class="price even"><a href="#" title="">25000</a></td>
-                    <td class="price odd"><a href="#" title="">25000</a></td>
-                    <td class="price even"><a href="#" title="">25000</a></td>
-                    <td class="price odd"><a href="#" title="">25000</a></td>
+                    <td>{$linecount[$i]["numcount"]}</td>
+cd;
+for($j=0;$j<count($linedef);$j++)
+{
+ if ($linedef[$j]["ischoice"])
+ {
+	$class = " class='price even' ";
+ }
+ else
+ {
+	$class = " class='price odd' ";
+ }
+$table.=<<<cd
+                    <td {$class}><a href="#" title="">{$linedef[$j]["price"]}</a></td>                   
+cd;
+}
+$table.=<<<cd
                   </tr>
-                  <tr>
-                    <td>12 رقمی</td>
-                    <td class="price even"><a href="#" title="">250/000/000</a></td>
-                    <td class="price odd"><a href="#" title="">25000</a></td>
-                    <td class="price even"><a href="#" title="">25000</a></td>
-                    <td class="price odd"><a href="#" title="">25000</a></td>
-                    <td class="price even"><a href="#" title="">25000</a></td>
-                    <td class="price odd"><a href="#" title="">25000</a></td>
-                    <td class="price even"><a href="#" title="">25000</a></td>
-                    <td class="price odd"><a href="#" title="">25000</a></td>
-                    <td class="price even"><a href="#" title="">25000</a></td>
-                    <td class="price odd"><a href="#" title="">25000</a></td>
-                  </tr>
-
+cd;
+}
+$table.=<<<cd
                 </tbody>
               </table>
               <p class="detail">1- توضیحات تکمیلی....</p>
             <div id="ascrail2002" class="nicescroll-rails" style="width: 6px; z-index: 99999999999; position: absolute; top: 0px; right: 0px; opacity: 1; cursor: default; display: none; height: 718px;"><div style="position: relative; top: 0px; float: right; width: 6px; border: 0px; border-radius: 3px; height: 0px; background-color: rgb(204, 204, 204); background-clip: padding-box;"></div></div><div id="ascrail2002-hr" class="nicescroll-rails" style="height: 6px; z-index: 99999999999; position: absolute; left: 0px; bottom: 0px; opacity: 1; cursor: default; display: none; width: 1168px;"><div style="position: relative; top: 0px; height: 6px; border: 0px; border-radius: 3px; width: 0px; background-color: rgb(204, 204, 204); background-clip: padding-box;"></div></div></div><!-- end of table wrapper -->
-
           </div><!-- end of col-md-12 -->
-
-
         </div><!-- end of row-->
       </div><!-- end of container -->
     </div><!-- end of section wrapper -->
   </section>
+cd;
 
-<?php
+  include_once('./inc/header.php');
+  include_once('./inc/pageheader.php');
+  include_once('./inc/menu.php');
+  echo $table;
   include_once('./inc/clients.php');
   include_once('./inc/footer.php');
 ?>
