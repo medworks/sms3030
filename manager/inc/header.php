@@ -170,9 +170,9 @@
                     <span>تعریف خطوط</span>
                 </a>
                 <ul>
-                    <li><a href="addnum.php">تعریف ارقام</a></li>
-                    <li><a href="addline.php">تعریف خطوط</a></li>
-                    <li><a href="linedetail.php">توضیحات</a></li>
+                    <li><a href="addnum.php?act=new">تعریف ارقام</a></li>
+                    <li><a href="addline.php?act=new">تعریف خطوط</a></li>
+                    <li><a href="linedetail.php?act=new">توضیحات</a></li>
                 </ul>
             </li>
             <li>
@@ -281,7 +281,7 @@
                     <span class="badge badge-red">3</span>
                 </a>
                 <ul>
-                    <li><a href="lineordered.php">ثبت نام کنندگان</a></li>
+                    <li><a href="lineordered.php?act=new">ثبت نام کنندگان</a></li>
                     <li><a href="lineconfirmed.php">تایید شده ها</a></li>
                 </ul>
             </li>

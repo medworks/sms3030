@@ -16,43 +16,43 @@
 	}
 	$db = Database::GetDatabase();	
 	
-	if ($_POST["mark"]=="saveparam")
+	if ($_POST["mark"]=="savenum")
 	{
-		$fields = array("`name`","`pos`");		
-		$values = array("'{$_POST[edtname]}'","'{$_POST[edtpos]}'");	
-		if (!$db->InsertQuery('params',$fields,$values)) 
+		$fields = array("`numcount`","`pos`");		
+		$values = array("'{$_POST[edtcount]}'","'{$_POST[edtpos]}'");	
+		if (!$db->InsertQuery('linecountnum',$fields,$values)) 
 		{			
-			header('location:addparam.php?act=new&msg=2');			
+			header('location:addnum.php?act=new&msg=2');			
 		} 	
 		else 
 		{  										
-			header('location:addparam.php?act=new&msg=1');
+			header('location:addnum.php?act=new&msg=1');
 		}  		
 	}
 	else
-	if ($_POST["mark"]=="editparam")
+	if ($_POST["mark"]=="editnum")
 	{			    
-		$values = array("`name`"=>"'{$_POST[edtname]}'","`pos`"=>"'{$_POST[edtpos]}'");
-        $db->UpdateQuery("params",$values,array("id='{$_GET[pid]}'"));		
-		header('location:addparam.php?act=new&msg=1');
+		$values = array("`numcount`"=>"'{$_POST[edtcount]}'","`pos`"=>"'{$_POST[edtpos]}'");
+        $db->UpdateQuery("linecountnum",$values,array("id='{$_GET[lid]}'"));		
+		header('location:addnum.php?act=new&msg=1');
 	}	
 	if ($_GET['act']=="new")
 	{
 		$insertoredit = "
 			<button type='submit' class='btn btn-default'>ثبت</button>
-			<input type='hidden' name='mark' value='saveparam' /> ";
+			<input type='hidden' name='mark' value='savenum' /> ";
 	}
 	if ($_GET['act']=="edit")
 	{
-	    $row=$db->Select("params","*","id='{$_GET["pid"]}'",NULL);		
+	    $row=$db->Select("linecountnum","*","id='{$_GET["lid"]}'",NULL);		
 		$insertoredit = "
 			<button type='submit' class='btn btn-default'>ویرایش</button>
-			<input type='hidden' name='mark' value='editparam' /> ";
+			<input type='hidden' name='mark' value='editnum' /> ";
 	}
 	if ($_GET['act']=="del")
 	{
-		$db->Delete("params"," id",$_GET["pid"]);		
-		header('location:addparam.php?act=new');	
+		$db->Delete("linecountnum"," id",$_GET["lid"]);		
+		header('location:addnum.php?act=new');	
 	}	
 $msgs = GetMessage($_GET['msg']);
 
@@ -84,7 +84,7 @@ $html=<<<cd
                                 </div>
                                 <div class="panel-body">
                                     <div class="form-group">
-                                        <input id="edtname" name="edtname" type="text" class="form-control" placeholder="تعداد رقم" value="{$row['name']}"/>
+                                        <input id="edtcount" name="edtcount" type="text" class="form-control" placeholder="تعداد رقم" value="{$row['numcount']}"/>
                                     </div>
                                     <div class="form-group">
                                         <input id="edtpos" name="edtpos"  type="text" class="form-control" placeholder="ترتیب" value="{$row['pos']}" />
@@ -116,19 +116,19 @@ $html=<<<cd
 								<tbody>
 								<tr>
 cd;
-$rows = $db->SelectAll("params","*",NULL,"pos ASC");
+$rows = $db->SelectAll("linecountnum","*",NULL,"pos ASC");
 for($i = 0; $i < Count($rows); $i++)
 {
 $rownumber = $i+1;
 $html.=<<<cd
 	<td>{$rownumber}</td>
-	<td>{$rows[$i]["name"]}</td>
-	<td>1</td>
+	<td>{$rows[$i]["numcount"]}</td>
+	<td>{$rows[$i]["pos"]}</td>
 	<td>
 		<ul class="ls-glyphicons-list">
 			<li>
-				<a href="?act=del&pid={$rows[$i]["id"]}" title="پاک کردن" style="margin-left:5px"><span class="glyphicon glyphicon-remove"></span></a>
-				<a href="?act=edit&pid={$rows[$i]["id"]}" title="ویرایش"><span class="glyphicon glyphicon-edit"></span></a>
+				<a href="?act=del&lid={$rows[$i]["id"]}" title="پاک کردن" style="margin-left:5px"><span class="glyphicon glyphicon-remove"></span></a>
+				<a href="?act=edit&lid={$rows[$i]["id"]}" title="ویرایش"><span class="glyphicon glyphicon-edit"></span></a>
 			</li>
 		</ul>
 	</td>
