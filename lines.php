@@ -14,9 +14,9 @@
 	}	
 	foreach(array_unique($linenumunique) as $v)
 	{
-		if($v!= "" ){$linenumuniq[] = $v;  }
+		if($v!= "" ){$linenumuniq[] = $v; }
 	}	
-	var_dump($linenumuniq);
+
  $table=<<<cd
     <!-- Page Info -->
     <div class="pageInfo">
@@ -102,7 +102,8 @@ $table.=<<<cd
                   <tr>
                     <td>{$linecount[$i]["numcount"]}</td>
 cd;
-for($j=0;$j<count($linedef);$j++)
+$line=$db->SelectAll("linedef","*","lctid ={$linecount[$i]["id"]} "," ischoice ASC");	
+for($j=0;$j<count($line);$j++)
 {
  if ($linedef[$j]["ischoice"])
  {
@@ -113,7 +114,7 @@ for($j=0;$j<count($linedef);$j++)
 	$class = " class='price odd' ";
  }
 $table.=<<<cd
-                    <td {$class}><a href="#" title="">{$linedef[$j]["price"]}</a></td>                   
+                    <td {$class}><a href="#" title="">{$line[$j]["price"]}</a></td>                   
 cd;
 }
 $table.=<<<cd
