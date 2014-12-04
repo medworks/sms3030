@@ -18,8 +18,8 @@
 	
 	if ($_POST["mark"]=="saveline")
 	{
-		$fields = array("`lctid`","`lineno`","`ischoice`");
-		$values = array("'{$_POST[edtname]}'","'{$_POST[edtpos]}'");	
+		$fields = array("`lctid`","`lineno`","`ischoice`","`price`");
+		$values = array("'{$_POST[cblinecount]}'","'{$_POST[rbchoice]}'","'{$_POST[edtprice]}'");	
 		if (!$db->InsertQuery('linedef',$fields,$values)) 
 		{			
 			header('location:addline.php?act=new&msg=2');			
@@ -32,8 +32,8 @@
 	else
 	if ($_POST["mark"]=="editline")
 	{			    
-		$values = array("`lctid`"=>"'{$_POST[edtname]}'","`lineno`"=>"'{$_POST[edtpos]}'",
-						"`ischoice`"=>"'{$_POST[edtname]}'");
+		$values = array("`lctid`"=>"'{$_POST[cblinecount]}'","`lineno`"=>"'{$_POST[edtline]}'",
+						"`ischoice`"=>"'{$_POST[rbchoice]}'","`price`"=>"'{$_POST[edtprice]}'");
         $db->UpdateQuery("linedef",$values,array("id='{$_GET[lid]}'"));		
 		header('location:addline.php?act=new&msg=1');
 	}	
@@ -46,6 +46,16 @@
 	if ($_GET['act']=="edit")
 	{
 	    $row=$db->Select("linedef","*","id='{$_GET["lid"]}'",NULL);		
+		if ($row["ischoice"])
+		{
+			$choiced = "checked";
+			$unchoiced = "";
+		}
+		else
+		{
+			$unchoiced = "checked";
+			$choiced = "";
+		}
 		$insertoredit = "
 			<button type='submit' class='btn btn-default'>ویرایش</button>
 			<input type='hidden' name='mark' value='editline' /> ";
@@ -100,7 +110,7 @@ $html=<<<cd
 									        انتخابی
 									    </label>
 									    <label class="radio-inline">
-									        <input type="radio" name="rbchoice" id="rbchoice" value="2" {$unchoiced}>
+									        <input type="radio" name="rbchoice" id="rbchoice" value="0" {$unchoiced}>
 									        غیرانتخابی
 									    </label>
 									</div>
