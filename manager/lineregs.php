@@ -105,7 +105,20 @@ $html=<<<cd
                             </div>
                         </div>
                     </div>
-                                                                                                                   
+					<div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"> شماره خط</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <input id="edtlinenumber" name="edtlinenumber" type="text" class="form-control" value="{$row['linenumber']}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>					
                     <div class="row">
                         <div class="col-md-12">
                             <div class="panel panel-default">
