@@ -99,7 +99,7 @@ $html.=<<<cd
                     							<td>{$rows[$i]["tell"]}</td>
                                                 <td class="text-center">													
     											   <a href="seenregres.php?act=view&aid={$rows[$i]["id"]}">
-                                                    <button type="button" class="btn btn-xs btn-success" title="مشاهده"><i class="fa fa-paper-plane"></i></button>
+                                                    <button type="button" class="btn btn-xs btn-success" title="تایید"><i class="fa fa-paper-plane"></i></button>
     											   </a>
                                                 </td>
                                             </tr>
