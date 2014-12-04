@@ -19,8 +19,8 @@
 	$db = Database::GetDatabase(); 
 	if ($_GET['act']=="del")
 	{
-		$db->Delete("agents"," id ",$_GET["aid"]);		
-		header('location:regreseller.php?act=edit');	
+		$db->Delete("linenumbers"," id ",$_GET["lid"]);		
+		header('location:lineordered.php?act=edit');	
 	}		
 $html=<<<cd
 <section id="min-wrapper">
@@ -72,13 +72,13 @@ cd;
 
 	$pagination->navigation_position("right");
 
-	$reccount = $db->CountAll("agents");
+	$reccount = $db->CountAll("linenumbers");
 	$pagination->records($reccount); 
 	
     $pagination->records_per_page($records_per_page);	
 
 $rows = $db->SelectAll(
-				"agents",
+				"linenumbers",
 				"*",
 				"confirm = 0",
 				"regdate DESC",
@@ -94,9 +94,9 @@ $html.=<<<cd
                                             <tr>
                     							<td>{$rownumber}</td>
                                                 <td>{$rows[$i]["name"]}</td>
-                                                <td>{$rows[$i]["name"]}</td>
-                                                <td>{$rows[$i]["mobile"]}</td>
-                    							<td>{$rows[$i]["tell"]}</td>
+                                                <td>{$rows[$i]["company"]}</td>
+                                                <td>{$rows[$i]["username"]}</td>
+                    							<td>{$rows[$i]["linenumber"]}</td>
                                                 <td class="text-center">													
     											   <a href="seenregres.php?act=view&aid={$rows[$i]["id"]}">
                                                     <button type="button" class="btn btn-xs btn-success" title="تایید"><i class="fa fa-paper-plane"></i></button>
