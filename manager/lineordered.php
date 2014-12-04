@@ -98,7 +98,7 @@ $html.=<<<cd
                                                 <td>{$rows[$i]["username"]}</td>
                     							<td>{$rows[$i]["linenumber"]}</td>
                                                 <td class="text-center">													
-    											   <a href="seenregres.php?act=view&aid={$rows[$i]["id"]}">
+    											   <a href="lineregs.php?act=view&lid={$rows[$i]["id"]}">
                                                     <button type="button" class="btn btn-xs btn-success" title="تایید"><i class="fa fa-paper-plane"></i></button>
     											   </a>
                                                 </td>
