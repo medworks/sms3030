@@ -16,44 +16,49 @@
 	}
 	$db = Database::GetDatabase();	
 	
-	if ($_POST["mark"]=="saveparam")
+	if ($_POST["mark"]=="saveline")
 	{
-		$fields = array("`name`","`pos`");		
+		$fields = array("`lctid`","`lineno`","`ischoice`");
 		$values = array("'{$_POST[edtname]}'","'{$_POST[edtpos]}'");	
-		if (!$db->InsertQuery('params',$fields,$values)) 
+		if (!$db->InsertQuery('linedef',$fields,$values)) 
 		{			
-			header('location:addparam.php?act=new&msg=2');			
+			header('location:addline.php?act=new&msg=2');			
 		} 	
 		else 
 		{  										
-			header('location:addparam.php?act=new&msg=1');
+			header('location:addline.php?act=new&msg=1');
 		}  		
 	}
 	else
-	if ($_POST["mark"]=="editparam")
+	if ($_POST["mark"]=="editline")
 	{			    
-		$values = array("`name`"=>"'{$_POST[edtname]}'","`pos`"=>"'{$_POST[edtpos]}'");
-        $db->UpdateQuery("params",$values,array("id='{$_GET[pid]}'"));		
-		header('location:addparam.php?act=new&msg=1');
+		$values = array("`lctid`"=>"'{$_POST[edtname]}'","`lineno`"=>"'{$_POST[edtpos]}'",
+						"`ischoice`"=>"'{$_POST[edtname]}'");
+        $db->UpdateQuery("linedef",$values,array("id='{$_GET[lid]}'"));		
+		header('location:addline.php?act=new&msg=1');
 	}	
 	if ($_GET['act']=="new")
 	{
 		$insertoredit = "
 			<button type='submit' class='btn btn-default'>ثبت</button>
-			<input type='hidden' name='mark' value='saveparam' /> ";
+			<input type='hidden' name='mark' value='saveline' /> ";
 	}
 	if ($_GET['act']=="edit")
 	{
-	    $row=$db->Select("params","*","id='{$_GET["pid"]}'",NULL);		
+	    $row=$db->Select("linedef","*","id='{$_GET["lid"]}'",NULL);		
 		$insertoredit = "
 			<button type='submit' class='btn btn-default'>ویرایش</button>
-			<input type='hidden' name='mark' value='editparam' /> ";
+			<input type='hidden' name='mark' value='editline' /> ";
 	}
 	if ($_GET['act']=="del")
 	{
-		$db->Delete("params"," id",$_GET["pid"]);		
-		header('location:addparam.php?act=new');	
-	}	
+		$db->Delete("linedef"," id",$_GET["lid"]);		
+		header('location:addline.php?act=new');	
+	}
+	
+	$linecount=$db->SelectAll("linecountnum","*",NULL,"pos ASC");		
+	//$cbmenu = DbSelectOptionTag("cbmenu",$menues,"name",NULL,NULL,"form-control",NULL,"  منو  ");
+	$cblinecount = DbSelectOptionTag("cblinecount",$linecount,"numcount",NULL,NULL,NULL,NULL,"انتخاب تعداد ارقام");
 $msgs = GetMessage($_GET['msg']);
 
 $html=<<<cd
@@ -84,24 +89,18 @@ $html=<<<cd
                                 </div>
                                 <div class="panel-body">
                                     <div class="form-group">
-                                        <input id="edtname" name="edtname" type="text" class="form-control" placeholder="خط" value="{$row['name']}"/>
+                                        <input id="edtline" name="edtline" type="text" class="form-control" placeholder="خط" value="{$row['name']}"/>
                                     </div>
                                     <div class="radio-inline">
-	                                    <select class="form-control">
-										  <option>تعداد ارقام</option>
-										  <option value="1">Volvo</option>
-										  <option value="2">Saab</option>
-										  <option value="3">VW</option>
-										  <option value="4">Audi</option>
-										</select>
+	                                    {$cblinecount}
 									</div>
                                     <div class="radio-inline">
 									    <label class="radio-inline">
-									        <input type="radio" name="type" id="optionsRadios3" value="1" {$userchecked}>
+									        <input type="radio" name="rbchoice" id="rbchoice" value="1" {$choiced}>
 									        انتخابی
 									    </label>
 									    <label class="radio-inline">
-									        <input type="radio" name="type" id="optionsRadios4" value="2" {$agentchecked}>
+									        <input type="radio" name="rbchoice" id="rbchoice" value="2" {$unchoiced}>
 									        غیرانتخابی
 									    </label>
 									</div>
@@ -117,7 +116,7 @@ $html=<<<cd
                                 </div>
                                 <div class="panel-body">
                                     <div class="form-group">
-                                        <input id="edtname" name="edtname" type="text" class="form-control" placeholder="قیمت خط" value="{$row['name']}"/>
+                                        <input id="edtprice" name="edtprice" type="text" class="form-control" placeholder="قیمت خط" value="{$row['name']}"/>
                                     </div>
                                     {$insertoredit}
                                 </div>
@@ -148,21 +147,21 @@ $html=<<<cd
 								<tbody>
 								<tr>
 cd;
-$rows = $db->SelectAll("params","*",NULL,"pos ASC");
+$rows = $db->SelectAll("linedef","*",NULL,"id ASC");
 for($i = 0; $i < Count($rows); $i++)
 {
 $rownumber = $i+1;
 $html.=<<<cd
 	<td>{$rownumber}</td>
-	<td>{$rows[$i]["name"]}</td>
-	<td>انتخابی</td>
-	<td>14 رقمی</td>
-	<td>50000</td>
+	<td>{$rows[$i]["lineno"]}</td>
+	<td>{$rows[$i]["ischoice"]}</td>
+	<td>{$rows[$i]["lctid"]}</td>
+	<td>{$rows[$i]["price"]}</td>
 	<td>
 		<ul class="ls-glyphicons-list">
 			<li>
-				<a href="?act=del&pid={$rows[$i]["id"]}" title="پاک کردن" style="margin-left:5px"><span class="glyphicon glyphicon-remove"></span></a>
-				<a href="?act=edit&pid={$rows[$i]["id"]}" title="ویرایش"><span class="glyphicon glyphicon-edit"></span></a>
+				<a href="?act=del&lid={$rows[$i]["id"]}" title="پاک کردن" style="margin-left:5px"><span class="glyphicon glyphicon-remove"></span></a>
+				<a href="?act=edit&lid={$rows[$i]["id"]}" title="ویرایش"><span class="glyphicon glyphicon-edit"></span></a>
 			</li>
 		</ul>
 	</td>
