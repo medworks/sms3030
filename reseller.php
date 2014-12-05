@@ -1,10 +1,20 @@
 <?php
-  include_once('./inc/header.php');
-  include_once('./inc/pageheader.php');
-  include_once('./inc/menu.php');
-?>
-
-    <!-- Page Info -->
+	include_once("./config.php");
+	include_once("./classes/functions.php");
+  	include_once("./classes/session.php");	
+  	include_once("./classes/security.php");
+  	include_once("./classes/database.php");	
+	
+	$db = Database::GetDatabase();	
+	$agents=$db->Select("plans","*","type=2");
+	$params = explode(",",$agents["specials"]);
+	for($i=0;$i<count($params);$i++)
+	{
+		$param = $db->Select("params","name","id ={$params[$i]}");
+		$params[$i] = $param[0];
+	}
+$rhtml=<<<cd
+  <!-- Page Info -->
     <div class="pageInfo">
       <div class="cover"></div>
       <div class="container">
@@ -35,30 +45,36 @@
             <div class="fact singleFact factBox">
               <div class="factIcon factIcon3"></div>
               <h4 class="factTitle">
-                <a href="single-reseller.html">نعریف دامنه مورد نظر</a>
+                <a href="single-reseller.html">{$params[0]}</a>
               </h4>
+			  <!--
               <p class="factDescription">
                 تعریف دامنه با نام خود برروی پنل.
               </p>
+			  -->
             </div><!-- end of fact -->
             
             <div class="fact singleFact factBox">
               <div class="factIcon factIcon3"></div>
               <h4 class="factTitle">
-                <a href="single-reseller.html">تعریف نماینده به صورت نامحدود</a>
+                <a href="single-reseller.html">{$params[1]}</a>
               </h4>
+               <!--
               <p class="factDescription">
-                تعریف نماینده و کاربر به صورت نامحدود.
+                تعریف دامنه با نام خود برروی پنل.
               </p>
+			  -->
             </div><!-- end of fact -->
             <div class="fact singleFact factBox">
               <div class="factIcon factIcon3"></div>
               <h4 class="factTitle">
-                <a href="single-reseller.html">تعریف نماینده به صورت نامحدود</a>
+                <a href="single-reseller.html">{$params[2]}</a>
               </h4>
+               <!--
               <p class="factDescription">
-                تعریف نماینده و کاربر به صورت نامحدود.
+                تعریف دامنه با نام خود برروی پنل.
               </p>
+			  -->
             </div><!-- end of fact -->
             
           </div><!-- end of facts wrapper -->
@@ -75,30 +91,36 @@
             <div class="fact singleFact factBox">
               <div class="factIcon factIcon3"></div>
               <h4 class="factTitle">
-                <a href="single-reseller.html">نعریف دامنه مورد نظر</a>
+                <a href="single-reseller.html">{$params[3]}</a>
               </h4>
+               <!--
               <p class="factDescription">
                 تعریف دامنه با نام خود برروی پنل.
               </p>
+			  -->
             </div><!-- end of fact -->
             
             <div class="fact singleFact factBox">
               <div class="factIcon factIcon3"></div>
               <h4 class="factTitle">
-                <a href="single-reseller.html">تعریف نماینده به صورت نامحدود</a>
+                <a href="single-reseller.html">{$params[4]}</a>
               </h4>
+               <!--
               <p class="factDescription">
-                تعریف نماینده و کاربر به صورت نامحدود.
+                تعریف دامنه با نام خود برروی پنل.
               </p>
+			  -->
             </div><!-- end of fact -->
             <div class="fact singleFact factBox">
               <div class="factIcon factIcon3"></div>
               <h4 class="factTitle">
-                <a href="single-reseller.html">تعریف نماینده به صورت نامحدود</a>
+                <a href="single-reseller.html">{$params[5]}</a>
               </h4>
+               <!--
               <p class="factDescription">
-                تعریف نماینده و کاربر به صورت نامحدود.
+                تعریف دامنه با نام خود برروی پنل.
               </p>
+			  -->
             </div><!-- end of fact -->
             
           </div><!-- end of facts wrapper -->
@@ -107,9 +129,12 @@
       </div><!-- end of container -->
     </div><!-- end of section wrapper -->
   </section>
- 
+cd;
 
-<?php
+  include_once('./inc/header.php');
+  include_once('./inc/pageheader.php');
+  include_once('./inc/menu.php');
+  echo $rhtml;
   include_once('./inc/clients.php');
   include_once('./inc/footer.php');
 ?>
