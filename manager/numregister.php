@@ -9,51 +9,22 @@
     include_once("../lib/persiandate.php"); 
 
 	$login = Login::GetLogin();
+	
     if (!$login->IsLogged())
 	{
 		header("Location: ../index.php");
 		die(); // solve a security bug
 	}
-	$db = Database::GetDatabase();	
 	
-	if ($_POST["mark"]=="savegroup")
+	if ($_POST['mark']=="saveregs")
 	{
-		$fields = array("`name`");		
-		$values = array("'{$_POST[edtgroup]}'");	
-		if (!$db->InsertQuery('categories',$fields,$values)) 
-		{			
-			header('location:categories.php?act=new&msg=2');			
-		} 	
-		else 
-		{  										
-			header('location:categories.php?act=new&msg=1');
-		}  		
+		SetSettingValue("ClientsCount",$_POST["edtcount"]);
+		
+		header('location:numregister.php?act=new');	
 	}
-	else
-	if ($_POST["mark"]=="editgroup")
-	{			    
-		$values = array("`name`"=>"'{$_POST[edtgroup]}'");
-        $db->UpdateQuery("categories",$values,array("id='{$_GET[gid]}'"));		
-		header('location:categories.php?act=new&msg=1');
-	}	
-	if ($_GET['act']=="new")
-	{
-		$insertoredit = "
-			<button type='submit' class='btn btn-default'>ثبت</button>
-			<input type='hidden' name='mark' value='savegroup' /> ";
-	}
-	if ($_GET['act']=="edit")
-	{
-	    $row=$db->Select("categories","*","id='{$_GET["gid"]}'",NULL);		
-		$insertoredit = "
-			<button type='submit' class='btn btn-default'>ویرایش</button>
-			<input type='hidden' name='mark' value='editgroup' /> ";
-	}
-	if ($_GET['act']=="del")
-	{
-		$db->Delete("categories"," id",$_GET["gid"]);		
-		header('location:categories.php?act=new');	
-	}	
+	
+	$ClientsCount = GetSettingValue('ClientsCount',0);
+	
 $msgs = GetMessage($_GET['msg']);
 
 $html=<<<cd
@@ -84,9 +55,10 @@ $html=<<<cd
                             <div class="panel-body">
                                 <form name="frmcat" action="" method="post" class="form-inline ls_form" role="form">
                                     <div class="form-group">
-                                        <input id="edtgroup" name="edtgroup" type="text" class="form-control" placeholder="تعداد ثبت نام کنندگان" value="{$row['name']}"/>
+                                        <input id="edtgroup" name="edtcount" type="text" class="form-control" placeholder="تعداد ثبت نام کنندگان" value="{$ClientsCount}"/>
                                     </div>
-                                    {$insertoredit}
+                                    <button type='submit' class='btn btn-default'>ثبت</button>
+									<input type='hidden' name='mark' value='saveregs' /> 
                                 </form>
                             </div>
                         </div>

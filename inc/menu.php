@@ -1,3 +1,10 @@
+<?php
+	include_once("./config.php");
+	include_once("./classes/functions.php");
+  	
+$ClientsCount = GetSettingValue('ClientsCount',0);
+	
+$mnu=<<<cd
   <!-- Header -->
   <header class="header headerStyle1" id="header">
     <div class="sticky scrollHeaderWrapper">
@@ -65,7 +72,7 @@
                 <a href="contactus.html">تماس با ما</a>
               </li>
               <li>
-                <a href="javascript:void(0);" style="font-size:18px;margin-right:60px">تعداد استفاده کنندگان از پنل : 0</a>
+                <a href="javascript:void(0);" style="font-size:18px;margin-right:60px">تعداد استفاده کنندگان از پنل : <B>{$ClientsCount}</B></a>
               </li>
           </nav><!-- end of main nav -->
           <a href="#" class="generalLink bordered" id="responsiveMainNavToggler"><i class="fa fa-bars"></i></a>
@@ -75,3 +82,7 @@
       </div><!-- end of container -->
     </div><!-- end of sticky -->
   </header><!-- end of header -->
+cd;
+  
+  echo $mnu;
+  ?>
