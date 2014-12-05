@@ -33,7 +33,7 @@
 			//echo $db->cmd;
 			if($_FILES['userfile']['size'] < $maxsize )
 			{    
-				//tid 1 is for menu pics, 2 for news pics, 3 for maghalat pics
+				//tid 1 is  for news pics
 				if ($mode == "insert")
 				{
 					$fields = array("`tid`","`sid`","`itype`","`img`","`iname`","`isize`");		
