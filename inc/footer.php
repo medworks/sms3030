@@ -1,3 +1,13 @@
+<?php
+  
+  include_once("config.php");
+  include_once("classes/functions.php");
+  
+  $FaceBook_Add = GetSettingValue('FaceBook_Add',0);  
+  $Twitter_Add = GetSettingValue('Twitter_Add',0);  
+  $Rss_Add = GetSettingValue('Rss_Add',0);  
+
+$footer= <<<cd
 <!-- Footer -->
   <footer class="footer" id="footer">   
     <!-- Bottom Footer -->
@@ -16,9 +26,9 @@
             <div class="footerSocialWrapper">
 
               <ul class="bottomSocial socialNav">
-                <li class="facebook"><a href="#"><i class="animated fa fa-facebook"></i></a></li>
-                <li class="twitter"><a href="#"><i class="animated fa fa-twitter"></i></a></li>
-                <li class="rss"><a href="#"><i class="animated fa fa-rss"></i></a></li>
+                <li class="facebook"><a href="{$FaceBook_Add}"><i class="animated fa fa-facebook"></i></a></li>
+                <li class="twitter"><a href="{$Twitter_Add}"><i class="animated fa fa-twitter"></i></a></li>
+                <li class="rss"><a href="{$Rss_Add}"><i class="animated fa fa-rss"></i></a></li>
               </ul><!-- end of bottom social -->
 
               <!-- <ul class="paymentsNav">
@@ -62,3 +72,7 @@
   
 </body>
 </html>
+cd;
+
+echo $footer;
+?>
