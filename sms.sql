@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.6
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2014 at 11:30 PM
--- Server version: 5.6.16
--- PHP Version: 5.5.9
+-- Generation Time: Dec 05, 2014 at 08:47 PM
+-- Server version: 5.6.11
+-- PHP Version: 5.5.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `sms`
 --
+CREATE DATABASE IF NOT EXISTS `sms` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `sms`;
 
 -- --------------------------------------------------------
 
@@ -185,7 +187,7 @@ CREATE TABLE IF NOT EXISTS `params` (
   `name` varchar(100) NOT NULL,
   `pos` smallint(6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `params`
@@ -197,7 +199,9 @@ INSERT INTO `params` (`id`, `name`, `pos`) VALUES
 (4, 'ارساب زمانبندی شده', 3),
 (5, 'پشتیبانی 24 ساعته', 4),
 (7, '5 خط رایگان\r\n', 6),
-(8, 'ارسال به وایبر\r\n', 7);
+(8, 'ارسال به وایبر\r\n', 7),
+(9, 'ارسال محله های', 0),
+(10, 'ارسال از طریق دکل', 0);
 
 -- --------------------------------------------------------
 
@@ -251,9 +255,9 @@ CREATE TABLE IF NOT EXISTS `plans` (
 --
 
 INSERT INTO `plans` (`id`, `name`, `title`, `type`, `offer`, `pos`, `params`, `specials`, `price`) VALUES
-(4, 'A<sup>+</sup>', 'شخصی', 1, 0, 1, '2,3,4,5,7,8', '2,3,4,5,7,8', 800000),
-(5, 'B', 'سازمانی', 2, 0, 3, '2,4,7', '2,4,7', 600000),
-(6, 'C', 'شرکتی', 1, 1, 2, '2,3,7,8', '2,3,7,8', 750000);
+(4, 'A<sup>+</sup>', 'شخصی', 1, 0, 1, '2,3,4,5,7,8,9,10', '2,3,4,5,7,8,9,10', 800000),
+(5, 'B', 'سازمانی', 2, 0, 3, '2,4,7,9,10', '2,4,7,9,10', 600000),
+(6, 'C', 'شرکتی', 1, 1, 2, '2,3,7,8', '2,3,4,5,7,8,9,10', 750000);
 
 -- --------------------------------------------------------
 
@@ -266,7 +270,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
   `key` varchar(30) NOT NULL,
   `value` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=42 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=44 ;
 
 --
 -- Dumping data for table `settings`
@@ -285,11 +289,11 @@ INSERT INTO `settings` (`id`, `key`, `value`) VALUES
 (10, 'Max_Post_Number', '3'),
 (11, 'FaceBook_Add', 'facebook.com'),
 (12, 'Twitter_Add', 'twitter.com'),
-(13, 'Rss_Add', '127.0.01/media/rssfeed.php'),
+(13, 'Rss_Add', 'rssfeed.php'),
 (14, 'YouTube_Add', 'youtube.com'),
 (15, 'Tell_Number', '38555560'),
-(16, 'Fax_Number', '38555560'),
-(17, 'Address', 'مشهد- چهارراه لشکر-مجتمع تجاری اداری آسیا-واحد203\r\n'),
+(16, 'Fax_Number', ''),
+(17, 'Address', 'مشهد- چهارراه لشکر-مجتمع تجاری اداری آسیا-واحد203'),
 (18, 'Is_Smtp_Active', 'yes'),
 (19, 'Smtp_Host', 'smtp.gmail.com'),
 (20, 'Smtp_User_Name', 'hatami4510@gmail.com'),
@@ -298,7 +302,7 @@ INSERT INTO `settings` (`id`, `key`, `value`) VALUES
 (23, 'Email_Sender_Name', 'گروه مدیاتک'),
 (24, 'WellCome_Title', ''),
 (25, 'WellCome_Body', ''),
-(26, 'Gplus_Add', 'www.googleplus.com'),
+(26, 'Gplus_Add', 'www.googleplus.com//'),
 (27, 'About_Pic_Name', 'about_pic.jpg'),
 (28, 'Percent_Off', '5'),
 (29, 'Extra_Tax', '0'),
@@ -313,7 +317,9 @@ INSERT INTO `settings` (`id`, `key`, `value`) VALUES
 (38, 'Is_Send_Order_Sms_For_Admin', '1'),
 (39, 'Admin_Mobile_Number', ''),
 (40, 'Admin_Sms_Text', ''),
-(41, 'LinesDescribe', 'توضیحات تکمیلی خطوط\r\nلاتلتالتالتالتلتا\r\nلتالتالتلتلتلتا');
+(41, 'LinesDescribe', 'توضیحات تکمیلی خطوط\r\nلاتلتالتالتالتلتا\r\nلتالتالتلتلتلتا'),
+(42, 'PlanDescribe', 'توضیحات مربوط به پلن ها - در این بخش تمامی موارد مربوطه '),
+(43, 'ClientsCount', '1000');
 
 -- --------------------------------------------------------
 
