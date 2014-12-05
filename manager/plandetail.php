@@ -8,52 +8,22 @@
 	include_once("../classes/login.php");
     include_once("../lib/persiandate.php"); 
 
+	
 	$login = Login::GetLogin();
     if (!$login->IsLogged())
 	{
 		header("Location: ../index.php");
 		die(); // solve a security bug
 	}
-	$db = Database::GetDatabase();	
 	
-	if ($_POST["mark"]=="saveparam")
+	if ($_POST['mark']=="savedesc")
 	{
-		$fields = array("`name`","`pos`");		
-		$values = array("'{$_POST[edtname]}'","'{$_POST[edtpos]}'");	
-		if (!$db->InsertQuery('params',$fields,$values)) 
-		{			
-			header('location:addparam.php?act=new&msg=2');			
-		} 	
-		else 
-		{  										
-			header('location:addparam.php?act=new&msg=1');
-		}  		
+		SetSettingValue("PlanDescribe",$_POST["txtdesc"]);
+		
+		header('location:plandetail.php?act=new');	
 	}
-	else
-	if ($_POST["mark"]=="editparam")
-	{			    
-		$values = array("`name`"=>"'{$_POST[edtname]}'","`pos`"=>"'{$_POST[edtpos]}'");
-        $db->UpdateQuery("params",$values,array("id='{$_GET[pid]}'"));		
-		header('location:addparam.php?act=new&msg=1');
-	}	
-	if ($_GET['act']=="new")
-	{
-		$insertoredit = "
-			<button type='submit' class='btn btn-default'>ثبت</button>
-			<input type='hidden' name='mark' value='saveparam' /> ";
-	}
-	if ($_GET['act']=="edit")
-	{
-	    $row=$db->Select("params","*","id='{$_GET["pid"]}'",NULL);		
-		$insertoredit = "
-			<button type='submit' class='btn btn-default'>ویرایش</button>
-			<input type='hidden' name='mark' value='editparam' /> ";
-	}
-	if ($_GET['act']=="del")
-	{
-		$db->Delete("params"," id",$_GET["pid"]);		
-		header('location:addparam.php?act=new');	
-	}	
+	
+	$PlanDescribe = GetSettingValue('PlanDescribe',0);
 $msgs = GetMessage($_GET['msg']);
 
 $html=<<<cd
@@ -84,7 +54,7 @@ $html=<<<cd
                                 </div>
                                 <div class="panel-body">
                                     <div class="col-md-10 ls-group-input">
-                                        <textarea class="animatedTextArea form-control" name=""></textarea>
+                                        <textarea class="animatedTextArea form-control" name="txtdesc">{$PlanDescribe}</textarea>
                                     </div>
                                 </div>
                             </div>
@@ -98,7 +68,8 @@ $html=<<<cd
                                 </div>
                                 <div class="panel-body">
                                     <div class="form-group">
-                                    	{$insertoredit}
+										<button type='submit' class='btn btn-default'>ثبت</button>
+										<input type='hidden' name='mark' value='savedesc' /> 
                                     </div>
                                 </div>
                             </div>
