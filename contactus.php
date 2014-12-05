@@ -12,6 +12,10 @@
 	$Tell_Number = GetSettingValue('Tell_Number',0);
 	$Fax_Number = GetSettingValue('Fax_Number',0);
 	$Address = GetSettingValue('Address',0);
+	$FaceBook_Add = GetSettingValue('FaceBook_Add',0);  
+    $Twitter_Add = GetSettingValue('Twitter_Add',0);  
+    $Rss_Add = GetSettingValue('Rss_Add',0);  	
+	$Gplus_Add = GetSettingValue('Gplus_Add',0);
 	
 $contact=<<<cd
 <script>	
@@ -150,13 +154,13 @@ $contact=<<<cd
                   <div class="departBody followingbody">
                     <ul class="rrssb-buttons colorful left clearfix rrssb-1">
                       <li class="facebook" data-initwidth="16.666666666666668" style="width: 16.6666666666667%;">
-                          <a href="#" class="popup"><i class="fa fa-facebook"></i></a>
+                          <a href="{$FaceBook_Add}" class="popup"><i class="fa fa-facebook"></i></a>
                       </li>
                       <li class="twitter" data-initwidth="16.666666666666668" style="width: 16.6666666666667%;">
-                          <a href="#" class="popup"><i class="fa fa-twitter"></i></a>
+                          <a href="{$Twitter_Add}" class="popup"><i class="fa fa-twitter"></i></a>
                       </li>
                       <li class="googleplus" data-initwidth="16.666666666666668" style="width: 16.6666666666667%;">
-                          <a href="#" class="popup"><i class="fa fa-google-plus"></i></a>
+                          <a href="{$Gplus_Add}" class="popup"><i class="fa fa-google-plus"></i></a>
                       </li>
                       <li class="youtube" data-initwidth="16.666666666666668" style="width: 16.6666666666667%;">
                         <!-- Replace subject with your message using URL Endocding: http://meyerweb.com/eric/tools/dencoder/ -->
