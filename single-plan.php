@@ -66,7 +66,7 @@ cd;
 for($j = 0; $j < Count($plans); $j++)
 {
 	$param = explode(",",$plans[$j]["params"]);
-	if (in_array($params[$i]["name"],$param))
+	if (in_array($params[$i]["id"],$param))
 	{
 		$img =" <img src='./images/tik.png' alt='' width='25' height='25' />"; 
 	}
@@ -79,18 +79,19 @@ $splan.=<<<cd
 cd;
 }
 $splan.=<<<cd
-                  </tr>
+                 </tr>
+				  <tr>
+cd;
+}
+for($i = 0; $i < Count($plans); $i++)
+{
+$splan.=<<<cd
+                    <td>سفارش/قیمت (ریال)</td>
+                    <td><a href="http://panel.sms3030.ir" class="generalLink order" style="font-size:18px">{$plans[$i]["price"]}</a></td>
 cd;
 }
 $splan.=<<<cd
-                  <tr>
-                    <td>سفارش/قیمت (ریال)</td>
-                    <td><a href="http://panel.sms3030.ir" class="generalLink order" style="font-size:18px">80000</a></td>
-                    <td><a href="http://panel.sms3030.ir" class="generalLink order" style="font-size:18px">10000</a></td>
-                    <td><a href="http://panel.sms3030.ir" class="generalLink order" style="font-size:18px">20000</a></td>
-                    <td><a href="http://panel.sms3030.ir" class="generalLink order" style="font-size:18px">30000</a></td>
                   </tr>
-
                 </tbody>
               </table>
               <p class="detail" style="padding: 20px 10px; color: #cd2f2e;">{$PlanDescribe}</p>
