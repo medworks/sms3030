@@ -10,13 +10,17 @@
   	  	      
 	$banks=$db->SelectAll("bankinfo","*");
 $lstbank=<<<cd
-		<table>
-			<tr>
-				<th style="width:150px">نام بانک</th>
-				<th style="width:100px">صاحب حساب</th>
-				<th style="width:100px">شماره حساب</th>
-				<th style="width:100px">شماره کارت</th>
-			</tr>
+  <div class="table-responsive tableWrapper" tabindex="5000" style="overflow: hidden; outline: none;">
+		<table class="rtl table table-hover table-bordered" style="transform: translate3d(0px, 0px, 0px);">
+      <thead>
+        <tr>
+  				<th style="width:150px">نام بانک</th>
+  				<th style="width:100px">صاحب حساب</th>
+  				<th style="width:100px">شماره حساب</th>
+  				<th style="width:100px">شماره کارت</th>
+  			</tr>
+      </thead>
+      <tbody>
 cd;
 	for($i=0;$i<count($banks);$i++)
 	{
@@ -30,7 +34,9 @@ $lstbank.=<<<cd
 cd;
 	}
 $lstbank.=<<<cd
-		</table>		
+     <tbody>
+		</table>
+  </div>		
 cd;
 $bhtml2 =<<<cd
     <!-- Page Info -->
@@ -60,8 +66,7 @@ $bhtml2 =<<<cd
       <div class="container">
         <div class="row">          
           <div class="col-md-12">
-            <p style="font-size:23px;text-align:justify;font-weight:normal;line-height:35px;padding:0 35px;color:#000">{$About_System}</p>
-			{$lstbank}
+			       {$lstbank}
           </div><!-- end of col-md-12 -->
         </div><!-- end of row-->
       </div><!-- end of container -->

@@ -3311,22 +3311,23 @@ hr,
 }
 .table-bordered td:nth-child(2) {
   /*color: #999;*/
-  font-size: 13px;
+  font-size: 20px;
+  font-weight: normal;
   text-align: center;
 }
 .table-bordered td:nth-child(3) {
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: normal;
   color: #ff6b6b;
 }
 .table-bordered td:nth-child(4) {
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: normal;
   color: #ff6b6b;
 }
 .table-bordered td:nth-child(5) {
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: normal;
   color: #ff6b6b;
 }
 .table-bordered > thead > tr > th,
