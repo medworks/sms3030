@@ -89,7 +89,7 @@ cd;
 $plan.=<<<cd
                 <li class="clearfix">
                   <span class="pricingPerMonth rtl">{$rows[$i]["price"]} ریال 
-                    <a href="#" class="generalLink order">سفارش</a>
+                    <a href="single-plan.html" class="generalLink order">توضیحات بیشتر</a>
                   </span>
                 </li>
               </ul>
