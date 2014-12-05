@@ -6,7 +6,12 @@
   	include_once("../classes/security.php");
   	include_once("../classes/database.php");	
 
-
+	$login = Login::GetLogin();
+    if (!$login->IsLogged())
+	{
+		header("Location: ../index.php");
+		die(); // solve a security bug
+	}
 	
 	if ($_POST['mark']=="savedesc")
 	{
