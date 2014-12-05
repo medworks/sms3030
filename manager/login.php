@@ -11,7 +11,8 @@ $msg=Message::GetMessage();
 $msgs = "";
 if ($login->IsLogged())
 {	
-		header("Location: ../manager/admin.php?act=ord");
+		//header("Location: ../manager/admin.php?act=ord");
+		header("Location: ../manager/regreseller.php?act=new");
 } 
 else
 {
@@ -19,7 +20,8 @@ else
 	{
 		if ($login->AdminLogin($_POST['username'],$_POST['password']))
 		{		 
-			header("location:admin.php");	
+			//header("location:admin.php");	
+			header("location:regreseller.php?act=new");	
 		}	
 		else
 		{ 
