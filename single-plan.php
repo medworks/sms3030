@@ -81,12 +81,13 @@ cd;
 $splan.=<<<cd
                  </tr>
 				  <tr>
+					<td>سفارش/قیمت (ریال)</td>
 cd;
 }
 for($i = 0; $i < Count($plans); $i++)
 {
 $splan.=<<<cd
-                    <td>سفارش/قیمت (ریال)</td>
+                    
                     <td><a href="http://panel.sms3030.ir" class="generalLink order" style="font-size:18px">{$plans[$i]["price"]}</a></td>
 cd;
 }
