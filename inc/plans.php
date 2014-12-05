@@ -77,7 +77,8 @@ $plan.=<<<cd
 cd;
 if (Count($specials)>0 )
 {
-for($j = 0; $j < Count($specials); $j++)
+//for($j = 0; $j < Count($specials); $j++)
+for($j = 0; $j < 6; $j++)
 {
 	$specials[$j] = $db->Select("params","name","id ={$specials[$j]}");
 $plan.=<<<cd
