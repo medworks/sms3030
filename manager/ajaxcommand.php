@@ -14,8 +14,8 @@
 
 	$name    = $_POST['name'];
 	$email   = $_POST['email'];
-	$text = $_POST['comments'];
-    $subject = "contact";
+	$text = $_POST['message'];
+    $subject = $_POST['subject'];
 	$message = $text;
 
 	if( strlen($name)>=1 && checkEmail($email) && strlen($text)>=1 ){

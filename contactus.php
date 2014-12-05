@@ -1,9 +1,40 @@
 <?php
-  include_once('./inc/header.php');
-  include_once('./inc/pageheader.php');
-      include_once('./inc/menu.php');
-?>
-
+	include_once("config.php");
+    include_once("classes/database.php");
+    include_once("classes/messages.php");
+	include_once("classes/functions.php");
+	include_once("lib/persiandate.php");
+  
+    $db = Database::GetDatabase();
+	$msg = Message::GetMessage();
+	
+	$Contact_Email = GetSettingValue('Contact_Email',0);				
+	$Tell_Number = GetSettingValue('Tell_Number',0);
+	$Fax_Number = GetSettingValue('Fax_Number',0);
+	$Address = GetSettingValue('Address',0);
+	
+$contact=<<<cd
+<script>	
+		$(document).ready(function(){
+			$("#frmcontact").submit(function(){               
+			    $.ajax({
+				    type: "POST",
+				    url: "./manager/ajaxcommand.php?contact=reg",
+				    data: $("#frmcontact").serialize(),
+					    success: function(msg)
+						{
+							$("#note-contact").ajaxComplete(function(event, request, settings){				
+								$(this).hide();
+								$(this).html(msg).slideDown("slow");
+								$(this).html(msg);
+							});
+						}
+			    });
+				return false;
+			});
+		});
+	</script>
+	
     <div class="pageInfo">
       <div class="cover"></div>
       <div class="container">
@@ -87,7 +118,7 @@
                             direction: rtl;
                           }
                         </style>
-                        <form method="POST" action="sendmail.php" class="sendMessageForm clearfix">
+                        <form id="frmcontact" name="frmcontact" method="POST" action="" class="sendMessageForm clearfix">
                           <ul class="row clearfix">
                             <li class="col-md-6">
                               <input type="text" value="نام و نام خانوادگی" onblur="if(this.value=='')this.value='نام و نام خانوادگی'" onfocus="if(this.value=='نام و نام خانوادگی')this.value=''" name="name" id="name" class="name" />
@@ -102,11 +133,12 @@
                               <input type="text" value="موضوع" onblur="if(this.value=='')this.value='موضوع'" onfocus="if(this.value=='موضوع')this.value=''" name="subject" id="subject" class="subject" />
                             </li>
                             <li class="col-md-12">
-                              <textarea name="message" id="messageArea" class="inputBar"></textarea>
+                              <textarea name="message" id="message" class="inputBar"></textarea>
                             </li>
                           </ul>
                           <button type="submit" class="loadingbtn" data-loading-text="Sending Your Message .... ">ارسال</button>
                         </form><!-- end of send Message form -->
+						<div id="note-contact" style="font-size:22px;color:#DE5328"></div>
                       </div><!-- end of send Message -->
                    </div><!-- end of widget body -->
                 </div><!-- end of widget -->
@@ -145,8 +177,11 @@
           </div><!-- end of container -->
         </div><!-- end of section wrapper -->
       </section>
- 
+cd;
 
-<?php
+  include_once('./inc/header.php');
+  include_once('./inc/pageheader.php');
+  include_once('./inc/menu.php');
+  echo $contact;
   include_once('./inc/footer.php');
 ?>
