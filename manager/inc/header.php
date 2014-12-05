@@ -285,6 +285,16 @@
                     <li><a href="lineconfirmed.php">تایید شده ها</a></li>
                 </ul>
             </li>
+			 <li>
+                <a href="#">
+                    <i class="fa fa-navicon"></i>
+                    <span>تعریف مشتری</span>
+                </a>
+                <ul>
+                    <li><a href="addclient.php?act=new">ثبت مشتری</a></li>
+                    <li><a href="editclient.php?act=edit">ویرایش مشتری</a></li>                    
+                </ul>
+            </li>
             <li> 
                 <a href="#">
                     <i class="fa fa-gear"></i>
