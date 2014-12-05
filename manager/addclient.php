@@ -87,7 +87,11 @@
 		$insertoredit = "
 			<button id='submit' type='submit' class='btn btn-default'>ویرایش</button>
 			<input type='hidden' name='mark' value='editclient' /> ";
-	
+		
+		if (isset($row["img"]))
+		{
+			$imgload = " <img src='img.php?did={$row["id"]}&type=client' width='200px' height='170px' /> ";
+		}	
 	}
 
         
@@ -139,9 +143,9 @@ $html=<<<cd
                                                 <input kl_virtual_keyboard_secure_input="on" id="userfile" name="userfile" class="file" multiple="true" data-preview-file-type="any" type="file" />
                                                 <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
                                             </div>
-                                        </div>
-                                        
-                                    </div>                                   
+                                        </div>                                        
+                                    </div>    
+										{$imgload}
                                 </div>
                             </div>
                         </div>

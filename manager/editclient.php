@@ -103,7 +103,10 @@ $html.=<<<cd
                                                 <td class="text-center">
 												<a href="?act=del&did={$rows[$i]["id"]}"  >												
                                                     <button class="btn btn-xs btn-danger" title="پاک کردن"><i class="fa fa-minus"></i></button>
-												</a>	
+												</a>
+												<a href="addclient.php?act=edit&did={$rows[$i]["id"]}"  >					
+                                                    <button class="btn btn-xs btn-warning" title="ویرایش"><i class="fa fa-pencil-square-o"></i></button>
+												</a>												
                                                 </td>
                                             </tr>
 cd;

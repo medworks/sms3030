@@ -14,6 +14,11 @@
 	if (isset($_GET["type"]) and $_GET["type"]=="slide")
 	{
 		$pic = $db->Select("slide","*","`id`='{$_GET[did]}'",NULL);
+	}	
+	else
+	if (isset($_GET["type"]) and $_GET["type"]=="client")
+	{
+		$pic = $db->Select("clients","*","`id`='{$_GET[did]}'",NULL);
 	}
 	else
 	{
