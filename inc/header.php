@@ -1,3 +1,11 @@
+<?php
+	include_once("./config.php");
+	include_once("./classes/functions.php");
+  	
+	$Site_Title = GetSettingValue('Site_Title',0);
+	$Site_KeyWords = GetSettingValue('Site_KeyWords',0);
+	$Site_Describtion = GetSettingValue('Site_Describtion',0);
+?>	
 <!DOCTYPE html>
 <!--[if lt IE 7]>
   <html class="no-js IE lt-ie9 lt-ie8 lt-ie7"></html>
@@ -16,14 +24,14 @@
 <!--<![endif]-->
 <head>
 <!-- title -->
-<title>SMS3030</title>
+<title><?php echo $Site_Title ?></title>
 
 <!-- meta tags -->
 <meta charset="utf-8" />
 <meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport" />
 <meta name="author" content="Mediateq.ir"  />
-<meta name="description" content="" />
-<meta name="keywords" content="" />
+<meta name="description" content="<?php echo $Site_Describtion ?>" />
+<meta name="keywords" content="<?php echo $Site_KeyWords ?>" />
 <meta name="google-site-verification" content="" />
 <meta name="msvalidate.01" content="" />
 <meta name="generator" content="Powered by Mediateq CMS panel" />
