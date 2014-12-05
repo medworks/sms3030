@@ -28,7 +28,7 @@
                 <a href="javascript:void(0);">سامانه پیامک</a>
                 <ul class="dropDown sub-menu">
                   <li>
-                    <a href="sms.sms3030.ir">ورود به سامانه</a>
+                    <a href="http://sms.sms3030.ir">ورود به سامانه</a>
                   </li>
                   <li>
                     <a href="http://panel.sms3030.ir/?section=main::new_user&tab=true">ثبت نام پنل</a>
@@ -48,7 +48,7 @@
                 <a href="javascript:void(0);">نمایندگی</a>
                 <ul class="dropDown sub-menu">
                    <li>
-                    <a href="reseller.html">شرایط نمایندگی نمایندگی</a>
+                    <a href="reseller.html">شرایط نمایندگی</a>
                   </li>
                   <li>
                     <a href="single-reseller.html">پلن نمایندگی</a>

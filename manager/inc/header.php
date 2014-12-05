@@ -27,7 +27,7 @@
     <!-- TODO: Add a favicon -->
     <link rel="shortcut icon" href="./images/fab.ico" />
     
-    <title>SMS330||Mediateq.ir</title>
+    <title>SMS3030||Mediateq.ir</title>
 	
 	<link href="./css/zebra_pagination.css" rel="stylesheet" />
     
