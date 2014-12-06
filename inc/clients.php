@@ -28,7 +28,7 @@ for($i = 0; $i < Count($rows); $i++)
 $chtml.=<<<cd
           <div class="col-md-2 col-sm-4 item client singleClientsWrapper">
             <a class="singleClient" href="#" title="client">
-			  <img src="./manager/img.php?did={$rows[$i]["id"]}&type=client" alt="{$rows[$i]['subject']}" title="{$rows[$i]['subject']}" />              
+			  <img src="./manager/img.php?did={$rows[$i]["id"]}&type=client" alt="{$rows[$i]['subject']}" title="{$rows[$i]['subject']}" style="width:128px!important;height:29px!important;" />              
             </a><!-- end of single client -->
           </div><!-- end of single client wrapper -->
 cd;
