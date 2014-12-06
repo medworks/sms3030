@@ -80,10 +80,13 @@ cd;
 }
 $splan.=<<<cd
                  </tr>
+cd;
+}
+$splan.=<<<cd
 				  <tr>
 					<td>سفارش/قیمت (ریال)</td>
 cd;
-}
+
 for($i = 0; $i < Count($plans); $i++)
 {
 $splan.=<<<cd
