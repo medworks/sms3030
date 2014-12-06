@@ -10,7 +10,7 @@
 	$Site_Describtion=GetSettingValue("Site_Describtion",1);
 	$Admin_Email=GetSettingValue("Admin_Email",1);
 	$now = date("D, d M Y H:i:s T");
-	$site = "http://www.Sms3030.ir";
+	$site = "http://www.sms3030.ir";
 	
 	//$uri = "?item=fullnews&act=do&wid=";
 	$uri = "single-news";
@@ -18,7 +18,7 @@
 	$rss2_writer = new RSS2Writer(
 									$Site_Title, 
 									$Site_Describtion, 
-									'www.Sms3030.ir', 
+									'www.sms3030.ir', 
 									6, //indent
 									false //use CDATA
 		                          );
