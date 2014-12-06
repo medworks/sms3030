@@ -28,8 +28,8 @@
     <link rel="shortcut icon" href="./images/fab.ico" />
     
     <title>SMS3030||Mediateq.ir</title>
-	
-	<link href="./css/zebra_pagination.css" rel="stylesheet" />
+    
+    <link href="./css/zebra_pagination.css" rel="stylesheet" />
     
     <!--Page loading plugin Start -->
     <link rel="stylesheet" href="./css/pace-rtl.css" />
@@ -71,7 +71,7 @@
     <script src="./js/html5shiv.js"></script>
     <script src="./js/respond.min.js"></script>
     <![endif]-->
-	<script type="text/javascript" src="./js/jquery-1.11.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-1.11.min.js"></script>
     
 </head>
 <body>
@@ -80,7 +80,7 @@
     <div class="container-fluid">
         <!--Logo text start-->
         <div class="header-logo">
-            <a href="./" title="اس ام اس 3030">
+            <a href="javascript:void(0);" title="اس ام اس 3030">
                 <h1>پنل مدیریت</h1>
             </a>
         </div>
@@ -116,7 +116,7 @@
     <section id="left-navigation">
         <!--Left navigation user details start-->
         <div class="user-image">
-            <img src="./images/avatar2-80.png" alt="Rahyab clinic">
+            <img src="./images/avatar2-80.png" alt="SMS3030">
             <div class="user-online-status">
                 <span class="user-status is-online"></span>
             </div>
@@ -141,13 +141,13 @@
         <!--Phone Navigation Menu icon start-->
        <!--Left navigation start-->
         <ul class="mainNav">
-            <li>
+           <!-- <li>
                 <a href="admin.php">
                     <i class="fa fa-dashboard"></i>
                     <span>داشبورد</span>
                 </a>
             </li>
-            <!-- <li>
+            <li>
                 <a href="#">
                     <i class="fa fa-envelope-o"></i>
                     <span>Email</span>
@@ -267,7 +267,7 @@
                 <a href="#">
                     <i class="fa fa-pencil-square-o"></i>
                     <span>پلن نمایندگی</span>
-                    <span class="badge badge-red">3</span>
+                    <span class="badge badge-red">0</span>
                 </a>
                 <ul>
                     <li><a href="regreseller.php?act=new">ثبت نام کنندگان</a></li>
@@ -278,14 +278,14 @@
                 <a href="#">
                     <i class="fa fa-table"></i>
                     <span>سفارش خطوط</span>
-                    <span class="badge badge-red">3</span>
+                    <span class="badge badge-red">0</span>
                 </a>
                 <ul>
                     <li><a href="lineordered.php?act=new">ثبت نام کنندگان</a></li>
                     <li><a href="lineconfirmed.php">تایید شده ها</a></li>
                 </ul>
             </li>
-			 <li>
+             <li>
                 <a href="#">
                     <i class="fa fa-navicon"></i>
                     <span>تعریف مشتری</span>

@@ -23,7 +23,7 @@ $mnu=<<<cd
           <nav class="mainMenu mainNav" id="mainNav">
             <ul class="navTabs">
               <li>
-                <a href="./" class="active">صفحه اصلی</a>
+                <a href="./">صفحه اصلی</a>
               </li>
               <li>
                 <a href="aboutus.html">درباره ما</a>

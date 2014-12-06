@@ -41,7 +41,7 @@ $html=<<<cd
                         <!--Top breadcrumb start -->
 						تاریخ ثبت نام {$regdate}
                         <ol class="breadcrumb">
-                            <li><a href="admin.php"><i class="fa fa-home"></i></a></li>
+                            <li><a href="javascript:void(0);"><i class="fa fa-home"></i></a></li>
                             <li class="active">مشاهده اطلاعات</li>							
                         </ol>
                         <!--Top breadcrumb start -->

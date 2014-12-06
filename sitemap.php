@@ -24,10 +24,31 @@
 	  <loc>http://www.sms3030.ir/news.html</loc>
 	</url>
 	<url>
-	  <loc>http://www.mediateq.ir/bank.html</loc>
+	  <loc>http://www.sms3030.ir/bank.html</loc>
 	</url>
 	<url>
 	  <loc>http://www.sms3030.ir/contactus.html</loc>
+	</url>
+	<url>
+	  <loc>http://www.sms3030.ir/plans.html</loc>
+	</url>
+	<url>
+	  <loc>http://www.sms3030.ir/lines.html</loc>
+	</url>
+	<url>
+	  <loc>http://www.sms3030.ir/reseller.html</loc>
+	</url>
+	<url>
+	  <loc>http://www.sms3030.ir/single-plan.html</loc>
+	</url>
+	<url>
+	  <loc>http://www.sms3030.ir/single-reseller.html</loc>
+	</url>
+	<url>
+	  <loc>http://www.sms3030.ir/order.html</loc>
+	</url>
+	<url>
+	  <loc>http://www.sms3030.ir/lineorder.html</loc>
 	</url>
 ";
 	$date = date("Y-m-d");	

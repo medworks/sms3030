@@ -57,7 +57,7 @@ $html=<<<cd
     <!-- TODO: Add a favicon -->
     <link rel="shortcut icon" href="./images/fab.ico" />
 
-    <title>Rahyab cms||Mediateq.ir</title>
+    <title>SMS3030||Mediateq.ir</title>
 
     <!--Page loading plugin Start -->
     <link rel="stylesheet" href="./css/pace-rtl.css" />

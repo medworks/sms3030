@@ -10,6 +10,17 @@ This file includes all cusomized javascript and all plugins libraries options
 {
   //-- Enable Use Strict Mode --
   "use strict";
+  
+  //-- active menu --
+  // jQuery(document).ready(function() {
+  //   var href=window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+  //   jQuery("ul.navTabs li a").each(function(){
+  //   if(jQuery(this).attr("href") == href || jQuery(this).attr("href") == '' ){
+  //     jQuery(this).addClass("active");
+  //       jQuery(this).parents("ul.navTabs li a").addClass("active");
+  //   }
+  //    });
+  // });
 
   //--Preloaing Effect --
   jQuery(window).load(function(){
