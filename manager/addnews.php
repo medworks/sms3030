@@ -9,7 +9,7 @@
     include_once("../lib/persiandate.php");
 	
 	$imgload="";
-	
+	//date_default_timezone_set('Asia/Tehran');
 	$login = Login::GetLogin();
     if (!$login->IsLogged())
 	{

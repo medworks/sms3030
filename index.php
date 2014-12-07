@@ -1,12 +1,17 @@
 <?php
   include_once("config.php");
   include_once("classes/functions.php");
-    include_once("classes/security.php");
-    include_once("classes/database.php"); 
-    include_once("./lib/persiandate.php");
+  include_once("classes/security.php");
+  include_once("classes/database.php"); 
+  //include_once("lib/jdatetime.class.php");
+  include_once("./lib/persiandate.php");
   include_once("./lib/Zebra_Pagination.php");
+  //require_once dirname(__FILE__) . 'lib/jdatetime.class.php';
   
   $db = Database::GetDatabase();
+  //date_default_timezone_set('Asia/Tehran');
+  
+  //$mydate = new jDateTime(true, true, 'Asia/Tehran');
   
   $Tell_Number = GetSettingValue('Tell_Number',0);
   $Address = GetSettingValue('Address',0);
@@ -90,7 +95,7 @@ $slide.=<<<cd
 cd;
 
     
-$news = $db->SelectAll("news","*",NULL,"id DESC","0","2");  
+$news = $db->SelectAll("news","*",NULL,"id DESC","0","3");  
 
 $html.=<<<cd
   <!-- Blog -->
@@ -110,7 +115,14 @@ $html.=<<<cd
 cd;
 for($i = 0; $i < Count($news); $i++)
 {
-$news[$i]["regdate"] = ToJalali($news["regdate"],"Y/m/d H:i");	
+ // $dt=date("y-m-d",$news[$i]["regdate"]);
+ // $tt=date("H:i:s",$news[$i]["regdate"]);
+ // list($year,$month,$day) = explode("-", $dt);
+ // list($hour,$min,$sec) = explode(":", $tt);
+ // $td = Date("Y-m-d H:i:s",mktime($hour, $min, $sec, $month, $day, $year));
+$news[$i]["regdate"] = ToJalali($news[$i]["regdate"]," l d F  Y");	
+//$news[$i]["regdate"] = jdate(" l d F  Y",$news["regdate"],NULL,"Asia/Tehran");
+//$news[$i]["regdate"]=$mydate->date("l j F Y H:i",$td);	
 $news[$i]["text"] =(mb_strlen($news[$i]["text"])>120)?mb_substr($news[$i]["text"],0,120,"UTF-8")."...":$news[$i]["text"];
 $html.=<<<cd
           <article class="col-md-4 post">
