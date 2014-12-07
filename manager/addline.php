@@ -47,6 +47,7 @@
 	if ($_GET['act']=="edit")
 	{
 	    $row=$db->Select("linedef","*","id='{$_GET["lid"]}'",NULL);		
+		//echo $db->cmd;
 		if ($row["ischoice"])
 		{
 			$choiced = "checked";
@@ -69,7 +70,7 @@
 	}
 	
 	$linecount=$db->SelectAll("linecountnum","*",NULL,"pos ASC");		
-	//$cbmenu = DbSelectOptionTag("cbmenu",$menues,"name",NULL,NULL,"form-control",NULL,"  منو  ");
+	
 	$cblinecount = DbSelectOptionTag("cblinecount",$linecount,"numcount",NULL,NULL,NULL,NULL,"انتخاب تعداد ارقام");
 $msgs = GetMessage($_GET['msg']);
 
