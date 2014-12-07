@@ -111,6 +111,7 @@ cd;
 for($i = 0; $i < Count($news); $i++)
 {
 $news[$i]["regdate"] = ToJalali($news["regdate"],"Y/m/d H:i");	
+$news[$i]["text"] =(mb_strlen($news[$i]["text"])>120)?mb_substr($news[$i]["text"],0,120,"UTF-8")."...":$news[$i]["text"];
 $html.=<<<cd
           <article class="col-md-4 post">
             <div class="postWrapper">
