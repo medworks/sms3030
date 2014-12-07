@@ -92,60 +92,28 @@ $snhtml2.=<<<cd
                   <div class="widgetBody">
                     
                     <ul id="ticker" class="ticker" style="height: 225px; overflow: hidden;">                 
-
+cd;
+$news = $db->SelectAll("news","*",NULL,"id DESC","0","5"); 
+for($i = 0; $i < Count($news); $i++)
+{
+$news[$i]["regdate"] = ToJalali($news[$i]["regdate"]," l d F  Y");	
+$news[$i]["subject"] =(mb_strlen($news[$i]["subject"])>30)?mb_substr($news[$i]["text"],0,30,"UTF-8")."...":$news[$i]["subject"];
+$snhtml2.=<<<cd
                         <li class="clearfix" style="margin-top: 0px;">
                           <article class="post rtl">
                             <div class="postContents">
                               <h5 class="postTitle">
-                                <a href="#">عنوان خبر</a>
+                                <a href="#">{$news[$i]["subject"]}</a>
                               </h5>
                               <ul class="postMeta">
-                                <li class="postDate">16 فروردین 2014</li>
+                                <li class="postDate">{$news[$i]["regdate"]}</li>
                               </ul>
                             </div><!-- end of post  contents -->
                           </article><!-- end of post -->
                         </li>
-
-                        <li class="clearfix" style="margin-top: 0px;">
-                          <article class="post rtl">
-                            <div class="postContents">
-                              <h5 class="postTitle">
-                                <a href="#">عنوان خبر</a>
-                              </h5>
-                              <ul class="postMeta">
-                                <li class="postDate">16 فروردین 2014</li>
-                              </ul>
-                            </div><!-- end of post  contents -->
-                          </article><!-- end of post -->
-                        </li>
-
-                        <li class="clearfix" style="margin-top: 0px;">
-                          <article class="post rtl">
-                            <div class="postContents">
-                              <h5 class="postTitle">
-                                <a href="#">عنوان خبر</a>
-                              </h5>
-                              <ul class="postMeta">
-                                <li class="postDate">16 فروردین 2014</li>
-                              </ul>
-                            </div><!-- end of post  contents -->
-                          </article><!-- end of post -->
-                        </li>
-
-                        <li class="clearfix" style="margin-top: 0px;">
-                          <article class="post rtl">
-                            <div class="postContents">
-                              <h5 class="postTitle">
-                                <a href="#">عنوان خبر</a>
-                              </h5>
-                              <ul class="postMeta">
-                                <li class="postDate">16 فروردین 2014</li>
-                              </ul>
-                            </div><!-- end of post  contents -->
-                          </article><!-- end of post -->
-                        </li>
-
-
+cd;
+}
+$snhtml2.=<<<cd
                     </ul><!-- end of ticker -->
                   </div><!-- end of widget body -->
                 </div><!-- end of widget -->
