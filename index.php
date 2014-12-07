@@ -1,18 +1,18 @@
 <?php
-	include_once("config.php");
-	include_once("classes/functions.php");
-  	include_once("classes/security.php");
-  	include_once("classes/database.php");	
+  include_once("config.php");
+  include_once("classes/functions.php");
+    include_once("classes/security.php");
+    include_once("classes/database.php"); 
     include_once("./lib/persiandate.php");
-	include_once("./lib/Zebra_Pagination.php");
-	
-	$db = Database::GetDatabase();
-	
-	$Tell_Number = GetSettingValue('Tell_Number',0);
-	$Address = GetSettingValue('Address',0);
-	$Contact_Email = GetSettingValue('Contact_Email',0);	
-	$About_System = GetSettingValue('About_System',0);
-	$slides = $db->SelectAll("slide","*",NULL,"id ASC");	
+  include_once("./lib/Zebra_Pagination.php");
+  
+  $db = Database::GetDatabase();
+  
+  $Tell_Number = GetSettingValue('Tell_Number',0);
+  $Address = GetSettingValue('Address',0);
+  $Contact_Email = GetSettingValue('Contact_Email',0);  
+  $About_System = GetSettingValue('About_System',0);
+  $slides = $db->SelectAll("slide","*",NULL,"id ASC");  
 $slide.=<<<cd
 <body id="top" class="style-7 body-boxed-2">
 <!--[if lt IE 9]>
@@ -70,17 +70,17 @@ for($i = 0; $i < Count($slides); $i++)
 $slide.=<<<cd
       <div id="slide1" class="item slide">
         <div class="cover"></div>
-		<!-- end of cover -->
-		<img src="manager/img.php?did={$slides[$i]['id']}&type=slide" title="{$slides[$i]['subject']}" alt="{$slides[$i]['subject']}" />         
+    <!-- end of cover -->
+    <img src="manager/img.php?did={$slides[$i]['id']}&type=slide" title="{$slides[$i]['subject']}" alt="{$slides[$i]['subject']}" />         
         <div class="captions">
           <h2 class="animated">{$slides[$i]['subject']}</h2>
           <p class="animated">
-			{$slides[$i]['text']}
+      {$slides[$i]['text']}
           </p>
         </div>
-		<!-- end of captions -->
+    <!-- end of captions -->
       </div>
-	  <!-- end of slide -->
+    <!-- end of slide -->
 cd;
 }
 $slide.=<<<cd
@@ -89,8 +89,8 @@ $slide.=<<<cd
   <!-- end of slider -->
 cd;
 
-		
-$news = $db->SelectAll("news","*",NULL,"id DESC","0","2");	
+    
+$news = $db->SelectAll("news","*",NULL,"id DESC","0","2");  
 
 $html.=<<<cd
   <!-- Blog -->
@@ -110,7 +110,7 @@ $html.=<<<cd
 cd;
 for($i = 0; $i < Count($news); $i++)
 {
-$news[$i]["regdate"] = ToJalali($news["regdate"],"Y/m/d H:i");	
+$news[$i]["regdate"] = ToJalali($news["regdate"],"Y/m/d H:i");  
 $html.=<<<cd
           <article class="col-md-4 post">
             <div class="postWrapper">
@@ -123,7 +123,7 @@ $html.=<<<cd
                     </div>
                   </li>                  
                 </ul>
-                <a href="manager/img.php?did={$news[$i]['id']}&tid=1" title="post sample">
+                <a href="single-news{$news[$i]['id']}.html" title="post sample">
                   <img  src="manager/img.php?did={$news[$i]['id']}&tid=1"/>
                 </a>
               </div>
