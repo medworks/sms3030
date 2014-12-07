@@ -159,7 +159,7 @@ $html=<<<cd
 								<tbody>
 								<tr>
 cd;
-$rows = $db->SelectAll("linedef","*",NULL,"id ASC");
+$rows = $db->SelectAll("linedef","*",NULL,"lineno ASC");
 for($i = 0; $i < Count($rows); $i++)
 {
 $rownumber = $i+1;
