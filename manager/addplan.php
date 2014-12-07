@@ -116,7 +116,7 @@ cd;
 		}	
 $lstparam.=<<<cd
 			<tr>
-				<td>{$paramlist[$i]['name']}</td>
+				<td style="width:400px">{$paramlist[$i]['name']}</td>
 				<td>
 					<input type="checkbox" name="param[]" value="{$paramlist[$i]['id']}" {$pmchecked}>
 				</td>	
@@ -206,6 +206,7 @@ $html=<<<cd
                                     <h3 class="panel-title">انتخاب پارامترها</h3>
                                 </div>
                                 <div class="panel-body">
+									<p>شما حق انتخاب شش عدد از پارامترهای نمیش در باکس را دارید</p>
                                    {$lstparam}
                                 </div>
                             </div>

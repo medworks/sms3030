@@ -1,17 +1,17 @@
 <?php
     include_once("./config.php");
-	include_once("./classes/functions.php");
-  	include_once("./classes/messages.php");
-  	include_once("./classes/session.php");	
-  	include_once("./classes/security.php");
-  	include_once("./classes/database.php");	
-	
-	$db = Database::GetDatabase(); 
-	$plans = $db->SelectAll("plans","*","type = 1","pos ASC");
-	$params = $db->SelectAll("params","*",NULL,"pos ASC");
-	$PlanDescribe = GetSettingValue('PlanDescribe',0);
-				
-	
+  include_once("./classes/functions.php");
+    include_once("./classes/messages.php");
+    include_once("./classes/session.php");  
+    include_once("./classes/security.php");
+    include_once("./classes/database.php"); 
+  
+  $db = Database::GetDatabase(); 
+  $plans = $db->SelectAll("plans","*","type = 1","pos ASC");
+  $params = $db->SelectAll("params","*",NULL,"pos ASC");
+  $PlanDescribe = GetSettingValue('PlanDescribe',0);
+        
+  
 $splan=<<<cd
  <!-- Page Info -->
     <div class="pageInfo">
@@ -49,7 +49,7 @@ cd;
 for($i = 0; $i < Count($plans); $i++)
 {
 $splan.=<<<cd
-                    <th>{$plans[$i]["name"]}</th>
+                    <th style="direction:ltr">{$plans[$i]["name"]}</th>
 cd;
 }
 $splan.=<<<cd
@@ -65,15 +65,15 @@ $splan.=<<<cd
 cd;
 for($j = 0; $j < Count($plans); $j++)
 {
-	$param = explode(",",$plans[$j]["params"]);
-	if (in_array($params[$i]["id"],$param))
-	{
-		$img =" <img src='./images/tik.png' alt='' width='25' height='25' />"; 
-	}
-	else
-	{
-		$img =" <img src='./images/cross.png' alt='' width='25' height='25' />"; 
-	}
+  $param = explode(",",$plans[$j]["params"]);
+  if (in_array($params[$i]["id"],$param))
+  {
+    $img =" <img src='./images/tik.png' alt='' width='25' height='25' />"; 
+  }
+  else
+  {
+    $img =" <img src='./images/cross.png' alt='' width='25' height='25' />"; 
+  }
 $splan.=<<<cd
                     <td>{$img}</td>
 cd;
@@ -83,15 +83,15 @@ $splan.=<<<cd
 cd;
 }
 $splan.=<<<cd
-				  <tr>
-					<td>سفارش/قیمت (ریال)</td>
+          <tr>
+          <td>سفارش/قیمت (ریال)</td>
 cd;
 
 for($i = 0; $i < Count($plans); $i++)
 {
 $splan.=<<<cd
                     
-                    <td><a href="http://panel.sms3030.ir" class="generalLink order" style="font-size:18px">{$plans[$i]["price"]}</a></td>
+                    <td><a href="http://panel.sms3030.ir/?section=main::new_user&tab=true" target="_blank" class="generalLink order" style="font-size:18px">{$plans[$i]["price"]}</a></td>
 cd;
 }
 $splan.=<<<cd

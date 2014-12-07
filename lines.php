@@ -1,22 +1,22 @@
 <?php
     include_once("./config.php");
-	include_once("./classes/functions.php");
-  	include_once("./classes/session.php");	
-  	include_once("./classes/security.php");
-  	include_once("./classes/database.php");		
+  include_once("./classes/functions.php");
+    include_once("./classes/session.php");  
+    include_once("./classes/security.php");
+    include_once("./classes/database.php");   
 
-	$db = Database::GetDatabase();	
-	$linecount=$db->SelectAll("linecountnum","*",NULL," numcount ASC");
-	$linenum=$db->SelectAll("linedef","*",NULL," id ASC");	
-	for ($i=0;$i<count($linenum);$i++)
-	{
-		$linenumunique[] = $linenum[$i]["lineno"];
-	}	
-	foreach(array_unique($linenumunique) as $v)
-	{
-		if($v!= "" ){$linenumuniq[] = $v; }
-	}	
-	$LinesDescribe = GetSettingValue('LinesDescribe',0);
+  $db = Database::GetDatabase();  
+  $linecount=$db->SelectAll("linecountnum","*",NULL," numcount ASC");
+  $linenum=$db->SelectAll("linedef","*",NULL," id ASC");  
+  for ($i=0;$i<count($linenum);$i++)
+  {
+    $linenumunique[] = $linenum[$i]["lineno"];
+  } 
+  foreach(array_unique($linenumunique) as $v)
+  {
+    if($v!= "" ){$linenumuniq[] = $v; }
+  } 
+  $LinesDescribe = GetSettingValue('LinesDescribe',0);
  $table=<<<cd
     <!-- Page Info -->
     <div class="pageInfo">
@@ -71,8 +71,8 @@
                     }
                   </style>
                 <thead>
-				<tr style="font-size:23px">
-				<th rowspan="2" style="vertical-align:middle;width:100px">تعداد ارقام</th>
+        <tr style="font-size:23px">
+        <th rowspan="2" style="vertical-align:middle;width:100px">تعداد ارقام</th>
 cd;
 for($i=0;$i<count($linenumuniq);$i++)
 {
@@ -102,19 +102,19 @@ $table.=<<<cd
                   <tr>
                     <td>{$linecount[$i]["numcount"]}</td>
 cd;
-$line=$db->SelectAll("linedef","*","lctid ={$linecount[$i]["id"]} "," ischoice ASC");	
+$line=$db->SelectAll("linedef","*","lctid ={$linecount[$i]["id"]} "," ischoice ASC"); 
 for($j=0;$j<count($line);$j++)
 {
  if ($linedef[$j]["ischoice"])
  {
-	$class = " class='price even' ";
+  $class = " class='price even' ";
  }
  else
  {
-	$class = " class='price odd' ";
+  $class = " class='price odd' ";
  }
 $table.=<<<cd
-                    <td {$class}><a href="#" title="">{$line[$j]["price"]}</a></td>                   
+                    <td {$class}><a href="lineorder.html" target="_blank" title="{$line[$j]["price"]}">{$line[$j]["price"]}</a></td>                   
 cd;
 }
 $table.=<<<cd
