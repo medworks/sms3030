@@ -47,7 +47,7 @@ $slide.=<<<cd
             <ul>
               <li class="tele">
                 Tel: 
-                <a href="javascript:void();" class="latinfont ltr" style="display:inline-block;letter-spacing:2px">+98 {$Tell_Number}</a>
+                <a href="javascript:void();" class="latinfont ltr" style="display:inline-block;letter-spacing:2px"> {$Tell_Number}</a>
               </li>
               <li class="mail">
                 Email: 
