@@ -26,6 +26,7 @@
 	}
 	//echo $db->cmd;
 	header("Content-type: {$pic[itype]}");
+	//echo $db->cmd;
 	//echo base64_decode($pic['img']);
 	echo $pic["img"];
 	//echo $img;	
