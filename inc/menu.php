@@ -11,14 +11,9 @@ $mnu=<<<cd
       <div class="container">
         <div class="row">
           <div class="logoWrapper">
-            <h1 class="logo">
               <a class="clearfix" href="javascript:void();" title="sms3030" style="latinfont">
-                <span class="square">
-                  <span>SMS</span>
-                </span>
-                <span class="text">3030</span>
+                <img src="./images/logo.png" alt="sms3030">
               </a>
-            </h1><!-- end of logo -->
           </div><!-- end of logoWrapper -->
           <nav class="mainMenu mainNav" id="mainNav">
             <ul class="navTabs">
