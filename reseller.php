@@ -1,18 +1,18 @@
 <?php
-	include_once("./config.php");
-	include_once("./classes/functions.php");
-  	include_once("./classes/session.php");	
-  	include_once("./classes/security.php");
-  	include_once("./classes/database.php");	
-	
-	$db = Database::GetDatabase();	
-	$agents=$db->Select("plans","*","type=2");
-	$params = explode(",",$agents["specials"]);
-	for($i=0;$i<count($params);$i++)
-	{
-		$param = $db->Select("params","name","id ={$params[$i]}");
-		$params[$i] = $param[0];
-	}
+  include_once("./config.php");
+  include_once("./classes/functions.php");
+    include_once("./classes/session.php");  
+    include_once("./classes/security.php");
+    include_once("./classes/database.php"); 
+  
+  $db = Database::GetDatabase();  
+  $agents=$db->Select("plans","*","type=2");
+  $params = explode(",",$agents["specials"]);
+  for($i=0;$i<count($params);$i++)
+  {
+    $param = $db->Select("params","name","id ={$params[$i]}");
+    $params[$i] = $param[0];
+  }
 $rhtml=<<<cd
   <!-- Page Info -->
     <div class="pageInfo">
@@ -45,36 +45,36 @@ $rhtml=<<<cd
             <div class="fact singleFact factBox">
               <div class="factIcon factIcon3"></div>
               <h4 class="factTitle">
-                <a href="single-reseller.html">{$params[0]}</a>
+                <a href="single-reseller.html" style="font-size:20px;font-weight:normal">{$params[0]}</a>
               </h4>
-			  <!--
+        <!--
               <p class="factDescription">
                 تعریف دامنه با نام خود برروی پنل.
               </p>
-			  -->
+        -->
             </div><!-- end of fact -->
             
             <div class="fact singleFact factBox">
               <div class="factIcon factIcon3"></div>
               <h4 class="factTitle">
-                <a href="single-reseller.html">{$params[1]}</a>
+                <a href="single-reseller.html" style="font-size:20px;font-weight:normal">{$params[1]}</a>
               </h4>
                <!--
               <p class="factDescription">
                 تعریف دامنه با نام خود برروی پنل.
               </p>
-			  -->
+        -->
             </div><!-- end of fact -->
             <div class="fact singleFact factBox">
               <div class="factIcon factIcon3"></div>
               <h4 class="factTitle">
-                <a href="single-reseller.html">{$params[2]}</a>
+                <a href="single-reseller.html" style="font-size:20px;font-weight:normal">{$params[2]}</a>
               </h4>
                <!--
               <p class="factDescription">
                 تعریف دامنه با نام خود برروی پنل.
               </p>
-			  -->
+        -->
             </div><!-- end of fact -->
             
           </div><!-- end of facts wrapper -->
@@ -91,36 +91,36 @@ $rhtml=<<<cd
             <div class="fact singleFact factBox">
               <div class="factIcon factIcon3"></div>
               <h4 class="factTitle">
-                <a href="single-reseller.html">{$params[3]}</a>
+                <a href="single-reseller.html" style="font-size:20px;font-weight:normal">{$params[3]}</a>
               </h4>
                <!--
               <p class="factDescription">
                 تعریف دامنه با نام خود برروی پنل.
               </p>
-			  -->
+        -->
             </div><!-- end of fact -->
             
             <div class="fact singleFact factBox">
               <div class="factIcon factIcon3"></div>
               <h4 class="factTitle">
-                <a href="single-reseller.html">{$params[4]}</a>
+                <a href="single-reseller.html" style="font-size:20px;font-weight:normal">{$params[4]}</a>
               </h4>
                <!--
               <p class="factDescription">
                 تعریف دامنه با نام خود برروی پنل.
               </p>
-			  -->
+        -->
             </div><!-- end of fact -->
             <div class="fact singleFact factBox">
               <div class="factIcon factIcon3"></div>
               <h4 class="factTitle">
-                <a href="single-reseller.html">{$params[5]}</a>
+                <a href="single-reseller.html" style="font-size:20px;font-weight:normal">{$params[5]}</a>
               </h4>
                <!--
               <p class="factDescription">
                 تعریف دامنه با نام خود برروی پنل.
               </p>
-			  -->
+        -->
             </div><!-- end of fact -->
             
           </div><!-- end of facts wrapper -->
