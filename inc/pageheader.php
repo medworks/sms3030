@@ -41,6 +41,8 @@ $html.=<<<cd
             <li class="facebook"><a href="{$FaceBook_Add}"><i class="animated fa fa-facebook"></i></a></li>
             <li class="twitter"><a href="{$Twitter_Add}"><i class="animated fa fa-twitter"></i></a></li>
             <li class="rss"><a href="{$Rss_Add}"><i class="animated fa fa-rss"></i></a></li>
+            <li><a href="http://sms.sms3030.ir" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;">ورود آزمایشی به سامانه</a></li>
+            <li><a href="http://panel.sms3030.ir" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;">ورود به پنل</a></li>
           </ul><!-- end of top social -->
           <div class="topContact col-md-6 col-sm-12">
             <ul>

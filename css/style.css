@@ -1193,8 +1193,8 @@ hr,
 .socialNav > li a {
   display: block;
   width: 25px;
-  height: 25px;
-  line-height: 30px;
+  height: 27px;
+  line-height: 32px;
   font-size: 17px;
   position: relative;
   color: #fff;
@@ -6079,6 +6079,7 @@ img.fnone {
   text-align: center;
   font-family: 'bmitra';
   font-size: 18px;
+  direction: rtl;
 }
 .style-4 .pricingTable .pricingBody li:last-child {
   padding-bottom: 0;
