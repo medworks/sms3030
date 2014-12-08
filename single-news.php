@@ -1,19 +1,19 @@
 <?php
     include_once("config.php");
-	include_once("classes/functions.php");
-  	include_once("classes/messages.php");
-  	include_once("classes/session.php");	
-  	include_once("classes/security.php");
-  	include_once("classes/database.php");	
-	include_once("classes/login.php");
+  include_once("classes/functions.php");
+    include_once("classes/messages.php");
+    include_once("classes/session.php");  
+    include_once("classes/security.php");
+    include_once("classes/database.php"); 
+  include_once("classes/login.php");
     include_once("lib/persiandate.php"); 
     //error_reporting(E_ALL);
-	//ini_set('display_errors', 1);
-	
-	$db = Database::GetDatabase();
-	
-	$news = $db->Select("news","*","id={$_GET['id']}");
-	$news["regdate"] = ToJalali($news["regdate"],"Y/m/d H:i");
+  //ini_set('display_errors', 1);
+  
+  $db = Database::GetDatabase();
+  
+  $news = $db->Select("news","*","id={$_GET['id']}");
+  $news["regdate"] = ToJalali($news["regdate"],"Y/m/d");
 
 $snhtml2.=<<<cd
     <!-- Page Info -->
@@ -50,14 +50,14 @@ $snhtml2.=<<<cd
                         <div>
                           <div>
                             <div>
-							<img class=" morph" src="manager/img.php?did={$news['id']}&tid=1" width="748" height="350" />
+              <img class=" morph" src="manager/img.php?did={$news['id']}&tid=1" width="748" height="350" />
                             </div>
                             
                           </div>
                         </div>
                       </div>
                       <div class="postContents">
-                        <a href="#" class="postIcon">
+                        <a href="javascript:void(0);" class="postIcon">
                         <i class="animated fa fa-newspaper-o"></i>
                       </a>
                         <h4 class="postTitle">{$news["subject"]}</h4>
@@ -96,17 +96,17 @@ cd;
 $news = $db->SelectAll("news","*",NULL,"id DESC","0","5"); 
 for($i = 0; $i < Count($news); $i++)
 {
-$news[$i]["regdate"] = ToJalali($news[$i]["regdate"]," l d F  Y");	
-$news[$i]["subject"] =(mb_strlen($news[$i]["subject"])>30)?mb_substr($news[$i]["text"],0,30,"UTF-8")."...":$news[$i]["subject"];
+$news[$i]["regdate"] = ToJalali($news[$i]["regdate"]," l d F  Y");  
+//$news[$i]["subject"] =(mb_strlen($news[$i]["subject"])>30)?mb_substr($news[$i]["subject"],0,30,"UTF-8")."...":$news[$i]["subject"];
 $snhtml2.=<<<cd
                         <li class="clearfix" style="margin-top: 0px;">
                           <article class="post rtl">
                             <div class="postContents">
                               <h5 class="postTitle">
-                                <a href="#">{$news[$i]["subject"]}</a>
+                                <a href="single-news{$news[$i]['id']}.html">{$news[$i]["subject"]}</a>
                               </h5>
                               <ul class="postMeta">
-                                <li class="postDate">{$news[$i]["regdate"]}</li>
+                                <li class="postDate" style="font-family:'bmitra';font-size:15px;">{$news[$i]["regdate"]}</li>
                               </ul>
                             </div><!-- end of post  contents -->
                           </article><!-- end of post -->
