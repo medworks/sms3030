@@ -116,10 +116,10 @@
     <section id="left-navigation">
         <!--Left navigation user details start-->
         <div class="user-image">
-            <img src="./images/avatar2-80.png" alt="SMS3030">
-            <div class="user-online-status">
+            <img src="../images/logo.png" alt="SMS3030" style="width:100px!important">
+            <!-- <div class="user-online-status">
                 <span class="user-status is-online"></span>
-            </div>
+            </div> -->
         </div>
         <ul class="social-icon">
             <li><a href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a></li>
