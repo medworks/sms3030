@@ -1,13 +1,13 @@
 <?php
-	include_once("./config.php");
-	include_once("./classes/functions.php");
-  	include_once("./classes/messages.php");
-  	include_once("./classes/session.php");	
-  	include_once("./classes/security.php");
-  	include_once("./classes/database.php");	
-	
-	$db = Database::GetDatabase(); 
-	$rows = $db->SelectAll("clients","*");
+  include_once("./config.php");
+  include_once("./classes/functions.php");
+    include_once("./classes/messages.php");
+    include_once("./classes/session.php");  
+    include_once("./classes/security.php");
+    include_once("./classes/database.php"); 
+  
+  $db = Database::GetDatabase(); 
+  $rows = $db->SelectAll("clients","*");
 $chtml=<<<cd
 <section class="clients section mainSection scrollAnchor lightSection" id="clients">
   <div class="sectionWrapper">
@@ -24,11 +24,11 @@ $chtml=<<<cd
         <div class="clientsCarousel owl-carousel clientsGallary">
 cd;
 for($i = 0; $i < Count($rows); $i++)
-{	
+{ 
 $chtml.=<<<cd
           <div class="col-md-2 col-sm-4 item client singleClientsWrapper">
-            <a class="singleClient" href="#" title="client">
-			  <img src="./manager/img.php?did={$rows[$i]["id"]}&type=client" alt="{$rows[$i]['subject']}" title="{$rows[$i]['subject']}" style="width:128px!important;height:29px!important;" />              
+            <a class="singleClient" href="javascript:void(0);" title="client">
+        <img src="./manager/img.php?did={$rows[$i]["id"]}&type=client" alt="{$rows[$i]['subject']}" title="{$rows[$i]['subject']}" style="width:128px!important;height:29px!important;" />              
             </a><!-- end of single client -->
           </div><!-- end of single client wrapper -->
 cd;
