@@ -20,7 +20,7 @@
 	if (isset($_GET["act"]) and $_GET["act"]=="view")
 	{
 		$row = $db->Select("linenumbers","*","id ={$_GET['lid']}");
-		$regdate = ToJalali($row["regdate"],"Y/m/d H:i");
+		$regdate = ToJalali($row["regdate"]," l d F  Y ساعت H:i");
 	}
 	
 	if ((isset($_POST["mark"]) and $_POST["mark"]=="confirm"))
@@ -39,7 +39,6 @@ $html=<<<cd
                         <h3 class="ls-top-header">مشاهده اطلاعات ثبت نام کنندگان</h3>
                         <!--Top header end -->
                         <!--Top breadcrumb start -->
-						تاریخ ثبت نام {$regdate}
                         <ol class="breadcrumb">
                             <li><a href="javascript:void(0);"><i class="fa fa-home"></i></a></li>
                             <li class="active">مشاهده اطلاعات</li>							
@@ -49,6 +48,20 @@ $html=<<<cd
                 </div>
                 <!-- Main Content Element  Start-->
                 <form id="frmagents" name="frmagents"  action="" method="post" class="form-inline ls_form" role="form">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">تاریخ و زمان ثبت نام</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        {$regdate}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="panel panel-default">
