@@ -1,12 +1,18 @@
 $(document).ready(function(){
 
 //*****************active menu
-
-    var href=window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+	var href=window.location.href;
+	var first=href.lastIndexOf("/")+1;
+	var last=href.lastIndexOf(".php")+3;
+	var lenght=last-first;
+    href=href.substr(first,lenght+1);
     $("ul.mainNav li a").each(function(){
-		if($(this).attr("href") == href || $(this).attr("href") == '' ){
-		  $(this).addClass("active");
-			  $(this).parents("ul.mainNav li").addClass("active");
+    	var linkhref=$(this).attr("href");
+    	var linklast=linkhref.lastIndexOf(".php")+3;
+    	linkhref=linkhref.substr(0,linklast+1);
+		if(linkhref == href){
+		  	$(this).addClass("active");
+			$(this).parents("ul.mainNav > li").addClass("active");
 		}
      });
 
