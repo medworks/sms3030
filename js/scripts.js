@@ -15,15 +15,25 @@ This file includes all cusomized javascript and all plugins libraries options
   jQuery(document).ready(function() {
     var href=window.location.href.substr(window.location.href.lastIndexOf("/")+1);
     // alert(href);
+    if(href.indexOf("news")>0){
+      jQuery('ul.navTabs li a.news').addClass('active');
+    }
+    if(href.indexOf("plan")>0){
+      jQuery('ul.navTabs li a.plan').addClass('active');
+    }
+    if(href.indexOf("reseller")>0){
+      jQuery('ul.navTabs li a.reseller').addClass('active');
+    }
+    if(href==""){
+      jQuery('ul.navTabs li a.index').addClass('active');
+    }
     jQuery("ul.navTabs > li > a").each(function(){
       if(jQuery(this).attr("href") == href || jQuery(this).attr("href") == '' ){
-        jQuery(".index").removeClass("active");
         jQuery(this).addClass("active");
       }
     });
     jQuery("ul.sub-menu > li > a").each(function(){
       if(jQuery(this).attr("href") == href || jQuery(this).attr("href") == '' ){
-        jQuery(".index").removeClass("active");
         jQuery(this).parents('ul.navTabs > li').children('a').addClass('active');
       }
     });

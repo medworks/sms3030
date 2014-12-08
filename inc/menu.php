@@ -18,16 +18,16 @@ $mnu=<<<cd
           <nav class="mainMenu mainNav" id="mainNav">
             <ul class="navTabs">
               <li>
-                <a href="./" class="index active">صفحه اصلی</a>
+                <a href="./" class="index">صفحه اصلی</a>
               </li>
               <li>
                 <a href="aboutus.html">درباره ما</a>
               </li>
               <li>
-                <a href="news.html">اخبار</a>
+                <a href="news.html" class="news">اخبار</a>
               </li>
               <li>
-                <a href="javascript:void(0);">سامانه پیامک</a>
+                <a href="javascript:void(0);" class="plan">سامانه پیامک</a>
                 <ul class="dropDown sub-menu">
                   <li>
                     <a href="http://sms.sms3030.ir">ورود به سامانه</a>
@@ -47,7 +47,7 @@ $mnu=<<<cd
                 </ul>
               </li>
               <li>
-                <a href="javascript:void(0);">نمایندگی</a>
+                <a href="javascript:void(0);" class="reseller">نمایندگی</a>
                 <ul class="dropDown sub-menu">
                    <li>
                     <a href="reseller.html">شرایط نمایندگی</a>
