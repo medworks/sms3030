@@ -25,10 +25,18 @@ $chtml=<<<cd
 cd;
 for($i = 0; $i < Count($rows); $i++)
 { 
+$pic = $db->Select("clients","*","`id`='{$rows[$i][id]}'");
+$img = base64_encode($pic['img']);
+$src = 'data: '.$pic['itype'].';base64,'.$img;
+
 $chtml.=<<<cd
           <div class="col-md-2 col-sm-4 item client singleClientsWrapper">
-            <a class="singleClient" href="javascript:void(0);" title="client">
-        <img src="./manager/img.php?did={$rows[$i]["id"]}&type=client" alt="{$rows[$i]['subject']}" title="{$rows[$i]['subject']}" style="width:128px!important;height:29px!important;" />              
+            <a class="singleClient" href="javascript:void(0);" title="{$rows[$i]['subject']}">
+		<!--	
+        <img src="manager/img.php?did={$rows[$i]["id"]}&type=client" alt="{$rows[$i]['subject']}" title="{$rows[$i]['subject']}" style="width:128px!important;height:29px!important;" />  
+        
+        -->
+		<img src="{$src}" style="width:128px!important;height:29px!important;" />		
             </a><!-- end of single client -->
           </div><!-- end of single client wrapper -->
 cd;

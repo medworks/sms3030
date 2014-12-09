@@ -7,22 +7,22 @@
 	$pic = NULL;
 	if (isset($_GET["type"]) and $_GET["type"]=="gall")
 	{
-		$pic = $db->Select("gpics","*","`gid`='{$_GET[did]}'",NULL);
+		$pic = $db->Select("gpics","*","`gid`='{$_GET[did]}'");
 	}
 	else
 	if (isset($_GET["type"]) and $_GET["type"]=="slide")
 	{
-		$pic = $db->Select("slide","*","`id`='{$_GET[did]}'",NULL);
+		$pic = $db->Select("slide","*","`id`='{$_GET[did]}'");
 	}
 	else
 	if (isset($_GET["type"]) and $_GET["type"]=="client")
 	{
-		$pic = $db->Select("clients","*","`id`='{$_GET[did]}'",NULL);
+		$pic = $db->Select("clients","*","`id`='{$_GET[did]}'");
 	}
 	else
 	if (isset($_GET["type"]) and $_GET["type"]=="other")
 	{
-		$pic = $db->Select("pics","*","`sid`='{$_GET[did]}' AND `tid`='{$_GET[tid]}'",NULL);
+		$pic = $db->Select("pics","*","`sid`='{$_GET[did]}' AND `tid`='{$_GET[tid]}'");
 	}
 	$img = $pic["img"];
 	//$img = base64_encode($pic['img']);
