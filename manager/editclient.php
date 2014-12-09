@@ -91,6 +91,10 @@ for($i = 0; $i < Count($rows); $i++)
 $rownumber = $i+1;
 $rows[$i]["subject"] =(mb_strlen($rows[$i]["subject"])>20)?mb_substr($rows[$i]["subject"],0,20,"UTF-8")."...":$rows[$i]["subject"];
 
+$pic = $db->Select("clients","*","`id`='{$rows[$i][id]}'");
+$img = base64_encode($pic['img']);
+$src = 'data: '.$pic['itype'].';base64,'.$img;
+
 $html.=<<<cd
 
                                                 
@@ -98,7 +102,10 @@ $html.=<<<cd
                                                 <td>{$rownumber}</td>									
                                                 <td>{$rows[$i]["subject"]}</td>                                               
                                                 <td>
+													<!--
                                                     <img src="img.php?did={$rows[$i]["id"]}&type=client" width="50px" height="50px" /> 
+													-->
+													<img src="{$src}"   width="70px" height="50px" />
                                                 </td>
                                                 <td class="text-center">
 												<a href="?act=del&did={$rows[$i]["id"]}"  >												
