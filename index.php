@@ -139,7 +139,8 @@ $html.=<<<cd
                   </li>                  
                 </ul>
                 <a href="single-news{$news[$i]['id']}.html" title="post sample">
-                  <img  src="manager/img.php?did={$news[$i]['id']}&tid=1" />
+                  <img  src="manager/img.php?did={$news[$i]['id']}&tid=1" 
+				  alt="{$news[$i]['subject']}" title="{$news[$i]['subject']}"/>
                 </a>
               </div>
               <div class="postContents">

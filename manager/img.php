@@ -24,10 +24,9 @@
 	{
 		$pic = $db->Select("pics","*","`sid`='{$_GET[did]}' AND `tid`='{$_GET[tid]}'",NULL);
 	}
-	//echo $db->cmd;
-	header("Content-type: {$pic[itype]}");
-	//echo $db->cmd;
+	$img = $pic["img"];
+	header("Content-type: {$pic['itype']}");
 	//echo base64_decode($pic['img']);
-	echo $pic["img"];
-	//echo $img;	
+	echo $img;
+	exit();
 ?>
