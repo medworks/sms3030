@@ -64,6 +64,8 @@ $slide.=<<<cd
             <li class="facebook"><a href="#"><i class="animated fa fa-facebook"></i></a></li>
             <li class="twitter"><a href="#"><i class="animated fa fa-twitter"></i></a></li>
             <li class="rss"><a href="#"><i class="animated fa fa-rss"></i></a></li>
+            <li><a href="http://sms.sms3030.ir" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;">ورود آزمایشی به سامانه</a></li>
+            <li><a href="http://panel.sms3030.ir" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;">ورود به سامانه</a></li>
           </ul><!-- end of top social -->
         </div><!-- end of row -->
       </div><!-- end of container -->
@@ -120,9 +122,9 @@ for($i = 0; $i < Count($news); $i++)
  // list($year,$month,$day) = explode("-", $dt);
  // list($hour,$min,$sec) = explode(":", $tt);
  // $td = Date("Y-m-d H:i:s",mktime($hour, $min, $sec, $month, $day, $year));
-$news[$i]["regdate"] = ToJalali($news[$i]["regdate"]," l d F  Y");	
+$news[$i]["regdate"] = ToJalali($news[$i]["regdate"]," l d F  Y");  
 //$news[$i]["regdate"] = jdate(" l d F  Y",$news["regdate"],NULL,"Asia/Tehran");
-//$news[$i]["regdate"]=$mydate->date("l j F Y H:i",$td);	
+//$news[$i]["regdate"]=$mydate->date("l j F Y H:i",$td);  
 $news[$i]["text"] =(mb_strlen($news[$i]["text"])>120)?mb_substr($news[$i]["text"],0,120,"UTF-8")."...":$news[$i]["text"];
 $html.=<<<cd
           <article class="col-md-4 post">
