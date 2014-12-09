@@ -6,7 +6,7 @@
     include_once("./classes/database.php");   
 
   $db = Database::GetDatabase();  
-  $linecount=$db->SelectAll("linecountnum","*",NULL," numcount ASC");
+  $linecount=$db->SelectAll("linecountnum","*",NULL," numcount DESC");
   $linenum=$db->SelectAll("linedef","*",NULL," lineno ASC");  
   for ($i=0;$i<count($linenum);$i++)
   {
@@ -102,10 +102,10 @@ $table.=<<<cd
                   <tr>
                     <td>{$linecount[$i]["numcount"]}</td>
 cd;
-$line=$db->SelectAll("linedef","*","lctid ={$linecount[$i]["id"]} "," ischoice ASC"); 
+$line=$db->SelectAll("linedef","*","lctid ={$linecount[$i]["id"]} "," lineno ASC,ischoice ASC"); 
 for($j=0;$j<count($line);$j++)
 {
- if ($linedef[$j]["ischoice"])
+ if ($line[$j]["ischoice"])
  {
   $class = " class='price even' ";
  }
