@@ -7,7 +7,7 @@
 
   $db = Database::GetDatabase();  
   $linecount=$db->SelectAll("linecountnum","*",NULL," numcount ASC");
-  $linenum=$db->SelectAll("linedef","*",NULL," id ASC");  
+  $linenum=$db->SelectAll("linedef","*",NULL," lineno ASC");  
   for ($i=0;$i<count($linenum);$i++)
   {
     $linenumunique[] = $linenum[$i]["lineno"];

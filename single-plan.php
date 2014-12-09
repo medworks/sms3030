@@ -8,7 +8,7 @@
   
   $db = Database::GetDatabase(); 
   $plans = $db->SelectAll("plans","*","type = 1","pos ASC");
-  $params = $db->SelectAll("params","*",NULL,"pos ASC");
+  $params = $db->SelectAll("params","*",NULL," pos ASC");
   $PlanDescribe = GetSettingValue('PlanDescribe',0);
         
   

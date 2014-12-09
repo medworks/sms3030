@@ -44,9 +44,11 @@
 			<button type='submit' class='btn btn-default'>ثبت</button>
 			<input type='hidden' name='mark' value='saveline' /> ";
 	}
+	$lctid = "";
 	if ($_GET['act']=="edit")
 	{
-	    $row=$db->Select("linedef","*","id='{$_GET["lid"]}'",NULL);		
+	    $row=$db->Select("linedef","*","id='{$_GET["lid"]}'");	
+		$lctid = $row["lctid"];
 		//echo $db->cmd;
 		if ($row["ischoice"])
 		{
@@ -71,7 +73,7 @@
 	
 	$linecount=$db->SelectAll("linecountnum","*",NULL,"pos ASC");		
 	
-	$cblinecount = DbSelectOptionTag("cblinecount",$linecount,"numcount",NULL,NULL,NULL,NULL,"انتخاب تعداد ارقام");
+	$cblinecount = DbSelectOptionTag("cblinecount",$linecount,"numcount",$lctid,NULL,NULL,NULL,"انتخاب تعداد ارقام");
 $msgs = GetMessage($_GET['msg']);
 
 $html=<<<cd
@@ -102,7 +104,7 @@ $html=<<<cd
                                 </div>
                                 <div class="panel-body">
                                     <div class="form-group">
-                                        <input id="edtline" name="edtline" type="text" class="form-control" placeholder="خط" value="{$row['name']}"/>
+                                        <input id="edtline" name="edtline" type="text" class="form-control" placeholder="خط" value="{$row['lineno']}"/>
                                     </div>
                                     <div class="radio-inline">
 	                                    {$cblinecount}
@@ -129,7 +131,7 @@ $html=<<<cd
                                 </div>
                                 <div class="panel-body">
                                     <div class="form-group">
-                                        <input id="edtprice" name="edtprice" type="text" class="form-control" placeholder="قیمت خط" value="{$row['name']}"/>
+                                        <input id="edtprice" name="edtprice" type="text" class="form-control" placeholder="قیمت خط" value="{$row['price']}"/>
                                     </div>
                                     {$insertoredit}
                                 </div>

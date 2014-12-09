@@ -147,7 +147,6 @@ $html.=<<<cd
 		<img src="data:{$pic['itype']};base64,{$img}">
 		<img  src="manager/img.php?did={$news[$i]['id']}&tid=1&type=other" 
 				  alt="{$news[$i]['subject']}" title="{$news[$i]['subject']}"/>
-		<img src="{$src}" />
 		-->
 		
 				  <img src="{$src}" />
