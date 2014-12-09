@@ -81,7 +81,7 @@
 			<input type='hidden' name='mark' value='editplan' /> ";		
 	}
 	
-	$paramlist=$db->SelectAll("params","*");
+	$paramlist=$db->SelectAll("params","*",NULL," pos ASC");
 $lstparam.=<<<cd
 		<table>
 			<tr>
@@ -90,6 +90,8 @@ $lstparam.=<<<cd
 				<th >نمایش در باکس</th>				
 			</tr>
 cd;
+    $pmchecked ="";
+	$slchecked ="";
 	for($i=0;$i<count($paramlist);$i++)
 	{
 		if ($_GET['act']=="edit")
@@ -230,11 +232,6 @@ $html=<<<cd
         </div>
     </section>
     <!--Page main section end -->
-	<script type="text/javascript">
-		$(document).ready(function(){
-					
-		});
-	</script>
 cd;
 
 	include_once("./inc/header.php");
