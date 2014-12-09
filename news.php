@@ -62,6 +62,9 @@ cd;
 
 for($i = 0; $i < Count($rows); $i++)
 {
+$pic = $db->Select("pics","*","`sid`='{$rows[$i][id]}' AND `tid`='1'");
+$img = base64_encode($pic['img']);
+$src = 'data: '.$pic['itype'].';base64,'.$img;
 $nhtml2.=<<<cd
 
               <article class="col-md-3 post">
@@ -69,7 +72,10 @@ $nhtml2.=<<<cd
                   <div class="postMedia">
                     
                     <a href="single-news{$rows[$i]['id']}.html" title="{$rows[$i]['subject']}">
+					<!--
                       <img class=" morph" src="manager/img.php?did={$rows[$i]['id']}&tid=1" />
+					-->
+					  <img src="{$src}" />
                     </a>
                   </div>
                   <div class="postContents">

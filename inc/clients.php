@@ -34,9 +34,8 @@ $chtml.=<<<cd
             <a class="singleClient" href="javascript:void(0);" title="{$rows[$i]['subject']}">
 		<!--	
         <img src="manager/img.php?did={$rows[$i]["id"]}&type=client" alt="{$rows[$i]['subject']}" title="{$rows[$i]['subject']}" style="width:128px!important;height:29px!important;" />  
-        
         -->
-		<img src="{$src}" style="width:128px!important;height:29px!important;" />		
+		<img src="{$src}" style="width:128px!important;height:29px!important;"/>		
             </a><!-- end of single client -->
           </div><!-- end of single client wrapper -->
 cd;

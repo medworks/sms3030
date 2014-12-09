@@ -126,9 +126,9 @@ $news[$i]["regdate"] = ToJalali($news[$i]["regdate"]," l d F  Y");
 //$news[$i]["regdate"] = jdate(" l d F  Y",$news["regdate"],NULL,"Asia/Tehran");
 //$news[$i]["regdate"]=$mydate->date("l j F Y H:i",$td);  
 $news[$i]["text"] =(mb_strlen($news[$i]["text"])>120)?mb_substr($news[$i]["text"],0,120,"UTF-8")."...":$news[$i]["text"];
-//$pic = $db->Select("pics","*","`sid`='{$news[$i][id]}' AND `tid`='1'");
-//$img = base64_encode($pic['img']);
-//$src = 'data: '.$pic['itype'].';base64,'.$img;
+$pic = $db->Select("pics","*","`sid`='{$news[$i][id]}' AND `tid`='1'");
+$img = base64_encode($pic['img']);
+$src = 'data: '.$pic['itype'].';base64,'.$img;
 $html.=<<<cd
           <article class="col-md-4 post">
             <div class="postWrapper">
@@ -150,8 +150,7 @@ $html.=<<<cd
 		<img src="{$src}" />
 		-->
 		
-		<img  src="manager/img.php?did={$news[$i]['id']}&tid=1&type=other" 
-				  alt="{$news[$i]['subject']}" title="{$news[$i]['subject']}"/>
+				  <img src="{$src}" />
                 </a>
               </div>
               <div class="postContents">
