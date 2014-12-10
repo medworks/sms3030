@@ -50,14 +50,14 @@ $bhtml2 =<<<cd
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <h2 class="pageTitle">شماره حساب</h2>
+            <h2 class="pageTitle">شماره حساب ها</h2>
           </div><!-- end of col-md-4 -->
           <div class="col-md-8">
             <ol class="breadcrumb">
               <li>
                 <a href="./">صفحه اصلی</a>
               </li>
-              <li class="active"><a href="about-us.html">شماره حساب</a></li>
+              <li class="active">شماره حساب ها</li>
             </ol><!-- end of breadcrumb -->
           </div><!-- end of col-md-8 -->		
         </div><!-- end of row -->

@@ -10,7 +10,7 @@
 	$db = Database::GetDatabase();
 	$seo = Seo::GetSeo();
 	
-	$seo->Site_Title = "ثبت نام نمایندگی";
+	$seo->Site_Title = "ثبت نام پلن نمایندگی اس ام اس 3030";
 
 	
 	if ($_POST["mark"]=="register")
@@ -40,7 +40,7 @@ $order2=<<<cd
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <h2 class="pageTitle">نمایندگی اس ام اس 3030</h2>
+            <h2 class="pageTitle">ثبت نام پلن نمایندگی</h2>
           </div><!-- end of col-md-4 -->
           <div class="col-md-8">
             <ol class="breadcrumb">

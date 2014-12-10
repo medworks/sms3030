@@ -11,9 +11,12 @@
   //ini_set('display_errors', 1);
   
   $db = Database::GetDatabase();
+  $seo = Seo::GetSeo();
   
   $news = $db->Select("news","*","id={$_GET['id']}");
   $news["regdate"] = ToJalali($news["regdate"],"Y/m/d");
+
+  $seo->Site_Title = $news["subject"];
 
 $snhtml2.=<<<cd
     <!-- Page Info -->
@@ -22,14 +25,14 @@ $snhtml2.=<<<cd
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <h2 class="pageTitle">اخبار</h2>
+            <h2 class="pageTitle">{$news["subject"]}</h2>
           </div><!-- end of col-md-4 -->
           <div class="col-md-8">
             <ol class="breadcrumb">
               <li>
                 <a href="./">صفحه اصلی</a>
               </li>
-              <li class="active"><a href="news.php">اخبار</a></li>
+              <li class="active"><a href="news.html">اخبار</a></li>
             </ol><!-- end of breadcrumb -->
           </div><!-- end of col-md-8 -->
 
@@ -50,7 +53,7 @@ $snhtml2.=<<<cd
                         <div>
                           <div>
                             <div>
-              <img class=" morph" src="manager/img.php?did={$news['id']}&tid=1&type=other" width="748" height="350" />
+                              <img class=" morph" src="manager/img.php?did={$news['id']}&tid=1&type=other" width="748" height="350" />
                             </div>
                             
                           </div>

@@ -9,7 +9,7 @@
 			
 	$seo = Seo::GetSeo();
 	
-	$seo->Site_Title = "تعرفه پلن ها";
+	$seo->Site_Title = "پلن های اس ام اس 3030";
 
 $phtml2=<<<cd
     <!-- end of header -->
@@ -19,14 +19,14 @@ $phtml2=<<<cd
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <h2 class="pageTitle">پنل های اس ام اس 3030</h2>
+            <h2 class="pageTitle">پلن های اس ام اس</h2>
           </div><!-- end of col-md-4 -->
           <div class="col-md-8">
             <ol class="breadcrumb">
               <li>
                 <a href="./">صفحه اصلی</a>
               </li>
-              <li class="active">پنل ها</li>
+              <li class="active">پلن ها</li>
             </ol><!-- end of breadcrumb -->
           </div><!-- end of col-md-8 -->
 

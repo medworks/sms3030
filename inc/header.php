@@ -35,8 +35,8 @@
 <meta name="author" content="Mediateq.ir"  />
 <meta name="description" content="<?php echo $seo->Site_Describtion; ?>" />
 <meta name="keywords" content="<?php echo $seo->Site_KeyWords; ?>" />
-<meta name="google-site-verification" content="" />
-<meta name="msvalidate.01" content="" />
+<meta name="google-site-verification" content="3tQMNvxRWB3FHGahHr5f87lMB8dllggDG_MH0LwEDHM" />
+<meta name="msvalidate.01" content="A92EDE738075648B70C10A8E52AFBCA6" />
 <meta name="generator" content="Powered by Mediateq CMS panel" />
 <meta name="googlebot" content="INDEX,FOLLOW" />
 <meta name="robots" content="INDEX,FOLLOW" />

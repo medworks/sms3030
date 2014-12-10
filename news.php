@@ -10,7 +10,7 @@
 	$db = Database::GetDatabase();
 	$seo = Seo::GetSeo();
 	
-	$seo->Site_Title = "اخبار";
+	$seo->Site_Title = "اخبار اس ام اس 3030";
 
 	//error_reporting(E_ALL);
 	//ini_set('display_errors', 1);

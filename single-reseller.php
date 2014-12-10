@@ -7,10 +7,16 @@
   	include_once("./classes/database.php");	
 	include_once("./classes/login.php");
     include_once("./lib/persiandate.php");
+
+
 	
 	$db = Database::GetDatabase();
+  $seo = Seo::GetSeo();
+
 	$row = $db->Select("plans","*","type = 2","pos ASC");
 	$PlanDescribe = GetSettingValue('PlanDescribe',0);
+  $seo->Site_Title = "پلن نمایندگی اس ام اس 3030";
+
 	
 $reseller=<<<cd
     <!-- Page Info -->
@@ -19,7 +25,7 @@ $reseller=<<<cd
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <h2 class="pageTitle">نمایندگی</h2>
+            <h2 class="pageTitle">پلن نمایندگی</h2>
           </div><!-- end of col-md-4 -->
           <div class="col-md-8">
             <ol class="breadcrumb">

@@ -26,7 +26,7 @@ $ahtml2 =<<<cd
               <li>
                 <a href="./">صفحه اصلی</a>
               </li>
-              <li class="active"><a href="about-us.html">درباره ما</a></li>
+              <li class="active">درباره ما</li>
             </ol><!-- end of breadcrumb -->
           </div><!-- end of col-md-8 -->
 
