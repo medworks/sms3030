@@ -84,14 +84,14 @@ cd;
 }
 $splan.=<<<cd
           <tr>
-          <td>سفارش/قیمت (ریال)</td>
+          <td>سفارش/قیمت (تومان)</td>
 cd;
 
 for($i = 0; $i < Count($plans); $i++)
 {
 $splan.=<<<cd
                     
-                    <td><a href="http://panel.sms3030.ir/?section=main::new_user&tab=true" target="_blank" class="generalLink order" style="font-size:18px">{$plans[$i]["price"]}</a></td>
+                    <td><a href="http://panel.sms3030.ir/?section=main::new_user&tab=true" target="_blank" class="generalLink order" style="font-size:18px"><price>{$plans[$i]["price"]}</price></a></td>
 cd;
 }
 $splan.=<<<cd

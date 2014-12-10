@@ -114,7 +114,7 @@ for($j=0;$j<count($line);$j++)
   $class = " class='price odd' ";
  }
 $table.=<<<cd
-                    <td {$class}><a href="lineorder.html" target="_blank" title="{$line[$j]["price"]}">{$line[$j]["price"]}</a></td>                   
+                    <td {$class}><a href="lineorder.html" target="_blank" title="{$line[$j]["price"]}"><price>{$line[$j]["price"]}</price></a></td>                   
 cd;
 }
 $table.=<<<cd

@@ -39,6 +39,20 @@ This file includes all cusomized javascript and all plugins libraries options
     });
   });
 
+  jQuery.fn.digits = function(){ 
+      return this.each(function(){ 
+          $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") ); 
+      })
+  }
+  jQuery(document).ready(function() {
+    $("price").digits();
+    // var price= jQuery("#price").text();
+    // alert(price);
+    // jQuery('#price').html(price.text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+
+  });
+
+
   //--Preloaing Effect --
   jQuery(window).load(function(){
     jQuery('.loadingContainer').css({'opacity' : 0 , 'display' : 'none'});
