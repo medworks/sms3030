@@ -94,8 +94,8 @@ cd;
 for($i=0;$i<count($linenumuniq);$i++)
 {
 $table.=<<<cd
-                    <th class="random">غیرانتخابی (ریال)</th>
-                    <th class="non-rand">انتخابی (ریال)</th>
+                    <th class="random">غیرانتخابی (تومان)</th>
+                    <th class="non-rand">انتخابی (تومان)</th>
 cd;
 }
 $table.=<<<cd
@@ -121,7 +121,7 @@ for($j=0;$j<count($line);$j++)
   $class = " class='price odd' ";
  }
 $table.=<<<cd
-                    <td {$class}><a href="lineorder.html" target="_blank" title="{$line[$j]["price"]}"><price>{$line[$j]["price"]}</price></a></td>                   
+                    <td {$class}><a href="lineorder.html" target="_blank" title="سفارش">سفارش <price>{$line[$j]["price"]}</price></a></td>                   
 cd;
 }
 $table.=<<<cd

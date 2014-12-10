@@ -91,7 +91,7 @@ for($i = 0; $i < Count($plans); $i++)
 {
 $splan.=<<<cd
                     
-                    <td><a href="http://panel.sms3030.ir/?section=main::new_user&tab=true" target="_blank" class="generalLink order" style="font-size:18px"><price>{$plans[$i]["price"]}</price></a></td>
+                    <td><a href="http://panel.sms3030.ir/?section=main::new_user&tab=true" target="_blank" class="generalLink order" style="font-size:18px" title="سفارش">سفارش <price>{$plans[$i]["price"]}</price></a></td>
 cd;
 }
 $splan.=<<<cd

@@ -64,8 +64,8 @@ cd;
 }
 $reseller.=<<<cd
                   <tr>
-                    <td>سفارش / قیمت (ریال)</td>
-                    <td><a href="order.html" class="generalLink order" style="font-size:18px"><price>{$row["price"]}</price></a></td>
+                    <td>سفارش / قیمت (تومان)</td>
+                    <td><a href="order.html" class="generalLink order" style="font-size:18px" title="سفارش">سفارش <price>{$row["price"]}</price></a></td>
                   </tr>
 
                 </tbody>
