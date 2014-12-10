@@ -1,9 +1,9 @@
 <?php
-	include_once("./config.php");
-	include_once("./classes/functions.php");
-  	
+  include_once("./config.php");
+  include_once("./classes/functions.php");
+    
 $ClientsCount = GetSettingValue('ClientsCount',0);
-	
+  
 $mnu=<<<cd
   <!-- Header -->
   <header class="header headerStyle1" id="header">
@@ -30,9 +30,6 @@ $mnu=<<<cd
                 <a href="javascript:void(0);" class="plan">سامانه پیامک</a>
                 <ul class="dropDown sub-menu">
                   <li>
-                    <a href="http://sms.sms3030.ir">ورود به سامانه</a>
-                  </li>
-                  <li>
                     <a href="http://panel.sms3030.ir/?section=main::new_user&tab=true">ثبت نام پنل</a>
                   </li>
                   <li>
@@ -49,9 +46,6 @@ $mnu=<<<cd
               <li>
                 <a href="javascript:void(0);" class="reseller">نمایندگی</a>
                 <ul class="dropDown sub-menu">
-                   <li>
-                    <a href="reseller.html">شرایط نمایندگی</a>
-                  </li>
                   <li>
                     <a href="single-reseller.html">پلن نمایندگی</a>
                   </li>

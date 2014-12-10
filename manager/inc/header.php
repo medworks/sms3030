@@ -267,7 +267,7 @@
                 <a href="#">
                     <i class="fa fa-pencil-square-o"></i>
                     <span>پلن نمایندگی</span>
-                    <span class="badge badge-red">0</span>
+                    <!-- <span class="badge badge-red">0</span> -->
                 </a>
                 <ul>
                     <li><a href="regreseller.php?act=new">ثبت نام کنندگان</a></li>
@@ -278,7 +278,7 @@
                 <a href="#">
                     <i class="fa fa-table"></i>
                     <span>سفارش خطوط</span>
-                    <span class="badge badge-red">0</span>
+                    <!-- <span class="badge badge-red">0</span> -->
                 </a>
                 <ul>
                     <li><a href="lineordered.php?act=new">ثبت نام کنندگان</a></li>

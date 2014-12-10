@@ -19,7 +19,7 @@
   $About_System = GetSettingValue('About_System',0);
   $slides = $db->SelectAll("slide","*",NULL,"id ASC");  
 $slide.=<<<cd
-<body id="top" class="style-7 body-boxed-2">
+<body id="top" class="style-6 body-boxed-2">
 <!--[if lt IE 9]>
   <p class="browsehappy">
     You are using an
