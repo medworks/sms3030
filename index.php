@@ -18,7 +18,9 @@
   $Address = GetSettingValue('Address',0);
   $Contact_Email = GetSettingValue('Contact_Email',0);  
   $About_System = GetSettingValue('About_System',0);
-  $slides = $db->SelectAll("slide","*",NULL,"id ASC");  
+  $slides = $db->SelectAll("slide","*",NULL,"id ASC");
+  $datetime = ToJalali(date('Y-M-d H:i:s'),'l، d F Y');
+
 $slide.=<<<cd
 <body id="top" class="style-6 body-boxed-2">
 <!--[if lt IE 9]>
@@ -67,6 +69,7 @@ $slide.=<<<cd
             <li class="rss"><a href="#"><i class="animated fa fa-rss"></i></a></li>
             <li><a href="http://sms.sms3030.ir" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;">ورود آزمایشی به سامانه</a></li>
             <li><a href="http://panel.sms3030.ir" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;">ورود به سامانه</a></li>
+            <li><a href="javascript:void(0);" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;">{$datetime}</a></li>
           </ul><!-- end of top social -->
         </div><!-- end of row -->
       </div><!-- end of container -->
