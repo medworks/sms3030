@@ -263,7 +263,7 @@
                     <li><a href="javascript:void(0);">ثبت نام کنندگان</a></li>
                 </ul>
             </li> -->
-            <li>
+            <li class="reseller">
                 <a href="#">
                     <i class="fa fa-pencil-square-o"></i>
                     <span>پلن نمایندگی</span>
@@ -274,7 +274,7 @@
                     <li><a href="confirmed.php">تایید شده ها</a></li>
                 </ul>
             </li>
-            <li>
+            <li class="lines">
                 <a href="#">
                     <i class="fa fa-table"></i>
                     <span>سفارش خطوط</span>
