@@ -4,12 +4,17 @@
   	include_once("classes/security.php");
   	include_once("classes/database.php");	
     include_once("./lib/persiandate.php");
-	include_once("./lib/Zebra_Pagination.php"); 
+	include_once("./lib/Zebra_Pagination.php");
+	include_once("classes/seo.php");
+			
+	$db = Database::GetDatabase();
+	$seo = Seo::GetSeo();
+	
+	$seo->Site_Title = "اخبار";
 
 	//error_reporting(E_ALL);
 	//ini_set('display_errors', 1);
 	
-	$db = Database::GetDatabase();
 	
 	$records_per_page = 10;
 	$pagination = new Zebra_Pagination();

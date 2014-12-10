@@ -4,8 +4,14 @@
     include_once("classes/messages.php");
 	include_once("classes/functions.php");
 	include_once("lib/persiandate.php");
+	include_once("classes/seo.php");
+			
+	$db = Database::GetDatabase();
+	$seo = Seo::GetSeo();
+	
+	$seo->Site_Title = "تماس با ما";
+	//$seo->Site_Describtion = mb_substr($About_System,0,150,"UTF-8");
   
-    $db = Database::GetDatabase();
 	$msg = Message::GetMessage();
 	
 	$Contact_Email = GetSettingValue('Contact_Email',0);				

@@ -5,9 +5,13 @@
   	include_once("./classes/session.php");	
   	include_once("./classes/security.php");
   	include_once("./classes/database.php");	
+	include_once("classes/seo.php");
+			
+	$db = Database::GetDatabase();
+	$seo = Seo::GetSeo();
 	
-    			
-	$db = Database::GetDatabase(); 
+	$seo->Site_Title = "ثبت نام خط";
+
 	
 	if ($_POST["mark"]=="register")
 	{

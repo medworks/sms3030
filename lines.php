@@ -1,11 +1,18 @@
 <?php
     include_once("./config.php");
-  include_once("./classes/functions.php");
+	include_once("./classes/functions.php");
     include_once("./classes/session.php");  
     include_once("./classes/security.php");
-    include_once("./classes/database.php");   
+    include_once("./classes/database.php");
+	include_once("classes/seo.php");
+			
+	$db = Database::GetDatabase();
+	$seo = Seo::GetSeo();
+	
+	$seo->Site_Title = "تعرفه خطوط";
+	//$seo->Site_Describtion = mb_substr($About_System,0,150,"UTF-8");
 
-  $db = Database::GetDatabase();  
+ 
   $linecount=$db->SelectAll("linecountnum","*",NULL," numcount DESC");
   $linenum=$db->SelectAll("linedef","*",NULL," lineno ASC");  
   for ($i=0;$i<count($linenum);$i++)

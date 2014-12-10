@@ -1,5 +1,15 @@
 <?php
-
+	include_once("./config.php");
+	include_once("./classes/functions.php");
+  	include_once("./classes/messages.php");
+  	include_once("./classes/session.php");	
+  	include_once("./classes/security.php");
+  	include_once("./classes/database.php");	
+	include_once("classes/seo.php");
+			
+	$seo = Seo::GetSeo();
+	
+	$seo->Site_Title = "تعرفه پلن ها";
 
 $phtml2=<<<cd
     <!-- end of header -->

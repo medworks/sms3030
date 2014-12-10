@@ -2,13 +2,14 @@
   include_once("config.php");
   include_once("classes/functions.php");
   include_once("classes/security.php");
-  include_once("classes/database.php"); 
+  include_once("classes/database.php"); 	
   //include_once("lib/jdatetime.class.php");
   include_once("./lib/persiandate.php");
   include_once("./lib/Zebra_Pagination.php");
   //require_once dirname(__FILE__) . 'lib/jdatetime.class.php';
   
   $db = Database::GetDatabase();
+  
   //date_default_timezone_set('Asia/Tehran');
   
   //$mydate = new jDateTime(true, true, 'Asia/Tehran');
@@ -172,12 +173,15 @@ $html.=<<<cd
     </div><!-- end of section wrapper -->
   </section><!-- end blog section -->
 cd;
-
+  ob_start();
   include_once('./inc/header.php');
   echo $slide;
   include_once('./inc/menu.php');
   include_once('./inc/plans.php');
   echo $html;
+  $page_content = ob_get_contents();
+  ob_end_clean();	
+  echo $page_content;
   include_once('./inc/clients.php');
   include_once('./inc/footer.php');
 ?>

@@ -1,12 +1,17 @@
 <?php
 	include_once("config.php");
 	include_once("classes/functions.php");
+	include_once("classes/seo.php");
   	  	      
 	$Tell_Number = GetSettingValue('Tell_Number',0);
 	$Contact_Email = GetSettingValue('Contact_Email',0);	
 	$About_System = GetSettingValue('About_System',0);
 
-
+	$seo = Seo::GetSeo();
+	
+	$seo->Site_Title = "درباره ما";
+	$seo->Site_Describtion = mb_substr($About_System,0,150,"UTF-8");
+	
 $ahtml2 =<<<cd
     <!-- Page Info -->
     <div class="pageInfo">
