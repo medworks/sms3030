@@ -173,15 +173,15 @@ $html.=<<<cd
     </div><!-- end of section wrapper -->
   </section><!-- end blog section -->
 cd;
-  ob_start();
+ // ob_start();
   include_once('./inc/header.php');
   echo $slide;
   include_once('./inc/menu.php');
   include_once('./inc/plans.php');
   echo $html;
-  $page_content = ob_get_contents();
-  ob_end_clean();	
-  echo $page_content;
+ // $page_content = ob_get_contents();
+ // ob_end_clean();	
+ // echo $page_content;
   include_once('./inc/clients.php');
   include_once('./inc/footer.php');
 ?>
