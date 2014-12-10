@@ -145,7 +145,6 @@ $html.=<<<cd
                 <a href="single-news{$news[$i]['id']}.html" title="post sample">
                  
 		<!--
-		<img src="data:{$pic['itype']};base64,{$img}">
 		<img  src="manager/img.php?did={$news[$i]['id']}&tid=1&type=other" 
 				  alt="{$news[$i]['subject']}" title="{$news[$i]['subject']}"/>
 		-->
