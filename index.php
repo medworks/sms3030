@@ -18,6 +18,9 @@
   $Address = GetSettingValue('Address',0);
   $Contact_Email = GetSettingValue('Contact_Email',0);  
   $About_System = GetSettingValue('About_System',0);
+  $facebook = GetSettingValue('FaceBook_Add',0);
+  $twitter = GetSettingValue('Twitter_Add',0);
+  $rss = GetSettingValue('Rss_Add',0);
   $slides = $db->SelectAll("slide","*",NULL,"id ASC");
   $datetime = ToJalali(date('Y-M-d H:i:s'),'l، d F Y');
 
@@ -64,9 +67,9 @@ $slide.=<<<cd
             </ul>
           </div><!-- end of top contacts -->
           <ul class="topSocial socialNav col-md-6 col-sm-12">
-            <li class="facebook"><a href="#"><i class="animated fa fa-facebook"></i></a></li>
-            <li class="twitter"><a href="#"><i class="animated fa fa-twitter"></i></a></li>
-            <li class="rss"><a href="#"><i class="animated fa fa-rss"></i></a></li>
+            <li class="facebook"><a href="{$facebook}"><i class="animated fa fa-facebook"></i></a></li>
+            <li class="twitter"><a href="{$twitter}"><i class="animated fa fa-twitter"></i></a></li>
+            <li class="rss"><a href="{$rss}"><i class="animated fa fa-rss"></i></a></li>
             <li><a href="http://sms.sms3030.ir" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;">ورود آزمایشی به سامانه</a></li>
             <li><a href="http://panel.sms3030.ir" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;">ورود به سامانه</a></li>
             <li><a href="javascript:void(0);" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;">{$datetime}</a></li>
