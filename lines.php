@@ -61,10 +61,11 @@
                       font-size: 20px!important;
                     }
                     td.price a{
-                      color: #cd2f2e!important;
+                      color: #fff!important;
+                      font-size:17px;
                     }
                     td.price a:hover{
-                      color: #2b2f3b!important;
+                      color: #fff!important;
                     }
                     td.price.odd{
                       background-color: #fafafa!important;
@@ -121,7 +122,7 @@ for($j=0;$j<count($line);$j++)
   $class = " class='price odd' ";
  }
 $table.=<<<cd
-                    <td {$class}><a href="lineorder.html" target="_blank" title="سفارش">سفارش <price>{$line[$j]["price"]}</price></a></td>                   
+                    <td {$class}><a href="lineorder.html" class="generalLink order" target="_blank" title="سفارش">سفارش <price>{$line[$j]["price"]}</price></a></td>                   
 cd;
 }
 $table.=<<<cd
