@@ -72,7 +72,7 @@ $slide.=<<<cd
             <li class="rss"><a href="{$rss}"><i class="animated fa fa-rss"></i></a></li>
             <li><a href="http://sms.sms3030.ir" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;">ورود آزمایشی به سامانه</a></li>
             <li><a href="http://panel.sms3030.ir" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;">ورود به سامانه</a></li>
-            <li><a href="javascript:void(0);" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;">{$datetime}</a></li>
+            <li><a href="javascript:void(0);" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;background-color:#cd2f2e">{$datetime}</a></li>
           </ul><!-- end of top social -->
         </div><!-- end of row -->
       </div><!-- end of container -->

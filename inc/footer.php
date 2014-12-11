@@ -26,9 +26,10 @@ $footer= <<<cd
             <div class="footerSocialWrapper">
 
               <ul class="bottomSocial socialNav">
-                <li class="facebook"><a href="{$FaceBook_Add}"><i class="animated fa fa-facebook"></i></a></li>
-                <li class="twitter"><a href="{$Twitter_Add}"><i class="animated fa fa-twitter"></i></a></li>
-                <li class="rss"><a href="{$Rss_Add}"><i class="animated fa fa-rss"></i></a></li>
+               <!-- Begin WebGozar.com Counter code -->
+              <script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=3409390&amp;t=counter" ></script>
+              <noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=3409390" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+          <!-- End WebGozar.com Counter code -->
               </ul><!-- end of bottom social -->
 
               <!-- <ul class="paymentsNav">
@@ -47,10 +48,6 @@ $footer= <<<cd
               </ul> end of payments nav -->
             </div><!-- end of footer social wrapper -->
           </div><!-- end of footer social -->
-          <!-- Begin WebGozar.com Counter code
-              <script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=3409390&amp;t=counter" ></script>
-              <noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=3409390" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
-          End WebGozar.com Counter code -->
         </div><!-- end of row -->
       </div><!-- end of container -->
     </div><!-- end of bottom footer -->
