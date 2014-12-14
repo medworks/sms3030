@@ -26,7 +26,7 @@ $mnu=<<<cd
               <li>
                 <a href="news.html" class="news">اخبار</a>
               </li>
-              <li>
+              <!-- <li>
                 <a href="javascript:void(0);" class="plan">سامانه پیامک</a>
                 <ul class="dropDown sub-menu">
                   <li>
@@ -42,7 +42,7 @@ $mnu=<<<cd
                     <a href="lineorder.html">ثبت نام خط</a>
                   </li>
                 </ul>
-              </li>
+              </li> -->
               <li>
                 <a href="javascript:void(0);" class="reseller">نمایندگی</a>
                 <ul class="dropDown sub-menu">

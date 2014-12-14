@@ -33,7 +33,19 @@ $html.=<<<cd
     <div class="rect5"></div>
   </div><!-- end of loading -->
 </div><!-- end of loading container -->
-
+<style>
+  a.ads{
+    position:absolute;
+    z-index: 999999;
+    top:165px;
+    left:20px;
+  }
+</style>  
+<!--rankweb Banner-->
+<a class="ads" href="http://rankweb.ir/?ref=105978">
+  <img src=http://rankweb.ir/banners/ban2.gif border=0 width="120" height="240">
+</a>
+<!--rankweb Banner-->
 <div class="allWrapper">
   <!-- Page Header -->
   <section class="pageHeader section mainSection scrollAnchor darkSection" id="pageHeader">
