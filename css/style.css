@@ -5150,7 +5150,7 @@ img.fnone {
   width: 100%;
   display: block;
   vertical-align: middle;
-  opacity: 0.6;
+  /*opacity: 0.6;*/
   -webkit-transition: all 0 ease-in-out;
   -moz-transition: all 0 ease-in-out;
   -o-transition: all 0 ease-in-out;

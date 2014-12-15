@@ -2,7 +2,7 @@
   include_once("config.php");
   include_once("classes/functions.php");
   include_once("classes/security.php");
-  include_once("classes/database.php"); 	
+  include_once("classes/database.php");   
   //include_once("lib/jdatetime.class.php");
   include_once("./lib/persiandate.php");
   include_once("./lib/Zebra_Pagination.php");
@@ -54,7 +54,7 @@ $slide.=<<<cd
   }
 </style>  
 <!--rankweb Banner-->
-<a class="ads" href="http://rankweb.ir/?ref=105978">
+<a class="ads" href="http://rankweb.ir/?ref=105978" target="_blank">
   <img src=http://rankweb.ir/banners/ban2.gif border=0 width="120" height="240">
 </a>
 <!--rankweb Banner-->
@@ -81,8 +81,8 @@ $slide.=<<<cd
             <li class="facebook"><a href="{$facebook}"><i class="animated fa fa-facebook"></i></a></li>
             <li class="twitter"><a href="{$twitter}"><i class="animated fa fa-twitter"></i></a></li>
             <li class="rss"><a href="{$rss}"><i class="animated fa fa-rss"></i></a></li>
-            <li><a href="http://sms.sms3030.ir" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;">ورود آزمایشی به سامانه</a></li>
-            <li><a href="http://panel.sms3030.ir" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;">ورود به سامانه</a></li>
+            <li><a href="http://sms.sms3030.ir" target="_blank" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;">ورود آزمایشی به سامانه</a></li>
+            <li><a href="http://panel.sms3030.ir" target="_blank" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;">ورود به سامانه</a></li>
             <li><a href="javascript:void(0);" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;background-color:#cd2f2e">{$datetime}</a></li>
           </ul><!-- end of top social -->
         </div><!-- end of row -->
@@ -161,12 +161,12 @@ $html.=<<<cd
                 </ul>
                 <a href="single-news{$news[$i]['id']}.html" title="post sample">
                  
-		<!--
-		<img  src="manager/img.php?did={$news[$i]['id']}&tid=1&type=other" 
-				  alt="{$news[$i]['subject']}" title="{$news[$i]['subject']}"/>
-		-->
-		
-				  <img src="{$src}" />
+    <!--
+    <img  src="manager/img.php?did={$news[$i]['id']}&tid=1&type=other" 
+          alt="{$news[$i]['subject']}" title="{$news[$i]['subject']}"/>
+    -->
+    
+          <img src="{$src}" />
                 </a>
               </div>
               <div class="postContents">
@@ -196,7 +196,7 @@ cd;
   include_once('./inc/plans.php');
   echo $html;
  // $page_content = ob_get_contents();
- // ob_end_clean();	
+ // ob_end_clean(); 
  // echo $page_content;
   include_once('./inc/clients.php');
   include_once('./inc/footer.php');
