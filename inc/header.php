@@ -1,14 +1,14 @@
 <?php
-	include_once("./config.php");
-	include_once("./classes/functions.php");
-  	include_once("classes/seo.php");
-	
-	/*$Site_Title = GetSettingValue('Site_Title',0);
-	$Site_KeyWords = GetSettingValue('Site_KeyWords',0);
-	$Site_Describtion = GetSettingValue('Site_Describtion',0);
-	*/
-	$seo = Seo::GetSeo();
-?>	
+  include_once("./config.php");
+  include_once("./classes/functions.php");
+    include_once("classes/seo.php");
+  
+  /*$Site_Title = GetSettingValue('Site_Title',0);
+  $Site_KeyWords = GetSettingValue('Site_KeyWords',0);
+  $Site_Describtion = GetSettingValue('Site_Describtion',0);
+  */
+  $seo = Seo::GetSeo();
+?>  
 <!DOCTYPE html>
 <!--[if lt IE 7]>
   <html class="no-js IE lt-ie9 lt-ie8 lt-ie7"></html>
@@ -41,7 +41,23 @@
 <meta name="googlebot" content="INDEX,FOLLOW" />
 <meta name="robots" content="INDEX,FOLLOW" />
 <meta name="format-detection" content="telephone=yes" />
-  
+ 
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://www.sms3030.ir/analys/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="http://www.sms3030.ir/analys/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+ 
 <!-- fav icon -->
 <link href="./favicon.ico" rel="shortcut icon" />
 
@@ -58,21 +74,6 @@
 <script type="text/javascript" src="./js/jquery-migrate-1.2.1.min.js"></script>
 
 <script type="text/javascript" src="./js/jquery-ui.js"></script>
-<!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://www.sms3030.ir/analys/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 1]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="http://www.sms3030.ir/analys/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-<!-- End Piwik Code -->
 
 
 <!--[if lt IE 9]><!-->
