@@ -876,8 +876,8 @@ jQuery(document).ready(function() {
   //-- The whole page --
   jQuery("html").niceScroll({
     cursorborder: 0,
-    cursorcolor: '#171717',
-    autohidemode: true,
+    cursorcolor: '#cd2f2e',
+    autohidemode: false,
     zindex: 9999999,
     scrollspeed: 60,
     mousescrollstep: 36,
