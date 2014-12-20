@@ -65,7 +65,7 @@ $slide.=<<<cd
     <div class="topMenu navBar">
       <div class="container">
         <div class="row">
-          <div class="topContact col-md-6 col-sm-12" style="float:left">
+          <!-- <div class="topContact col-md-6 col-sm-12" style="float:left">
             <ul>
               <li class="tele">
                 Tel: 
@@ -76,7 +76,7 @@ $slide.=<<<cd
                 <a href="javascript:void();" class="latinfont" style="letter-spacing:2px">{$Contact_Email}</a>
               </li>
             </ul>
-          </div><!-- end of top contacts -->
+          </div> end of top contacts -->
           <ul class="topSocial socialNav col-md-6 col-sm-12">
             <li class="facebook"><a href="{$facebook}"><i class="animated fa fa-facebook"></i></a></li>
             <li class="twitter"><a href="{$twitter}"><i class="animated fa fa-twitter"></i></a></li>
@@ -194,7 +194,7 @@ cd;
   echo $slide;
   include_once('./inc/menu.php');
   include_once('./inc/plans.php');
-  echo $html;
+  // echo $html;
  // $page_content = ob_get_contents();
  // ob_end_clean(); 
  // echo $page_content;

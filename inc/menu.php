@@ -20,13 +20,13 @@ $mnu=<<<cd
               <li>
                 <a href="./" class="index">صفحه اصلی</a>
               </li>
-              <li>
+              <!-- <li>
                 <a href="aboutus.html">درباره ما</a>
               </li>
               <li>
                 <a href="news.html" class="news">اخبار</a>
               </li>
-              <!-- <li>
+              <li>
                 <a href="javascript:void(0);" class="plan">سامانه پیامک</a>
                 <ul class="dropDown sub-menu">
                   <li>

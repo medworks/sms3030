@@ -25,11 +25,11 @@ $footer= <<<cd
           <div class="col-md-6 footerSocial">
             <div class="footerSocialWrapper">
 
-              <ul class="bottomSocial socialNav">
-               <!-- Begin WebGozar.com Counter code -->
-              <script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=3409390&amp;t=counter" ></script>
-              <noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=3409390" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
-          <!-- End WebGozar.com Counter code -->
+              <ul class="bottomSocial socialNav">        
+         <!-- Begin WebGozar.com Counter code -->
+          <script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=3415077&amp;t=counter" ></script>
+          <noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=3415077" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+        <!-- End WebGozar.com Counter code -->
               </ul><!-- end of bottom social -->
 
               <!-- <ul class="paymentsNav">

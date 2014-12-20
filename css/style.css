@@ -5580,7 +5580,7 @@ img.fnone {
   display: none;
 }
 .bottomFooter .footerSocial .footerSocialWrapper {
-  float: right;
+  float: left;
   padding-top: 15px;
 }
 .bottomFooter .footerSocial ul {
