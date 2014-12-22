@@ -53,9 +53,9 @@ $html.=<<<cd
       <div class="container">
         <div class="row">
           <ul class="topSocial socialNav col-md-6 col-sm-12">
-            <li class="facebook"><a href="{$FaceBook_Add}"><i class="animated fa fa-facebook"></i></a></li>
-            <li class="twitter"><a href="{$Twitter_Add}"><i class="animated fa fa-twitter"></i></a></li>
-            <li class="rss"><a href="{$Rss_Add}"><i class="animated fa fa-rss"></i></a></li>
+            <li class="facebook"><a href="{$FaceBook_Add}" target="_blank"><i class="animated fa fa-facebook"></i></a></li>
+            <li class="twitter"><a href="{$Twitter_Add}" target="_blank"><i class="animated fa fa-twitter"></i></a></li>
+            <li class="rss"><a href="{$Rss_Add}" target="_blank"><i class="animated fa fa-rss"></i></a></li>
             <li><a href="http://sms.sms3030.ir" target="_blank" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;">ورود آزمایشی به سامانه</a></li>
             <li><a href="http://panel.sms3030.ir" target="_blank" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;">ورود به سامانه</a></li>
             <li><a href="javascript:void(0);" style="padding: 0px 10px;text-align: center;line-height: normal;display: inline;font-size:19px;background-color:#cd2f2e">{$datetime}</a></li>
