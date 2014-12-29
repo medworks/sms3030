@@ -49,15 +49,15 @@ $slide.=<<<cd
   a.ads{
     position:absolute;
     z-index: 999999;
-    top:165px;
+    top:1360px;
     left:20px;
   }
 </style>  
-<!--rankweb Banner-->
-<a class="ads" href="http://rankweb.ir/?ref=105978" target="_blank">
-  <img src=http://rankweb.ir/banners/ban2.gif border=0 width="120" height="240">
+<!--Banner-->
+<a class="ads" href="javascript:void(0);">
+  <img src="./images/sms3030.gif" border=0 width="120" height="240">
 </a>
-<!--rankweb Banner-->
+<!--Banner-->
 <div class="allWrapper"> 
 
   <!-- Slider -->
