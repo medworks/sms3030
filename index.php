@@ -47,9 +47,9 @@ $slide.=<<<cd
 </div><!-- end of loading container -->
 <style>
   a.ads{
-    position:absolute;
+    position:fixed;
     z-index: 999999;
-    top:1360px;
+    top:650px;
     left:20px;
   }
 </style>  
