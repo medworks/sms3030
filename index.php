@@ -49,7 +49,7 @@ $slide.=<<<cd
   a.ads{
     position:fixed;
     z-index: 999999;
-    top:650px;
+    bottom:0;
     left:20px;
   }
 </style>  
