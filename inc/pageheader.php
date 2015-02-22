@@ -40,12 +40,19 @@ $html.=<<<cd
     bottom:0;
     left:20px;
   }
+  iframe{
+    position:fixed;
+    z-index: 999999;
+    bottom:246px;
+    left:20px;
+  }
 </style>  
 <!--Banner-->
 <a class="ads" href="javascript:void(0);">
   <img src="./images/sms3030.gif" border=0 width="120" height="240">
 </a>
 <!--Banner-->
+<iframe src="/eNamadLogo.htm" frameborder="0" scrolling="no" allowtransparency="true" style="width:120px; height:150px; background:#fff;"></iframe>
 <div class="allWrapper">
   <!-- Page Header -->
   <section class="pageHeader section mainSection scrollAnchor darkSection" id="pageHeader">
